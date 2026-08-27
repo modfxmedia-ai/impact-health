@@ -42,7 +42,7 @@ export function MapOfficeHours() {
       />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_50%_at_85%_10%,rgba(64,144,185,0.12),transparent_60%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(45%_45%_at_10%_90%,rgba(23,61,101,0.08),transparent_60%)]" />
-      <div className="relative mx-auto max-w-6xl px-6 py-24">
+      <div className="relative mx-auto max-w-6xl px-6 py-14 sm:py-20 lg:py-24">
         <Reveal>
           <SectionHeading
             eyebrow="Visit Us"

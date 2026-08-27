@@ -59,7 +59,7 @@ function Stars() {
 
 export function Testimonials() {
   return (
-    <section className="relative overflow-hidden bg-[#f4f8fb] py-20">
+    <section className="relative overflow-hidden bg-[#f4f8fb] py-14 sm:py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <Reveal>

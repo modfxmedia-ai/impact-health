@@ -119,7 +119,7 @@ export default function AboutUsPage() {
       afterContent={
         <>
           {/* Our Story */}
-          <section className="relative overflow-hidden bg-white py-20 sm:py-24">
+          <section className="relative overflow-hidden bg-white py-14 sm:py-20 lg:py-24">
             <div
               aria-hidden="true"
               className="pointer-events-none absolute -left-32 top-1/4 h-80 w-80 rounded-full bg-brand-teal/10 blur-3xl"
@@ -148,7 +148,7 @@ export default function AboutUsPage() {
               </Reveal>
 
               <Reveal delay={0.1}>
-                <span className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-navy/10 bg-[#eef4f9] px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-teal">
+                <span className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-teal/20 bg-brand-teal/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-brand-teal">
                   <span
                     aria-hidden="true"
                     className="h-1.5 w-1.5 rounded-full bg-brand-teal"
@@ -185,14 +185,14 @@ export default function AboutUsPage() {
           </section>
 
           {/* Why Choose Us */}
-          <section className="relative overflow-hidden bg-[#f4f8fb] py-20 sm:py-24">
+          <section className="relative overflow-hidden bg-[#f4f8fb] py-14 sm:py-20 lg:py-24">
             <div
               aria-hidden="true"
               className="pointer-events-none absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-brand-navy/5 blur-3xl"
             />
             <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2 lg:gap-20">
               <Reveal className="order-2 lg:order-1">
-                <span className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-navy/10 bg-white px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-teal">
+                <span className="inline-flex w-fit items-center gap-2 rounded-full border border-brand-teal/20 bg-brand-teal/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-brand-teal">
                   <span
                     aria-hidden="true"
                     className="h-1.5 w-1.5 rounded-full bg-brand-teal"
@@ -258,7 +258,7 @@ export default function AboutUsPage() {
           </section>
 
           {/* Our Team */}
-          <section className="bg-white py-20 sm:py-24">
+          <section className="bg-white py-14 sm:py-20 lg:py-24">
             <div className="mx-auto max-w-6xl px-6">
               <Reveal>
                 <div className="mx-auto max-w-2xl text-center">

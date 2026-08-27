@@ -29,7 +29,7 @@ export function Hero() {
       </video>
       <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/85 to-brand-navy/40" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(64,144,185,0.25),transparent_45%)]" />
-      <div className="relative mx-auto w-full max-w-6xl px-6 py-24 lg:py-28">
+      <div className="relative mx-auto w-full max-w-6xl px-6 py-16 sm:py-20 lg:py-28">
         <Reveal className="max-w-3xl text-left">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs font-semibold tracking-wide text-white/80 uppercase">
             {contactInfo.address.split(",").slice(-2).join(",").trim()}

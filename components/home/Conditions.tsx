@@ -27,7 +27,7 @@ export function Conditions() {
       />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_50%_at_85%_10%,rgba(64,144,185,0.12),transparent_60%)]" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(45%_45%_at_10%_90%,rgba(23,61,101,0.08),transparent_60%)]" />
-      <div className="relative mx-auto grid max-w-6xl gap-12 px-6 py-24 lg:grid-cols-12">
+      <div className="relative mx-auto grid max-w-6xl gap-8 px-6 py-14 sm:gap-12 sm:py-20 lg:grid-cols-12 lg:py-24">
         <Reveal className="lg:col-span-4">
           <div className="lg:sticky lg:top-28">
             <SectionHeading

@@ -52,7 +52,7 @@ export function ServicesOverview({ className = "bg-white" }: { className?: strin
     <section id="homepage-services" className={`relative overflow-hidden ${className}`}>
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_45%_at_15%_20%,rgba(64,144,185,0.07),transparent_60%)]" />
       <div className="pointer-events-none absolute -top-32 -right-32 h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(64,144,185,0.12),transparent_70%)] blur-2xl" />
-      <div className="relative mx-auto max-w-6xl px-6 py-20">
+      <div className="relative mx-auto max-w-6xl px-6 py-14 sm:py-20">
         <Reveal>
           <SectionHeading eyebrow="Comprehensive Care" title="Our Services" />
         </Reveal>

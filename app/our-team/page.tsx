@@ -168,7 +168,7 @@ export default function OurTeamPage() {
           </section>
 
           {/* Our Team Consists Of */}
-          <section className="bg-[#f4f8fb] py-20 sm:py-24">
+          <section className="bg-[#f4f8fb] py-14 sm:py-20 lg:py-24">
             <div className="mx-auto max-w-6xl px-6">
               <Reveal>
                 <h2 className="text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl">
@@ -205,14 +205,14 @@ export default function OurTeamPage() {
           </section>
 
           {/* Team grid */}
-          <section className="bg-white py-20 sm:py-24">
+          <section className="bg-white py-14 sm:py-20 lg:py-24">
             <div className="mx-auto max-w-6xl px-6">
               <TeamGrid members={staffMembers} />
             </div>
           </section>
 
           {/* Strategic Partnerships */}
-          <section className="bg-[#f4f8fb] py-20 sm:py-24">
+          <section className="bg-[#f4f8fb] py-14 sm:py-20 lg:py-24">
             <div className="mx-auto max-w-3xl px-6">
               <Reveal>
                 <h2 className="text-3xl font-bold tracking-tight text-brand-navy sm:text-4xl">

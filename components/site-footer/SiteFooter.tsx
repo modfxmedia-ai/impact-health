@@ -76,7 +76,7 @@ export function SiteFooter() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(55%_50%_at_85%_0%,rgba(64,144,185,0.12),transparent_60%)]"
       />
 
-      <div className="relative mx-auto max-w-6xl px-6 py-16">
+      <div className="relative mx-auto max-w-6xl px-6 py-12 sm:py-16">
         <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-x-10 lg:gap-y-0">
           <div className="lg:col-span-4">
             <Link href="/" aria-label="Impact Health & Wellness — home">

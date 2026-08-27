@@ -9,7 +9,7 @@ export function BlogPreview() {
 
   return (
     <section className="bg-gradient-to-b from-white to-zinc-50">
-      <div className="mx-auto max-w-6xl px-6 py-20">
+      <div className="mx-auto max-w-6xl px-6 py-14 sm:py-20">
         <Reveal>
           <SectionHeading
             eyebrow="Wellness Reads"

@@ -8,7 +8,7 @@ export function IntroSection() {
   return (
     <section className="relative overflow-hidden bg-white">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(60%_50%_at_85%_15%,rgba(64,144,185,0.08),transparent_60%)]" />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-6 py-20 lg:grid-cols-2">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-6 py-14 sm:py-20 lg:grid-cols-2">
         <Reveal>
           <video
             autoPlay

@@ -56,7 +56,7 @@ export function ServicesGrid() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#0b1f36] via-[#153a5e] to-[#0b1f36]">
       <div className="aurora opacity-70" />
-      <div className="relative z-10 mx-auto max-w-6xl px-6 py-20">
+      <div className="relative z-10 mx-auto max-w-6xl px-6 py-14 sm:py-20">
         <Reveal>
           <SectionHeading
             eyebrow="What We Offer"
