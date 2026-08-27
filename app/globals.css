@@ -10,6 +10,16 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Brand palette, sampled directly from the Impact Health & Wellness logo. */
+  --color-brand-navy: #173d65;
+  --color-brand-navy-deep: #003f6d;
+  --color-brand-teal: #4090b9;
+
+  /* Footer palette, matched to the live site's computed styles. */
+  --color-footer-charcoal: #282828;
+  --color-footer-black: #0a0a0a;
+  --color-quick-bar: #3a73b8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,3 +34,158 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes header-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.site-header-enter {
+  animation: header-enter 0.5s ease-out both;
+}
+
+/* Keeps overflow scrollable without showing the browser's scrollbar track. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes dropdown-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition:
+    opacity 0.18s ease-out,
+    transform 0.18s ease-out,
+    visibility 0.18s;
+}
+
+.group:hover .nav-dropdown,
+.group:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header-enter {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .nav-dropdown {
+    transition: none;
+  }
+
+  .hero-zoom {
+    animation: none;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+
+  .marquee-viewport {
+    overflow-x: auto;
+  }
+
+  .aurora {
+    animation: none;
+  }
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+.hero-zoom {
+  animation: hero-zoom 20s ease-in-out infinite alternate;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 6%,
+    #000 94%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 6%,
+    #000 94%,
+    transparent
+  );
+}
+
+.marquee-track {
+  animation: marquee-scroll 50s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Ambient aurora — slow drifting radial gradients for depth on dark bands. */
+@keyframes aurora-drift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(4%, -3%, 0) scale(1.15);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.aurora {
+  position: absolute;
+  inset: -25%;
+  pointer-events: none;
+  background:
+    radial-gradient(38% 38% at 22% 28%, rgba(64, 144, 185, 0.3), transparent 70%),
+    radial-gradient(34% 34% at 82% 68%, rgba(64, 144, 185, 0.22), transparent 70%),
+    radial-gradient(30% 30% at 60% 15%, rgba(255, 255, 255, 0.08), transparent 70%);
+  filter: blur(28px);
+  animation: aurora-drift 22s ease-in-out infinite;
+}
+

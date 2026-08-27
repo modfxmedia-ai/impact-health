@@ -1,69 +1,116 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import { Hero } from "@/components/home/Hero";
+import { IntroSection } from "@/components/home/IntroSection";
+import { ServicesGrid } from "@/components/home/ServicesGrid";
+import { BlogPreview } from "@/components/home/BlogPreview";
+import { ServicesOverview } from "@/components/home/ServicesOverview";
+import { Conditions } from "@/components/home/Conditions";
+import { Testimonials } from "@/components/home/Testimonials";
+import { MapOfficeHours } from "@/components/home/MapOfficeHours";
+
+export const metadata: Metadata = {
+  title: "Care Clinic | Health & Wellness Services in Westerville, OH",
+  description:
+    "Experience full-spectrum pain management at our medically-integrated care facility. We provide treatments based on Physical, Traditional, & Functional Medicine.",
+  alternates: { canonical: "/" },
+};
+
+// Yoast schema graph captured from the live homepage, preserved as-is.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://impacthealthoh.com/",
+      url: "https://impacthealthoh.com/",
+      name: "Care Clinic | Health & Wellness Services in Westerville, OH",
+      isPartOf: { "@id": "https://impacthealthoh.com/#website" },
+      about: { "@id": "https://impacthealthoh.com/#organization" },
+      datePublished: "2024-10-03T18:15:25+00:00",
+      dateModified: "2024-10-03T18:15:26+00:00",
+      description:
+        "Experience full-spectrum pain management at our medically-integrated care facility. We provide treatments based on Physical, Traditional, & Functional Medicine.",
+      breadcrumb: { "@id": "https://impacthealthoh.com/#breadcrumb" },
+      inLanguage: "en-US",
+      potentialAction: [
+        { "@type": "ReadAction", target: ["https://impacthealthoh.com/"] },
+      ],
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://impacthealthoh.com/#breadcrumb",
+      itemListElement: [{ "@type": "ListItem", position: 1, name: "Home" }],
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://impacthealthoh.com/#website",
+      url: "https://impacthealthoh.com/",
+      name: "Impact Health & Wellness",
+      description: "",
+      publisher: { "@id": "https://impacthealthoh.com/#organization" },
+      alternateName: "Impact Health",
+      potentialAction: [
+        {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: "https://impacthealthoh.com/?s={search_term_string}",
+          },
+          "query-input": {
+            "@type": "PropertyValueSpecification",
+            valueRequired: true,
+            valueName: "search_term_string",
+          },
+        },
+      ],
+      inLanguage: "en-US",
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://impacthealthoh.com/#organization",
+      name: "Impact Health & Wellness",
+      alternateName: "Impact Health",
+      url: "https://impacthealthoh.com/",
+      logo: {
+        "@type": "ImageObject",
+        inLanguage: "en-US",
+        "@id": "https://impacthealthoh.com/#/schema/logo/image/",
+        url: "https://impacthealthoh.com/wp-content/uploads/2024/02/impact-logo-horizonal-rgb.png",
+        contentUrl:
+          "https://impacthealthoh.com/wp-content/uploads/2024/02/impact-logo-horizonal-rgb.png",
+        width: 620,
+        height: 199,
+        caption: "Impact Health & Wellness",
+      },
+      image: { "@id": "https://impacthealthoh.com/#/schema/logo/image/" },
+      sameAs: [
+        "https://www.facebook.com/impacthealthandwellness/",
+        "https://www.instagram.com/impacthealthandwellness/",
+        "https://www.linkedin.com/company/impacthealthandwellness",
+      ],
+    },
+  ],
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main>
+        <Hero />
+        <IntroSection />
+        <ServicesGrid />
+        <ServicesOverview />
+        <Conditions />
+        <Testimonials />
+        <BlogPreview />
+        <MapOfficeHours />
       </main>
-    </div>
+    </>
   );
 }
+
+
