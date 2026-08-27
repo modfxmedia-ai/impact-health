@@ -114,6 +114,7 @@ export default function SportsInjuriesPage() {
         { label: "Sports Injuries" },
       ]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices items={relatedTreatments} heading="Related Treatments" />

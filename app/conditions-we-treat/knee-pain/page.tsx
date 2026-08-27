@@ -113,6 +113,7 @@ export default function KneePainPage() {
         { label: "Knee Pain" },
       ]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices items={relatedTreatments} heading="Related Treatments" />

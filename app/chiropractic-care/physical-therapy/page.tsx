@@ -151,6 +151,7 @@ export default function PhysicalTherapyPage() {
         { label: "Physical Therapy" },
       ]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/physical-therapy.jpg",
         alt: "physical therapy",

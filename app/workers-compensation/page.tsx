@@ -105,6 +105,7 @@ export default function WorkersCompensationPage() {
       intro="Secure your rights and benefits with our comprehensive Workers’ Compensation assistance. Dedicated support for your peace of mind and recovery."
       breadcrumbs={[{ label: "Workers Compensation" }]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/workers-compensation.jpg",
         alt: "workers comp",

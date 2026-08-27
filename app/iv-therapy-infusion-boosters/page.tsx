@@ -190,6 +190,7 @@ export default function IvTherapyInfusionBoostersPage() {
         { label: "IV Therapy Infusion Boosters" },
       ]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/vitamin-infusions.webp",
         alt: "vitamin infusions at Impact Health & Wellness",

@@ -176,6 +176,7 @@ export default function NeuropathyTreatmentsPage() {
       intro="Understand the symptoms, types, and management approaches. Empower yourself with knowledge for better symptom management!"
       breadcrumbs={[{ label: "Neuropathy Treatments" }]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/neuropathy-treatments.jpg",
         alt: "neuropathy treatments",

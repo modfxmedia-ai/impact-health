@@ -114,6 +114,7 @@ export default function HipPainPage() {
         { label: "Hip Pain" },
       ]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices items={relatedTreatments} heading="Related Treatments" />
@@ -126,6 +127,28 @@ export default function HipPainPage() {
         hip/pelvic region. Hip Pain is described as a shooting pain, weakness
         and/or stiffness in the hip. Hip Pain can be caused by any number of
         factors, most notably Rheumatoid Arthritis and Osteoarthritis.
+      </p>
+
+      <h2>Common Causes of Hip Pain</h2>
+      <ul>
+        <li>Osteoarthritis or rheumatoid arthritis in the hip joint</li>
+        <li>Bursitis or tendinitis around the hip</li>
+        <li>Muscle strain from overuse or sudden movement</li>
+        <li>Hip labral tears affecting joint stability</li>
+      </ul>
+
+      <h2>When Hip Pain Needs Professional Care</h2>
+      <p>
+        Hip pain that limits walking, disrupts sleep, or doesn&apos;t improve with
+        rest is a sign your hip needs a proper evaluation rather than
+        continued home management.
+      </p>
+
+      <h2>Why Choose Impact for Hip Pain Treatment</h2>
+      <p>
+        Our providers combine chiropractic care, physical therapy, and
+        regenerative medicine to relieve pressure on the hip joint and
+        rebuild strength—so you can move without pain, without surgery.
       </p>
     </PageLayout>
   );

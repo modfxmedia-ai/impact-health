@@ -114,6 +114,7 @@ export default function OsteoarthritisPage() {
         { label: "Osteoarthritis" },
       ]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices items={relatedTreatments} heading="Related Treatments" />
@@ -133,6 +134,29 @@ export default function OsteoarthritisPage() {
         Osteoarthritis is most commonly treated with pain medication where
         with Impact Health & Wellness we effectively treat the cause and
         prevention of osteoarthritis.
+      </p>
+
+      <h2>Common Osteoarthritis Symptoms</h2>
+      <ul>
+        <li>Joint stiffness, especially after rest or first thing in the morning</li>
+        <li>Swelling around the affected joint</li>
+        <li>Pain that worsens with movement or weight-bearing activity</li>
+        <li>Decreased range of motion and joint tenderness</li>
+      </ul>
+
+      <h2>Joints Most Affected by Osteoarthritis</h2>
+      <p>
+        Osteoarthritis most commonly develops in the knees, hips, hands, and
+        spine—joints that absorb repeated stress over time. Left unmanaged,
+        it can progressively limit mobility and independence.
+      </p>
+
+      <h2>Why Choose Impact for Osteoarthritis Care</h2>
+      <p>
+        We combine regenerative medicine, PRP therapy, and HA gel injections
+        with chiropractic care to reduce joint inflammation, rebuild
+        cartilage support, and help you stay active without relying solely on
+        pain medication or surgery.
       </p>
     </PageLayout>
   );

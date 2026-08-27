@@ -162,6 +162,7 @@ export default function ChiropracticCarePage() {
       intro="Welcome to Impact Health & Wellness, your premier destination for holistic chiropractic care in Westerville, Ohio. Specializing in a wide range of treatments from spinal adjustments to therapeutic massage, our facility is dedicated to revolutionizing patient care with an emphasis on personalized, multidisciplinary approaches. Whether you're seeking relief from back pain, neck pain, or looking for a holistic path to wellness, our expert team is here to support your health journey."
       breadcrumbs={[{ label: "Chiropractic Care" }]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/chiropractic-care-hub.jpg",
         alt: "Impact Health & Wellness office",

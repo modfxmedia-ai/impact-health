@@ -114,6 +114,7 @@ export default function WhiplashPage() {
         { label: "Whiplash" },
       ]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices items={relatedTreatments} heading="Related Treatments" />
@@ -131,6 +132,29 @@ export default function WhiplashPage() {
         a serious condition that is treatable with non-opioid non-surgical
         solutions. Whiplash injuries are almost always the beginning of neck
         problems that lead to osteoarthritis if not properly managed.
+      </p>
+
+      <h2>Common Whiplash Symptoms</h2>
+      <ul>
+        <li>Neck pain and stiffness that may worsen with movement</li>
+        <li>Headaches originating at the base of the skull</li>
+        <li>Dizziness or reduced range of motion in the neck</li>
+        <li>Shoulder, arm, or upper back pain</li>
+      </ul>
+
+      <h2>Why Whiplash Should Be Treated Early</h2>
+      <p>
+        Whiplash symptoms don&apos;t always appear right away&mdash;sometimes
+        taking hours or days to surface after an accident. Getting evaluated
+        early helps prevent the soft tissue damage from developing into
+        chronic neck problems or long-term osteoarthritis.
+      </p>
+
+      <h2>Why Choose Impact for Whiplash Recovery</h2>
+      <p>
+        Our team uses chiropractic care, spinal decompression, and physical
+        therapy to relieve inflammation and restore proper neck alignment
+        after an accident&mdash;all without opioids or surgery.
       </p>
     </PageLayout>
   );

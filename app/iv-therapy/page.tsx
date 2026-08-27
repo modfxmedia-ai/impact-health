@@ -177,6 +177,7 @@ export default function IvTherapyPage() {
         { label: "IV Therapy" },
       ]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices items={getRelatedServices("/iv-therapy/")} />

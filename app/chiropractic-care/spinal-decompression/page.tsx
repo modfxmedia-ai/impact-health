@@ -118,6 +118,7 @@ export default function SpinalDecompressionPage() {
         { label: "Spinal Decompression" },
       ]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/spinal-decompression.jpg",
         alt: "spinal decompression at Impact Health & Wellness",

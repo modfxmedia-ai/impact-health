@@ -152,6 +152,7 @@ export default function PrpTherapyPage() {
       intro="Platelet-rich plasma therapy is an innovative treatment in the field of regenerative medicine that harnesses the healing power of your own blood to rejuvenate the body and promote healing."
       breadcrumbs={[{ label: "PRP Therapy" }]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices items={getRelatedServices("/prp-therapy/")} />

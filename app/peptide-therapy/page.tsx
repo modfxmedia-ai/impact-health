@@ -191,6 +191,7 @@ export default function PeptideTherapyPage() {
         { label: "Peptide Therapy" },
       ]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices items={getRelatedServices("/peptide-therapy/")} />

@@ -4,6 +4,7 @@ import { PageHero, type PageHeroImage } from "@/components/page/PageHero";
 import { JsonLd, type JsonLdSchema } from "@/components/page/JsonLd";
 import type { Crumb } from "@/components/page/Breadcrumbs";
 import { ServiceSidebar } from "@/components/page/ServiceSidebar";
+import { Testimonials } from "@/components/home/Testimonials";
 
 /** Splits flat prose children into one group per <h2> boundary, so each topic renders as its own full-width section instead of one long article. */
 function splitContentSections(children: ReactNode) {
@@ -38,6 +39,8 @@ export interface PageLayoutProps {
   showSidebar?: boolean;
   /** Extra section(s) rendered after the main content, before the CTA (e.g. Related Services). */
   afterContent?: React.ReactNode;
+  /** Renders the shared patient-reviews section after `afterContent` (service and condition pages). */
+  showTestimonials?: boolean;
   children?: React.ReactNode;
 }
 
@@ -50,6 +53,7 @@ export function PageLayout({
   schema,
   showSidebar = true,
   afterContent,
+  showTestimonials = false,
   children,
 }: PageLayoutProps) {
   const trail: Crumb[] = [
@@ -101,6 +105,7 @@ export function PageLayout({
       ) : null}
 
       {afterContent}
+      {showTestimonials ? <Testimonials /> : null}
     </main>
   );
 }

@@ -142,6 +142,7 @@ export default function PersonalInjuriesPage() {
       intro="Navigate your recovery from personal injuries with our dedicated support. Regain your strength and wellness with tailored care."
       breadcrumbs={[{ label: "Personal Injuries" }]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/personal-injuries.jpg",
         alt: "personal injuries",

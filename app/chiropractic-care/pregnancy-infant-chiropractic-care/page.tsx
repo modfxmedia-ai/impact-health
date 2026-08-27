@@ -125,6 +125,7 @@ export default function PregnancyInfantChiropracticCarePage() {
         { label: "Pregnancy & Infant Chiropractic Care" },
       ]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/pregnancy-infant-chiropractic-care.jpg",
         alt: "pregnancy and infant chiropractic care at Impact Health & Wellness",

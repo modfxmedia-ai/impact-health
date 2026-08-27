@@ -119,6 +119,7 @@ export default function MedicalInfusionTherapyGuidePage() {
         { label: "Medical Infusion Therapy Guide" },
       ]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <section className="bg-white">

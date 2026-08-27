@@ -105,6 +105,7 @@ export default function CarAccidentInjuriesPage() {
       intro="Heal from car accident trauma using gentle, personalized care. We help you bounce back to optimal vitality safely."
       breadcrumbs={[{ label: "Car Accident Injuries" }]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/car-accident-injuries.jpg",
         alt: "car accident injuries",

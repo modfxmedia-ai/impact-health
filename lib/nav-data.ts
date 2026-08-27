@@ -28,7 +28,10 @@ export const primaryNav: NavItem[] = [
     href: "/about-us/",
     columns: [
       {
-        links: [{ label: "Meet Our Team", href: "/our-team/" }],
+        links: [
+          { label: "Meet Our Team", href: "/our-team/" },
+          { label: "Blog", href: "/blog/" },
+        ],
       },
     ],
   },

@@ -106,6 +106,7 @@ export default function SchoolSportsPhysicalsPage() {
       intro="You can get your school and sports physicals done at Anodyne of Westerville. We can usually get you scheduled for a same-day or next-day appointment, unlike many primary care doctors."
       breadcrumbs={[{ label: "School & Sports Physicals" }]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices

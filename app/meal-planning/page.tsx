@@ -135,6 +135,7 @@ export default function MealPlanningPage() {
         { label: "Meal Planning" },
       ]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/meal-planning.jpg",
         alt: "dietary consultations at Impact Health & Wellness",

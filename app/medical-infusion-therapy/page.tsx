@@ -215,6 +215,7 @@ export default function MedicalInfusionTherapyPage() {
       intro="Physician-prescribed IV infusions and biologic therapies, administered in a comfortable, monitored setting close to home."
       breadcrumbs={[{ label: "Medical Infusion Therapies" }]}
       schema={schema}
+      showTestimonials
       afterContent={
         <RelatedServices
           heading="Explore More"

@@ -114,6 +114,7 @@ export default function CarpalTunnelPage() {
         { label: "Carpal Tunnel" },
       ]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices items={relatedTreatments} heading="Related Treatments" />
@@ -128,6 +129,31 @@ export default function CarpalTunnelPage() {
         squeezed, which leads to the pain and discomfort associated with
         Carpal Tunnel. Typical symptoms include aching, stiffness, and
         weakness in the hands, especially at night.
+      </p>
+
+      <h2>Common Signs of Carpal Tunnel Syndrome</h2>
+      <ul>
+        <li>Numbness or tingling in the thumb, index, and middle fingers</li>
+        <li>Weak grip strength or difficulty holding small objects</li>
+        <li>Pain that worsens at night or after repetitive wrist motion</li>
+        <li>A pins-and-needles sensation that radiates up toward the forearm</li>
+      </ul>
+
+      <h2>What Causes Carpal Tunnel Syndrome</h2>
+      <p>
+        Carpal Tunnel Syndrome is often linked to repetitive hand and wrist
+        motions, awkward wrist positioning, and prolonged pressure on the
+        median nerve. Certain health factors—including pregnancy, diabetes,
+        thyroid conditions, and rheumatoid arthritis—can also increase your
+        risk by contributing to swelling within the carpal canal.
+      </p>
+
+      <h2>Why Choose Impact for Carpal Tunnel Treatment</h2>
+      <p>
+        Our team takes a non-invasive approach to Carpal Tunnel relief,
+        combining chiropractic adjustments, laser therapy, and trigger point
+        injections to reduce inflammation and restore nerve function—helping
+        you avoid surgery whenever possible.
       </p>
     </PageLayout>
   );

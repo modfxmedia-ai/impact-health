@@ -118,6 +118,7 @@ export default function ChiropracticDiagnosticsPage() {
         { label: "Diagnostics" },
       ]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/chiropractic-diagnostics.jpg",
         alt: "diagnostics at Impact Health & Wellness",

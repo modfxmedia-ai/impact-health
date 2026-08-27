@@ -114,6 +114,7 @@ export default function FootAnklePainPage() {
         { label: "Foot & Ankle Pain" },
       ]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices items={relatedTreatments} heading="Related Treatments" />
@@ -131,6 +132,29 @@ export default function FootAnklePainPage() {
         foot pain almost always require medical attention. When left
         untreated, chronic, and sometimes acute, foot pain can lead to
         long-term issues such as numbness in the foot or a walking impairment.
+      </p>
+
+      <h2>Common Causes of Foot & Ankle Pain</h2>
+      <ul>
+        <li>Plantar fasciitis and heel pain</li>
+        <li>Ankle sprains and ligament injuries</li>
+        <li>Tendinitis from overuse or repetitive stress</li>
+        <li>Arthritis affecting the foot or ankle joints</li>
+        <li>Stress fractures from high-impact activity</li>
+      </ul>
+
+      <h2>When to Seek Treatment</h2>
+      <p>
+        If foot or ankle pain persists beyond a few days, limits your ability
+        to bear weight, or is accompanied by swelling or bruising, it&apos;s time
+        to have it evaluated before the issue becomes chronic.
+      </p>
+
+      <h2>Why Choose Impact for Foot & Ankle Pain</h2>
+      <p>
+        We combine chiropractic care, laser therapy, and shockwave therapy to
+        reduce inflammation and support healing—helping you get back on your
+        feet without surgery.
       </p>
     </PageLayout>
   );

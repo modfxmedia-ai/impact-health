@@ -195,6 +195,7 @@ export default function HormoneReplacementTherapyPage() {
       intro="Hormone Replacement Therapy (HRT) offers a promising solution for men and women experiencing the adverse effects of hormonal imbalances, such as mood swings, weight gain, and decreased energy levels."
       breadcrumbs={[{ label: "Hormone Replacement Therapy" }]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/hormone-replacement-therapy.jpg",
         alt: "hormone replacement therapy consultation",

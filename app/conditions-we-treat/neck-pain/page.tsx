@@ -114,6 +114,7 @@ export default function NeckPainPage() {
         { label: "Neck Pain" },
       ]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices items={relatedTreatments} heading="Related Treatments" />
@@ -128,6 +129,31 @@ export default function NeckPainPage() {
         neck and upper back can stiffen and cause neck pain as well. The most
         common long-term cause for neck pain is osteoarthritis, and this
         results in the neck being the most common area for spinal surgery.
+      </p>
+
+      <h2>Common Causes of Neck Pain</h2>
+      <ul>
+        <li>Poor posture from desk work, driving, or phone use</li>
+        <li>Muscle strain or overuse in the neck and upper back</li>
+        <li>Herniated or bulging discs in the cervical spine</li>
+        <li>Whiplash injuries from car accidents or falls</li>
+        <li>Osteoarthritis affecting the joints of the neck</li>
+      </ul>
+
+      <h2>When to Seek Treatment for Neck Pain</h2>
+      <p>
+        Neck pain that lasts more than a few days, limits your range of
+        motion, or radiates into your shoulders and arms is a sign it&apos;s time
+        to seek professional care. Left untreated, chronic neck pain can lead
+        to worsening joint degeneration over time.
+      </p>
+
+      <h2>Why Choose Impact for Neck Pain Relief</h2>
+      <p>
+        Impact&apos;s providers combine chiropractic adjustments, spinal
+        decompression, and physical therapy to relieve pressure on the neck
+        and restore mobility—addressing the root cause rather than just
+        masking the symptoms.
       </p>
     </PageLayout>
   );

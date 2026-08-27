@@ -112,6 +112,7 @@ export default function MigrainesAndHeadachesPage() {
         { label: "Migraines and Headaches" },
       ]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices items={relatedTreatments} heading="Related Treatments" />

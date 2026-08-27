@@ -128,6 +128,7 @@ export default function AntiAgingWellnessPage() {
       intro="Transform your life with our Anti-Aging & Weight Loss programs. Tailored strategies to rejuvenate your body and achieve lasting wellness."
       breadcrumbs={[{ label: "Anti-Aging & Weight Loss" }]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/anti-aging-wellness.jpg",
         alt: "massage therapy at Impact Health & Wellness",

@@ -148,6 +148,7 @@ export default function ShockwavePage() {
       intro="Embrace the future of healing with Shockwave Therapy. Accelerate recovery, reduce pain, and improve mobility with this innovative, non-surgical treatment."
       breadcrumbs={[{ label: "Shockwave Therapy" }]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/shockwave-therapy.webp",
         alt: "Shockwave Therapy",

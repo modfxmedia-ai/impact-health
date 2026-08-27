@@ -165,6 +165,7 @@ export default function HaGelInjectionsPage() {
       intro="Experience lasting relief with HA Gel Injections. Targeted treatment for joint pain that lubricates and cushions, restoring movement and comfort."
       breadcrumbs={[{ label: "HA Gel Injections" }]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/ha-gel-injections.jpg",
         alt: "HA Gel Injections",

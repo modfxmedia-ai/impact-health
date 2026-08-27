@@ -177,6 +177,7 @@ export default function LaserTherapyPage() {
       intro="Laser therapy in Westerville at Impact Health & Wellness offers non-invasive treatments for pain relief and healing."
       breadcrumbs={[{ label: "Laser Therapy" }]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices items={getRelatedServices("/laser-therapy/")} />

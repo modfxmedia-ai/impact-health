@@ -114,6 +114,7 @@ export default function ChronicPainPage() {
         { label: "Chronic Pain" },
       ]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices items={relatedTreatments} heading="Related Treatments" />

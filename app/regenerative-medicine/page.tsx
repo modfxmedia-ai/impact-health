@@ -177,6 +177,7 @@ export default function RegenerativeMedicinePage() {
       intro="Unlock your body's natural healing potential with innovative regenerative medicine approaches. Discover treatments that promote tissue repair and support long-term well-being."
       breadcrumbs={[{ label: "Regenerative Medicine" }]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/regenerative-medicine.jpg",
         alt: "Regenerative Medicine",

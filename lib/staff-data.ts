@@ -73,6 +73,21 @@ export const staffMembers: StaffMember[] = [
     ],
   },
   {
+    slug: "melinda-everman-moore",
+    name: "Melinda Everman-Moore",
+    role: "Nurse Practitioner",
+    blurb: "Certified Nurse Practitioner",
+    image: "/images/staff/melinda-everman-moore.jpg",
+    pageTitle: "Melinda Everman-Moore - Impact Health & Wellness - Westerville, OH",
+    metaDescription: "Certified Nurse Practitioner",
+    bio: [
+      "Melinda is an Adult-Gerontology Nurse Practitioner and Functional Medicine & Medical Weight Management Specialist at Impact Health & Wellness.",
+      "She holds a PhD in Exercise Science and Health Promotion and is a certified nutrition counselor. With a background in group exercise instruction, Melinda is certified in Strong Nation, Zumba, and Zumba Toning, allowing her to integrate movement and wellness into her patient care approach. Her passion for medical weight management and functional medicine drives her commitment to optimizing health and well-being through a holistic approach.",
+      "Melinda has over eight years of experience in home health and is a Certified Palliative and Hospice Provider. She has also completed an advanced wound certification course and is preparing to become a Board-Certified Wound Care Provider. In addition to her expertise in functional medicine, she specializes in regenerative and aesthetic treatments, including platelet-rich plasma (PRP) therapy, joint injections, Botox, laser hair removal, microneedling, and laser facial resurfacing.",
+      "Outside of work, Melinda enjoys spending time with her 18-year-old twin boys, staying active with weight training, tackling home improvement projects, and gardening. She is dedicated to empowering patients through innovative, personalized treatments that enhance both longevity and quality of life.",
+    ],
+  },
+  {
     slug: "eve-ciacciarelli-pt",
     name: "Dr. Eve Ciacciarelli, DPT",
     role: "Physical Therapist",
@@ -85,6 +100,20 @@ export const staffMembers: StaffMember[] = [
       "Dr. Eve Ciacciarelli, our physical therapist, is highly skilled, compassionate, and committed to delivering exceptional care to patients of all ages and conditions.",
       "She specializes in designing personalized treatment plans that address the unique needs of each patient, focusing on techniques that promote healing, improve mobility, and enhance overall quality of life. Utilizing her background in outpatient and inpatient settings, Eve works to not only treat your musculoskeletal (i.e., injuries, pain, post surgical etc.) and neurological (i.e., stroke, TBI, etc.) conditions, but also to help you understand how those conditions developed in the first place.",
       "Eve graduated summa cum laude from The Richard Stockton University in Atlantic City, NJ. After becoming interested in the field of Physical Therapy while volunteering at a hippotherapy (physical therapy involving humans and horses) program. She believes in treating the entire individual and loves being a part of a multidisciplinary team. At Impact Health & Wellness, we are dedicated to helping you regain your strength, improve your mobility, and relieve your pain through personalized and evidence-based physical therapy services. Rehab therapy treatment interventions include various manual soft tissue techniques and joint mobilizations, corrective exercises and home programs, functional movement training, and patient education are all part of our integrated approach to help you feel and function at your best.",
+    ],
+  },
+  {
+    slug: "tara-allen",
+    name: "Tara Allen",
+    role: "Business Development Director",
+    blurb: "Business Development Director",
+    image: "/images/staff/tara-allen.jpg",
+    pageTitle: "Tara Allen at Impact Health & Wellness",
+    metaDescription:
+      "Tara Allen at Impact Health & Wellness: Experienced Speech Language Pathologist and Business Development Director. Learn more about her healthcare expertise.",
+    bio: [
+      "Meet Tara Allen. Tara is the Business Development Director for Impact Health & Wellness.",
+      "She is a licensed Speech Language Pathologist and has over 18 years of experience in the healthcare field. Tara received her Bachelors of Education from The University of Toledo and her Masters of Fine Arts from The University of Akron. She specialized with the geriatric population and dementia training along with being a Director of Rehabilitation for 14 years in a subacute care facility. Tara lives in Lewis Center with her husband Nick and their three children Zach, Alexis, and Jacob. She enjoys spending time watching her children play sports, being outdoors, and spending time with family and friends. Tara has a passion for helping others improve their health and wellness through rehabilitation.",
     ],
   },
   {

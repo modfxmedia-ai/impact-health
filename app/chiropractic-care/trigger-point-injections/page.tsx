@@ -119,6 +119,7 @@ export default function TriggerPointInjectionsPage() {
         { label: "Trigger Point Injections" },
       ]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/trigger-point-injections.jpg",
         alt: "trigger point injections at Impact Health & Wellness",

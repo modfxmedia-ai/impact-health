@@ -139,6 +139,7 @@ export default function WoundCarePage() {
       intro="Discover expert wound care solutions tailored to your needs for effective healing, innovative treatments, and dedicated patient support."
       breadcrumbs={[{ label: "Wound Care" }]}
       schema={schema}
+      showTestimonials
       image={{
         src: "/images/services/wound-care.jpg",
         alt: "wound care",

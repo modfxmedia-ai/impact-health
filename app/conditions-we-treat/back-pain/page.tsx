@@ -114,6 +114,7 @@ export default function BackPainPage() {
         { label: "Back Pain" },
       ]}
       schema={schema}
+      showTestimonials
       afterContent={
         <>
           <RelatedServices items={relatedTreatments} heading="Related Treatments" />
