@@ -3,6 +3,7 @@ import { PageLayout } from "@/components/page/PageLayout";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Advanced Diagnostics | Chiropractor Near Westerville, OH",
@@ -147,9 +148,9 @@ export default function ChiropracticDiagnosticsPage() {
         <li>High quality images</li>
         <li>
           The ability to visualize{" "}
-          <a href="/chiropractic-care/">
+          <Link href="/chiropractic-care/">
             skeletal issues and misalignments
-          </a>
+          </Link>
         </li>
       </ul>
       <p>

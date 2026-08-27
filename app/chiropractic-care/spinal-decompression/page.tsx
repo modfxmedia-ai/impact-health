@@ -3,6 +3,7 @@ import { PageLayout } from "@/components/page/PageLayout";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Back Relief | Spinal Decompression in Westerville, OH",
@@ -136,7 +137,7 @@ export default function SpinalDecompressionPage() {
     >
       <p>
         Spinal decompression is a{" "}
-        <a href="/chiropractic-care/">nonsurgical therapy option</a> that
+        <Link href="/chiropractic-care/">nonsurgical therapy option</Link> that
         produces relief through motorized traction based upon weight. At
         Impact Health & Wellness, we use decompression to treat multiple
         conditions including but not limited to neck and back pain,

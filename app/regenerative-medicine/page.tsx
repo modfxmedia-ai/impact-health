@@ -6,6 +6,7 @@ import { Faq, faqSchema } from "@/components/page/Faq";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Regenerative Medicine in Westerville | Non-Surgical Healing",
@@ -203,7 +204,7 @@ export default function RegenerativeMedicinePage() {
         <a href="https://impacthealthoh.com/">Impact Health & Wellness</a> is
         at the forefront of providing these advanced treatment options to our
         clients in Westerville, Columbus, Dublin, Gahanna and all of Central
-        Ohio. <a href="/contact-us/">Contact us</a> to schedule a consultation
+        Ohio. <Link href="/contact-us/">Contact us</Link> to schedule a consultation
         and discover how regenerative medicine treatments can benefit you.
       </p>
 
@@ -277,9 +278,9 @@ export default function RegenerativeMedicinePage() {
         of therapy, the complexity of the procedure, individual patient needs
         and in some cases, your insurance plan. At Impact Health & Wellness,
         we strive to provide transparent pricing and will discuss all options
-        and costs during your consultation. <a href="/contact-us/">
+        and costs during your consultation. <Link href="/contact-us/">
           Contact us
-        </a>{" "}
+        </Link>{" "}
         for more detailed information.
       </p>
 
@@ -294,14 +295,14 @@ export default function RegenerativeMedicinePage() {
       </p>
       <ul>
         <li>
-          <a href="/prp-therapy/">PRP Therapy</a>: Utilizing the healing
+          <Link href="/prp-therapy/">PRP Therapy</Link>: Utilizing the healing
           properties of your own blood, PRP (Platelet-Rich Plasma) Therapy
           stimulates tissue repair and regeneration. It’s a
           minimally-invasive, gentle solution for pain management and
           improved tissue function.
         </li>
         <li>
-          <a href="/chiropractic-care/">Chiropractic Care</a>: Chiropractic
+          <Link href="/chiropractic-care/">Chiropractic Care</Link>: Chiropractic
           care involves adjusting the spine and other parts of the body to
           alleviate pain and support the body’s natural ability to heal
           itself. This form of functional medicine can help you achieve
@@ -309,7 +310,7 @@ export default function RegenerativeMedicinePage() {
           musculoskeletal issues without surgery or medication.
         </li>
         <li>
-          <a href="/wound-care/">Advanced Wound Care</a>: Our advanced wound
+          <Link href="/wound-care/">Advanced Wound Care</Link>: Our advanced wound
           care services utilize the latest techniques and technologies to
           promote healing in chronic and complex wounds such as diabetic
           ulcers, venous stasis ulcers or wounds that have not responded to
@@ -317,7 +318,7 @@ export default function RegenerativeMedicinePage() {
           services for your convenience.
         </li>
         <li>
-          <a href="/anti-aging-wellness/">Medical Weight Loss Programs</a>: We
+          <Link href="/anti-aging-wellness/">Medical Weight Loss Programs</Link>: We
           combine nutrition counseling, fitness recommendations and, when
           appropriate, medication management to help you achieve and
           maintain a healthy weight. This holistic approach is perfect for
@@ -325,7 +326,7 @@ export default function RegenerativeMedicinePage() {
           looking for a sustainable, health-focused solution.
         </li>
         <li>
-          <a href="/shockwave/">Shockwave Therapy</a>: This non-invasive
+          <Link href="/shockwave/">Shockwave Therapy</Link>: This non-invasive
           treatment uses acoustic waves to stimulate healing in injured
           tissues. It’s particularly effective for treating conditions like
           plantar fasciitis, tendonitis, ligament injuries and other soft
@@ -342,7 +343,7 @@ export default function RegenerativeMedicinePage() {
       </p>
       <p>
         Take the first step towards a healthier, pain-free life.{" "}
-        <a href="/contact-us/">Schedule</a> your regenerative medicine
+        <Link href="/contact-us/">Schedule</Link> your regenerative medicine
         consultation today and let us show you how our advanced treatments
         can improve your quality of life and help you heal faster.
       </p>

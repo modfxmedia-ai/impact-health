@@ -5,6 +5,7 @@ import { Faq, faqSchema } from "@/components/page/Faq";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Expert Back & Neck Pain Chiropractor in Westerville, OH",
@@ -233,9 +234,9 @@ export default function ChiropracticCarePage() {
       <p>
         Alleviate the discomfort of herniated discs, spinal stenosis, and
         other spinal conditions with our{" "}
-        <a href="/chiropractic-care/spinal-decompression/">
+        <Link href="/chiropractic-care/spinal-decompression/">
           spinal decompression
-        </a>{" "}
+        </Link>{" "}
         therapy. This non-invasive treatment method gently stretches the
         spine to relieve nerve pressure and reduce pain, offering a safe
         alternative to surgical interventions.
@@ -263,7 +264,7 @@ export default function ChiropracticCarePage() {
       <h3>Diagnostic Imaging</h3>
       <p>
         Our state-of-the-art{" "}
-        <a href="/chiropractic-care/diagnostics/">imaging techniques</a>{" "}
+        <Link href="/chiropractic-care/diagnostics/">imaging techniques</Link>{" "}
         provide clear insights into your musculoskeletal system, enabling
         our team to develop targeted, effective treatment plans tailored to
         your specific needs and conditions.
@@ -272,9 +273,9 @@ export default function ChiropracticCarePage() {
       <h3>Physical Therapy</h3>
       <p>
         Our dedicated{" "}
-        <a href="/chiropractic-care/physical-therapy/">
+        <Link href="/chiropractic-care/physical-therapy/">
           physical therapists
-        </a>{" "}
+        </Link>{" "}
         will guide you through personalized rehabilitation programs,
         addressing injuries, improving mobility, and boosting your overall
         quality of life through expert care and support.
@@ -352,7 +353,7 @@ export default function ChiropracticCarePage() {
       <h2>Book Your Chiropractic Care Consultation in Westerville, Ohio</h2>
       <p>
         Ready to experience the benefits of chiropractic care?{" "}
-        <a href="/contact-us/">Contact</a> Impact Health & Wellness today to
+        <Link href="/contact-us/">Contact</Link> Impact Health & Wellness today to
         schedule your consultation. Let us be your partner in achieving
         optimal health and wellness.
       </p>

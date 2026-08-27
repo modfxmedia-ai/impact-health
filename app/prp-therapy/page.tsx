@@ -5,6 +5,7 @@ import { Faq, faqSchema } from "@/components/page/Faq";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "PRP Therapy in Westerville | Advanced Healing & Relief",
@@ -169,7 +170,7 @@ export default function PrpTherapyPage() {
       <p>
         Located in Westerville, Ohio, Impact Health & Wellness is your
         destination for personalized PRP treatments.{" "}
-        <a href="/contact-us/">Book your consultation</a> today to explore
+        <Link href="/contact-us/">Book your consultation</Link> today to explore
         how PRP therapy can benefit you.
       </p>
 
@@ -246,7 +247,7 @@ export default function PrpTherapyPage() {
         treatment area and the number of sessions required. At Impact
         Health & Wellness, we provide transparent pricing and personalized
         treatment plans to ensure you receive the best care possible.{" "}
-        <a href="/contact-us/">Contact us</a> for more details and to
+        <Link href="/contact-us/">Contact us</Link> for more details and to
         discuss your options.
       </p>
 
@@ -261,7 +262,7 @@ export default function PrpTherapyPage() {
       </p>
       <ul>
         <li>
-          <a href="/regenerative-medicine/">Regenerative Treatments</a>: This
+          <Link href="/regenerative-medicine/">Regenerative Treatments</Link>: This
           approach involves using donor tissue to repair and regenerate
           damaged tissues and organs, offering a promising solution for
           multiple orthopedic and degenerative conditions. It’s an ideal
@@ -269,7 +270,7 @@ export default function PrpTherapyPage() {
           relief and tissue repair.
         </li>
         <li>
-          <a href="/iv-therapy/">IV Infusion Therapies</a>: Delivering
+          <Link href="/iv-therapy/">IV Infusion Therapies</Link>: Delivering
           vitamins, minerals and medications directly into your bloodstream,
           IV infusion therapies can boost energy, enhance immune function
           and support recovery from illness or stress. This treatment is
@@ -277,7 +278,7 @@ export default function PrpTherapyPage() {
           levels and overall vitality.
         </li>
         <li>
-          <a href="/wound-care/">Advanced Wound Care</a>: Utilizing the
+          <Link href="/wound-care/">Advanced Wound Care</Link>: Utilizing the
           latest in wound healing technologies and methodologies, our
           advanced wound care services are designed to promote faster
           healing of chronic wounds, reducing the risk of infection and
@@ -294,7 +295,7 @@ export default function PrpTherapyPage() {
         here to support your journey to improved health and wellness.
         Located conveniently in Westerville, Ohio, we’re easily accessible
         from Columbus, Dublin and Worthington.{" "}
-        <a href="/contact-us/">Book your consultation</a> today and take the
+        <Link href="/contact-us/">Book your consultation</Link> today and take the
         first step towards natural, effective healing.
       </p>
 

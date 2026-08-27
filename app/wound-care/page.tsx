@@ -6,6 +6,7 @@ import { Faq, faqSchema, type FaqItem } from "@/components/page/Faq";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Advanced Wound Care | Specialized Treatment in Westerville",
@@ -344,7 +345,7 @@ export default function WoundCarePage() {
       <ul>
         <li>
           <strong>
-            <a href="/anti-aging-wellness/">Anti-aging & Weight-loss</a>:
+            <Link href="/anti-aging-wellness/">Anti-aging & Weight-loss</Link>:
           </strong>{" "}
           Through a combination of injectable treatments and personalized
           wellness plans, we address both the aesthetic and health-related
@@ -354,7 +355,7 @@ export default function WoundCarePage() {
         </li>
         <li>
           <strong>
-            <a href="/chiropractic-care/">Chiropractic & Rehab</a>:
+            <Link href="/chiropractic-care/">Chiropractic & Rehab</Link>:
           </strong>{" "}
           Utilizing non-invasive techniques, our chiropractic and
           rehabilitation services are designed to alleviate pain, improve
@@ -364,7 +365,7 @@ export default function WoundCarePage() {
         </li>
         <li>
           <strong>
-            <a href="/regenerative-medicine/">Regenerative Medicine</a>:
+            <Link href="/regenerative-medicine/">Regenerative Medicine</Link>:
           </strong>{" "}
           Offering advanced treatments such as stem cell therapy and
           platelet-rich plasma (PRP) injections, regenerative medicine at our
@@ -381,7 +382,7 @@ export default function WoundCarePage() {
         Take the first step towards healing by booking your Wound Care
         consultation at Impact Health & Wellness. Our team is ready to
         support you through your recovery and help you return to a life of
-        health and wellness. <a href="/contact-us/">Contact us</a> today to
+        health and wellness. <Link href="/contact-us/">Contact us</Link> today to
         schedule your appointment and learn more about how we can help you
         heal.
       </p>

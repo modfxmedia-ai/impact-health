@@ -3,6 +3,7 @@ import { PageLayout } from "@/components/page/PageLayout";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Trigger Point Injections & Pain Management in Westerville",
@@ -145,9 +146,9 @@ export default function TriggerPointInjectionsPage() {
       <p>
         Trigger points can result in pain in the surrounding area, muscle
         weakness, and restricted{" "}
-        <a href="/chiropractic-care/">
+        <Link href="/chiropractic-care/">
           spinal movement and flexibility
-        </a>
+        </Link>
         . Our medical providers at Anodyne of Westerville specialize in the
         treatment of this condition through TPI therapy. These injections
         are always performed by a medical provider and only take a matter

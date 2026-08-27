@@ -3,6 +3,7 @@ import { PageLayout } from "@/components/page/PageLayout";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Pregnancy & Infant Chiropractic Care in Westerville, OH",
@@ -149,7 +150,7 @@ export default function PregnancyInfantChiropracticCarePage() {
         subluxations. If subluxations occur in a newborn, there is greater
         chance they will have trouble breast feeding, trouble digesting
         food, and recurring infections.{" "}
-        <a href="/chiropractic-care/">Chiropractic adjustments</a> for
+        <Link href="/chiropractic-care/">Chiropractic adjustments</Link> for
         newborns are very gentle and created specifically to prevent these
         problems and to allow the nervous system to function at its optimal
         level.

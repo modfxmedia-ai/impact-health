@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-posts";
 import { staffMembers } from "@/lib/staff-data";
+import { SITE_URL } from "@/lib/site";
 
-const BASE_URL = "https://impacthealthoh.com";
+const BASE_URL = SITE_URL;
 
 // Real, indexable pages only — mirrors the live site's nav/footer + orphan
 // pages. Excludes the two "-dev" staging duplicates and the unused

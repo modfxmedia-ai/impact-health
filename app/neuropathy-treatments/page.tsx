@@ -204,7 +204,7 @@ export default function NeuropathyTreatmentsPage() {
         your neuropathy. Whether you&rsquo;re dealing with diabetic
         neuropathy, peripheral neuropathy or other nerve-related conditions,
         our team of board-certified and experienced providers is here to
-        help. <a href="/contact-us/">Schedule a consultation</a> today and
+        help. <Link href="/contact-us/">Schedule a consultation</Link> today and
         take the first step towards effective relief and recovery.
       </p>
 
@@ -324,7 +324,7 @@ export default function NeuropathyTreatmentsPage() {
         Wellness, we&rsquo;re dedicated to helping our patients find relief
         and regain control. If you&rsquo;re in Westerville, Columbus,
         Dublin, New Albany, Worthington or anywhere in Central Ohio,{" "}
-        <a href="/contact-us/">contact us</a> today to schedule your
+        <Link href="/contact-us/">contact us</Link> today to schedule your
         neuropathy treatment consultation. Our team is ready to provide you
         with the care and support you need for a better quality of life.
       </p>

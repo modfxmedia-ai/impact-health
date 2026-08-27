@@ -4,6 +4,7 @@ import { BenefitGrid } from "@/components/page/BenefitGrid";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Meal Planning & Nutrition Services in Westerville, OH",
@@ -194,7 +195,7 @@ export default function MealPlanningPage() {
 
       <h2>Getting Started with Your Personalized Meal Plan</h2>
       <p>
-        <a href="/contact-us/">Schedule a consultation</a> with our team to
+        <Link href="/contact-us/">Schedule a consultation</Link> with our team to
         discuss your specific goals and health history. We&rsquo;ll then
         work together to design a customized meal plan that fits your
         lifestyle and preferences.

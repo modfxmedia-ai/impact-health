@@ -4,6 +4,7 @@ import { BenefitGrid } from "@/components/page/BenefitGrid";
 import { ProcessSteps } from "@/components/page/ProcessSteps";
 import { Faq, faqSchema } from "@/components/page/Faq";
 import { RelatedServices } from "@/components/page/RelatedServices";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Medical Infusion Therapy Services in Westerville, OH",
@@ -244,7 +245,7 @@ export default function MedicalInfusionTherapyPage() {
         prescribed an infusion or biologic therapy, our clinical team can
         administer it in a calm, well-equipped setting in Westerville, Ohio
         &mdash; no hospital visit required.{" "}
-        <a href="/contact-us/">Contact us</a> to get started.
+        <Link href="/contact-us/">Contact us</Link> to get started.
       </p>
 
       <h2>What Is Infusion Therapy?</h2>
@@ -266,10 +267,10 @@ export default function MedicalInfusionTherapyPage() {
         gastroenterology, dermatology, ophthalmology, cardiology,
         neurology, hematology, endocrinology, nephrology, and bone health.
         For a full breakdown of specific medications by specialty, see our{" "}
-        <a href="/medical-infusion-therapy-guide/">infusion therapy guide</a>
+        <Link href="/medical-infusion-therapy-guide/">infusion therapy guide</Link>
         . If your provider has already selected a therapy for you, you can
         find the matching order form on our{" "}
-        <a href="/therapies-order-forms/">therapies &amp; order forms</a>{" "}
+        <Link href="/therapies-order-forms/">therapies &amp; order forms</Link>{" "}
         page.
       </p>
 
@@ -333,7 +334,7 @@ export default function MedicalInfusionTherapyPage() {
         coverage, since specialty biologics are priced very differently
         from routine hydration or wellness infusions. Our team can help
         verify your benefits and any prior authorization requirements
-        before your first visit &mdash; <a href="/contact-us/">reach out</a>{" "}
+        before your first visit &mdash; <Link href="/contact-us/">reach out</Link>{" "}
         and we&rsquo;ll walk you through it.
       </p>
 
@@ -343,7 +344,7 @@ export default function MedicalInfusionTherapyPage() {
         infusion therapy, we&rsquo;re glad to help coordinate their care. Send us
         the relevant clinical documentation and our team will follow up
         promptly to confirm therapy, dosing, and scheduling.{" "}
-        <a href="/contact-us/">Contact our office</a> to start a referral.
+        <Link href="/contact-us/">Contact our office</Link> to start a referral.
       </p>
 
       <h2>FAQs</h2>

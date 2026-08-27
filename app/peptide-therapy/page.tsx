@@ -5,6 +5,7 @@ import { Faq, faqSchema } from "@/components/page/Faq";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Peptide Therapy in Westerville | Enhanced Wellness Plans",
@@ -206,10 +207,10 @@ export default function PeptideTherapyPage() {
         amino acids to promote healing, boost energy levels, and improve
         overall health. Whether you&rsquo;re looking to enhance muscle mass,
         support weight loss, or simply{" "}
-        <a href="/anti-aging-wellness/">revitalize your well-being</a>, our
+        <Link href="/anti-aging-wellness/">revitalize your well-being</Link>, our
         peptide therapy offers a path to achieving your health goals.
         Discover the transformative power of peptides and{" "}
-        <a href="/contact-us/">schedule your consultation</a> today.
+        <Link href="/contact-us/">schedule your consultation</Link> today.
       </p>
 
       <h2>What is Peptide Therapy?</h2>
@@ -337,9 +338,9 @@ export default function PeptideTherapyPage() {
       <ul>
         <li>
           <strong>
-            <a href="/hormone-replacement-therapy-hrt/">
+            <Link href="/hormone-replacement-therapy-hrt/">
               Hormone Replacement Therapy (HRT)
-            </a>
+            </Link>
             :
           </strong>{" "}
           An injectable or topical treatment that balances hormonal levels
@@ -350,7 +351,7 @@ export default function PeptideTherapyPage() {
         </li>
         <li>
           <strong>
-            <a href="/anti-aging-wellness/">Dietary Consultations</a>:
+            <Link href="/anti-aging-wellness/">Dietary Consultations</Link>:
           </strong>{" "}
           Personalized nutritional advice aimed at optimizing health through
           diet. These consultations assess your dietary habits and
@@ -360,7 +361,7 @@ export default function PeptideTherapyPage() {
         </li>
         <li>
           <strong>
-            <a href="/iv-therapy/">IV Therapy</a>:
+            <Link href="/iv-therapy/">IV Therapy</Link>:
           </strong>{" "}
           A treatment that delivers vitamins, minerals, and hydration
           directly into the bloodstream. IV Therapy boosts immune function,
@@ -380,7 +381,7 @@ export default function PeptideTherapyPage() {
         health and wellness.
       </p>
       <p>
-        To schedule your consultation, <a href="/contact-us/">contact us</a>{" "}
+        To schedule your consultation, <Link href="/contact-us/">contact us</Link>{" "}
         today. Your path to enhanced well-being begins here.
       </p>
 

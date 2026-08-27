@@ -5,6 +5,7 @@ import { Faq, faqSchema } from "@/components/page/Faq";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Shockwave Therapy in Westerville | Effective Pain Relief",
@@ -167,10 +168,10 @@ export default function ShockwavePage() {
       </p>
       <p>
         Extracorporeal shockwave therapy (ESWT) is a non-invasive treatment
-        that <a href="/regenerative-medicine/">promotes healing</a> and pain
+        that <Link href="/regenerative-medicine/">promotes healing</Link> and pain
         relief without the need for surgery or medication. Discover how
         Shockwave therapy can help you move beyond pain and towards a more
-        active lifestyle by <a href="/contact-us/">scheduling a consultation</a>{" "}
+        active lifestyle by <Link href="/contact-us/">scheduling a consultation</Link>{" "}
         with us today.
       </p>
 
@@ -258,7 +259,7 @@ export default function ShockwavePage() {
         sessions required and the specific condition being treated. At
         Impact Health & Wellness, we strive to provide accessible and
         affordable care to our patients in Westerville and the surrounding
-        areas. We encourage you to <a href="/contact-us/">contact</a> our
+        areas. We encourage you to <Link href="/contact-us/">contact</Link> our
         office to discuss your options and learn of any special offerings
         for new patients.
       </p>
@@ -274,7 +275,7 @@ export default function ShockwavePage() {
       </p>
       <ul>
         <li>
-          <a href="/chiropractic-care/">Chiropractic Care</a>: This
+          <Link href="/chiropractic-care/">Chiropractic Care</Link>: This
           treatment involves spinal adjustments and manipulations to
           alleviate pain, improve alignment and enhance overall physical
           function. It’s an excellent choice for those seeking a natural
@@ -282,21 +283,21 @@ export default function ShockwavePage() {
           issues.
         </li>
         <li>
-          <a href="/prp-therapy/">PRP Therapy</a>: Platelet-Rich Plasma
+          <Link href="/prp-therapy/">PRP Therapy</Link>: Platelet-Rich Plasma
           (PRP) therapy utilizes the healing components of your own blood
           to repair damaged tissues and reduce inflammation. Ideal for
           individuals looking for advanced regenerative treatments to
           accelerate recovery and heal more effectively.
         </li>
         <li>
-          <a href="/ha-gel-injections/">HA Gel Injections</a>: Hyaluronic
+          <Link href="/ha-gel-injections/">HA Gel Injections</Link>: Hyaluronic
           acid gel injections provide lubrication and cushioning to joints
           affected by osteoarthritis, offering pain relief and improved
           mobility. This option is perfect for patients seeking targeted
           solutions for joint pain without resorting to surgery.
         </li>
         <li>
-          <a href="/neuropathy-treatments/">Neuropathy Treatments</a>: Our
+          <Link href="/neuropathy-treatments/">Neuropathy Treatments</Link>: Our
           specialized neuropathy treatments are designed to address the
           root causes of nerve pain and dysfunction, using a combination of
           therapies to restore nerve health and reduce symptoms. Suitable
@@ -311,7 +312,7 @@ export default function ShockwavePage() {
         Wellness, we’re dedicated to helping our patients achieve optimal
         health and wellness through personalized, innovative treatment
         plans. If you’re in Westerville, Columbus, Dublin, Gahanna or
-        Central Ohio, <a href="/contact-us/">contact us</a> to schedule an
+        Central Ohio, <Link href="/contact-us/">contact us</Link> to schedule an
         appointment and take the first step towards a pain-free life.
       </p>
 

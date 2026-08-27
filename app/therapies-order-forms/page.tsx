@@ -4,6 +4,7 @@ import { ProcessSteps } from "@/components/page/ProcessSteps";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { Reveal } from "@/components/motion/Reveal";
 import { orderFormTherapies } from "@/lib/infusion-data";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Therapies & Order Forms | Impact Health & Wellness, OH",
@@ -225,7 +226,7 @@ export default function TherapiesOrderFormsPage() {
         find it in the directory below and download its order form. Once
         it&rsquo;s completed and submitted, our team will follow up to confirm
         scheduling. Don&rsquo;t see your therapy listed, or have questions?{" "}
-        <a href="/contact-us/">Contact our office</a> and we&rsquo;ll help.
+        <Link href="/contact-us/">Contact our office</Link> and we&rsquo;ll help.
       </p>
     </PageLayout>
   );

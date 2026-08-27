@@ -5,6 +5,7 @@ import { Faq, faqSchema } from "@/components/page/Faq";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "HA Gel Injections in Westerville | Improve Your Mobility",
@@ -183,15 +184,15 @@ export default function HaGelInjectionsPage() {
         you’ve been searching for. These injections, also known as
         viscosupplementation, are designed to lubricate your knee joint or
         other affected joint,{" "}
-        <a href="/regenerative-medicine/">improving mobility</a> and
+        <Link href="/regenerative-medicine/">improving mobility</Link> and
         reducing pain.
       </p>
       <p>
         At Impact Health & Wellness, located in the heart of Westerville,
         Ohio, we offer HA gel injections as part of our comprehensive
-        approach to joint health. <a href="/contact-us/">
+        approach to joint health. <Link href="/contact-us/">
           Book a consultation
-        </a>{" "}
+        </Link>{" "}
         today to see if this treatment is right for you.
       </p>
 
@@ -283,7 +284,7 @@ export default function HaGelInjectionsPage() {
       </p>
       <ul>
         <li>
-          <a href="/prp-therapy/">PRP Therapy</a>: Platelet-Rich Plasma (PRP)
+          <Link href="/prp-therapy/">PRP Therapy</Link>: Platelet-Rich Plasma (PRP)
           therapy uses a concentration of your own platelets to promote
           healing of injured tendons, ligaments, muscles and joints. This
           treatment can be a great option if you’re looking for a natural
@@ -291,14 +292,14 @@ export default function HaGelInjectionsPage() {
           pain.
         </li>
         <li>
-          <a href="/regenerative-medicine/">Regenerative Medicine</a>: These
+          <Link href="/regenerative-medicine/">Regenerative Medicine</Link>: These
           innovative treatments regenerate damaged tissues and reduce
           inflammation in the body through the use of structural tissue
           products and tissue allografts. Ideal for non-healing wounds and
           ulcers as well as burns and other acute injuries.
         </li>
         <li>
-          <a href="/shockwave/">Shockwave Therapy</a>: A non-invasive
+          <Link href="/shockwave/">Shockwave Therapy</Link>: A non-invasive
           treatment that uses shock waves to stimulate healing in injured
           musculoskeletal tissues. Shockwave therapy is particularly
           beneficial for those with persistent pain conditions like
@@ -306,7 +307,7 @@ export default function HaGelInjectionsPage() {
           way to relieve pain and enhance tissue repair.
         </li>
         <li>
-          <a href="/laser-therapy/">Laser Therapy</a>: Low-level laser
+          <Link href="/laser-therapy/">Laser Therapy</Link>: Low-level laser
           therapy uses concentrated light to reduce inflammation, promote
           tissue healing, and alleviate pain. This treatment can be
           beneficial for various conditions, including arthritis, muscle
@@ -325,7 +326,7 @@ export default function HaGelInjectionsPage() {
         At Impact Health & Wellness, we’re dedicated to improving your
         quality of life through innovative and personalized care. If you’re
         in Westerville, Ohio and suffering from knee pain,{" "}
-        <a href="/contact-us/">book your consultation</a> today to explore
+        <Link href="/contact-us/">book your consultation</Link> today to explore
         how HA gel injections could benefit you.
       </p>
 

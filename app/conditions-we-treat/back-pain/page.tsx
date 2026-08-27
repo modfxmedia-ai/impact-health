@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageLayout } from "@/components/page/PageLayout";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Back Pain Treatment Chiropractor in Westerville, OH",
@@ -128,18 +129,18 @@ export default function BackPainPage() {
         Back pain can lead to discomfort in the arms and legs as well as the
         hands and feet. A few symptoms of back pain include numbness or
         weakness in the legs and arms. Treatments for this condition include:{" "}
-        <a href="/chiropractic-care/">Chiropractic Care</a>,{" "}
-        <a href="/chiropractic-care/spinal-decompression/">
+        <Link href="/chiropractic-care/">Chiropractic Care</Link>,{" "}
+        <Link href="/chiropractic-care/spinal-decompression/">
           Spinal Decompression
-        </a>
+        </Link>
         , Pain Management,{" "}
-        <a href="/chiropractic-care/physical-therapy/">
+        <Link href="/chiropractic-care/physical-therapy/">
           Physical Therapy and Rehabilitation
-        </a>
+        </Link>
         , and{" "}
-        <a href="/chiropractic-care/trigger-point-injections/">
+        <Link href="/chiropractic-care/trigger-point-injections/">
           Trigger Point Injections
-        </a>
+        </Link>
         .
       </p>
 

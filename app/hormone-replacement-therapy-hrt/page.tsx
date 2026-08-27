@@ -220,7 +220,7 @@ export default function HormoneReplacementTherapyPage() {
       <p>
         With our personalized approach, we aim to restore your hormone
         balance and enhance your overall wellness. Contact us today to{" "}
-        <a href="/contact-us/">book your consultation</a> and begin on a
+        <Link href="/contact-us/">book your consultation</Link> and begin on a
         journey to rejuvenate your health.
       </p>
 
@@ -368,7 +368,7 @@ export default function HormoneReplacementTherapyPage() {
       <ul>
         <li>
           <strong>
-            <a href="/peptide-therapy/">Peptides</a>:
+            <Link href="/peptide-therapy/">Peptides</Link>:
           </strong>{" "}
           Injectable treatments that use short chains of amino acids to
           signal and stimulate cellular regeneration and processes.
@@ -378,7 +378,7 @@ export default function HormoneReplacementTherapyPage() {
         </li>
         <li>
           <strong>
-            <a href="/anti-aging-wellness/">Dietary Consultations</a>:
+            <Link href="/anti-aging-wellness/">Dietary Consultations</Link>:
           </strong>{" "}
           Personalized nutritional planning aimed at optimizing your
           health. These consultations address dietary needs, manage
@@ -387,7 +387,7 @@ export default function HormoneReplacementTherapyPage() {
         </li>
         <li>
           <strong>
-            <a href="/iv-therapy/">IV Therapy</a>:
+            <Link href="/iv-therapy/">IV Therapy</Link>:
           </strong>{" "}
           A method of delivering vitamins, minerals, and antioxidants
           directly into the bloodstream. IV Therapy can enhance immune
@@ -406,7 +406,7 @@ export default function HormoneReplacementTherapyPage() {
         Our clinic, conveniently located in Westerville, Ohio, offers a
         serene and supportive environment for you to discuss your health
         concerns and treatment options.{" "}
-        <a href="/contact-us/">Schedule your consultation</a> today and
+        <Link href="/contact-us/">Schedule your consultation</Link> today and
         discover how we can help you achieve hormonal balance and improve
         your quality of life.
       </p>

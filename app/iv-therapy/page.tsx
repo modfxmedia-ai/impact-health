@@ -5,6 +5,7 @@ import { Faq, faqSchema } from "@/components/page/Faq";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "IV Therapy in Westerville | Boost Your Health & Wellness",
@@ -188,13 +189,13 @@ export default function IvTherapyPage() {
       <p>
         IV Therapy at Impact Health &amp; Wellness in Westerville, Ohio,
         offers an optimal solution to rejuvenate, hydrate, and{" "}
-        <a href="/anti-aging-wellness/">boost your overall health</a>{" "}
+        <Link href="/anti-aging-wellness/">boost your overall health</Link>{" "}
         efficiently. Tailored to address various health concerns and
         wellness goals, our IV Therapy delivers essential vitamins,
         minerals, and hydration directly into your bloodstream, ensuring
         maximum absorption and immediate benefits. Discover the power of
         personalized IV treatments designed to enhance your well-being. Get
-        in touch to <a href="/contact-us/">book your consultation</a> now.
+        in touch to <Link href="/contact-us/">book your consultation</Link> now.
       </p>
 
       <h2>What is IV Therapy?</h2>
@@ -261,7 +262,7 @@ export default function IvTherapyPage() {
       <h2>Different Types of Vitamin Boosters</h2>
       <p>
         At Impact Health &amp; Wellness in Westerville, Ohio, we offer a{" "}
-        <a href="/iv-therapy-infusion-boosters/">variety of vitamin boosters</a>{" "}
+        <Link href="/iv-therapy-infusion-boosters/">variety of vitamin boosters</Link>{" "}
         as part of our IV Therapy treatments, designed to cater to the
         unique needs and health goals of our patients. Vitamin boosters are
         concentrated doses of essential vitamins and nutrients that can be
@@ -299,9 +300,9 @@ export default function IvTherapyPage() {
       <ul>
         <li>
           <strong>
-            <a href="/hormone-replacement-therapy-hrt/">
+            <Link href="/hormone-replacement-therapy-hrt/">
               Hormone Replacement Therapy (HRT)
-            </a>
+            </Link>
             :
           </strong>{" "}
           A treatment involving the administration of bioidentical or
@@ -312,7 +313,7 @@ export default function IvTherapyPage() {
         </li>
         <li>
           <strong>
-            <a href="/peptide-therapy/">Peptide Therapy</a>:
+            <Link href="/peptide-therapy/">Peptide Therapy</Link>:
           </strong>{" "}
           Utilizes injectable amino acid sequences to signal various
           biological processes, supporting healing, muscle growth, weight
@@ -334,7 +335,7 @@ export default function IvTherapyPage() {
         Elevate your health and wellness with personalized IV Therapy at
         Impact Health &amp; Wellness. Located in Westerville, Ohio,
         we&rsquo;re here to support your journey to optimal well-being with
-        targeted IV treatments. <a href="/contact-us/">Schedule your consultation</a> today
+        targeted IV treatments. <Link href="/contact-us/">Schedule your consultation</Link> today
         and take the first step towards a healthier, more vibrant you.
       </p>
 

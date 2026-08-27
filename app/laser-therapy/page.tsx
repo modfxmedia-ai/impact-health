@@ -6,6 +6,7 @@ import { Faq, faqSchema } from "@/components/page/Faq";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Laser Therapy in Westerville | Non-Invasive Pain Relief",
@@ -188,9 +189,9 @@ export default function LaserTherapyPage() {
       <p>
         Discover the healing power of light with Class IV laser therapy at
         Impact Health & Wellness, your premier destination for advanced pain
-        management and <a href="/regenerative-medicine/">
+        management and <Link href="/regenerative-medicine/">
           healing technologies
-        </a>{" "}
+        </Link>{" "}
         in Westerville, Ohio. The Summus Horizon medical laser is an
         innovative, non-invasive treatment that offers a drug-free solution
         to pain relief and healing.
@@ -198,7 +199,7 @@ export default function LaserTherapyPage() {
       <p>
         Whether you’re dealing with chronic pain, neuropathy or looking for
         post-surgery recovery options, laser therapy might be the answer
-        you’ve been searching for. <a href="/contact-us/">Contact us</a>{" "}
+        you’ve been searching for. <Link href="/contact-us/">Contact us</Link>{" "}
         today to schedule a consultation and explore how laser therapy can
         help you achieve a better quality of life.
       </p>
@@ -333,21 +334,21 @@ export default function LaserTherapyPage() {
       </p>
       <ul>
         <li>
-          <a href="/chiropractic-care/">Chiropractic Care</a>: A
+          <Link href="/chiropractic-care/">Chiropractic Care</Link>: A
           non-invasive approach focusing on the manipulation of the spine
           and other parts of the body to alleviate pain, improve alignment
           and enhance overall physical function, particularly useful for
           back pain, neck pain and headaches.
         </li>
         <li>
-          <a href="/neuropathy-treatments/">Neuropathy Treatments</a>: These
+          <Link href="/neuropathy-treatments/">Neuropathy Treatments</Link>: These
           treatments target nerve damage, using a combination of therapies
           to reduce pain, restore function and promote nerve health. Ideal
           for patients with diabetic neuropathy or other nerve-related
           conditions.
         </li>
         <li>
-          <a href="/shockwave/">Shockwave Therapy</a>: A non-invasive
+          <Link href="/shockwave/">Shockwave Therapy</Link>: A non-invasive
           treatment that employs acoustic waves to stimulate healing in
           injured tissues, reduce pain and enhance blood circulation,
           making it effective for a variety of musculoskeletal conditions.
@@ -361,7 +362,7 @@ export default function LaserTherapyPage() {
         is ready to support you through your healing journey with
         personalized care and advanced treatments. If you’re in
         Westerville, Columbus or the surrounding Central Ohio area,{" "}
-        <a href="/contact-us/">contact us</a> today to schedule your
+        <Link href="/contact-us/">contact us</Link> today to schedule your
         consultation and discover the power of laser therapy.
       </p>
 
