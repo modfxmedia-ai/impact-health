@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import { SiteHeader } from "@/components/site-header/SiteHeader";
 import { CtaBanner } from "@/components/site-footer/CtaBanner";
 import { SiteFooter } from "@/components/site-footer/SiteFooter";
@@ -53,6 +54,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       {/* suppressHydrationWarning: browser extensions (e.g. ColorZilla) inject attributes like cz-shortcut-listen onto <body> before hydration */}
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-X7PD7NQWJF"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-X7PD7NQWJF');
+          `}
+        </Script>
         <SiteHeader />
         {children}
         <CtaBanner />
