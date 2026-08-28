@@ -2,6 +2,15 @@ import type { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/blog-posts";
 import { staffMembers } from "@/lib/staff-data";
 import { SITE_URL } from "@/lib/site";
+import {
+  AREAS_WE_SERVE_ENABLED,
+  AREAS_WE_SERVE_PILOT_MODE,
+  PILOT_COMBOS,
+  PILOT_LOCATION_SLUGS,
+  shouldNoindexArea,
+} from "@/lib/areas-we-serve/config";
+import { areaLocations } from "@/lib/areas-we-serve/locations";
+import { areaTopics } from "@/lib/areas-we-serve/topics";
 
 const BASE_URL = SITE_URL;
 
@@ -75,5 +84,40 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  return [...staticEntries, ...blogEntries, ...staffEntries];
+  // Areas We Serve is feature-flagged (see lib/areas-we-serve/config.ts) —
+  // omitted from the sitemap entirely until the flag is enabled. While the
+  // pilot is running, only the pilot batch's locations/combos are included;
+  // home-base (noindex) combos are always excluded, since noindexed pages
+  // shouldn't be submitted for indexing.
+  const areasWeServeEntries: MetadataRoute.Sitemap = AREAS_WE_SERVE_ENABLED
+    ? AREAS_WE_SERVE_PILOT_MODE
+      ? [
+          { url: `${BASE_URL}/areas-we-serve/`, lastModified: new Date() },
+          ...PILOT_LOCATION_SLUGS.map((slug) => ({
+            url: `${BASE_URL}/areas-we-serve/${slug}/`,
+            lastModified: new Date(),
+          })),
+          ...PILOT_COMBOS.map(({ location, topic }) => ({
+            url: `${BASE_URL}/areas-we-serve/${location}/${topic}/`,
+            lastModified: new Date(),
+          })),
+        ]
+      : [
+          { url: `${BASE_URL}/areas-we-serve/`, lastModified: new Date() },
+          ...areaLocations.map((location) => ({
+            url: `${BASE_URL}/areas-we-serve/${location.slug}/`,
+            lastModified: new Date(),
+          })),
+          ...areaLocations.flatMap((location) =>
+            areaTopics
+              .filter(() => !shouldNoindexArea(location))
+              .map((topic) => ({
+                url: `${BASE_URL}/areas-we-serve/${location.slug}/${topic.slug}/`,
+                lastModified: new Date(),
+              })),
+          ),
+        ]
+    : [];
+
+  return [...staticEntries, ...blogEntries, ...staffEntries, ...areasWeServeEntries];
 }

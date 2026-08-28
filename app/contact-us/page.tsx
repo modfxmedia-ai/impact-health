@@ -4,6 +4,7 @@ import { PageLayout } from "@/components/page/PageLayout";
 import { Reveal } from "@/components/motion/Reveal";
 import { MapOfficeHours } from "@/components/home/MapOfficeHours";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
+import { AreaServedNote } from "@/components/page/AreaServedNote";
 import { PhoneIcon, MailIcon } from "@/components/site-header/icons";
 import { contactInfo } from "@/lib/nav-data";
 
@@ -190,6 +191,8 @@ export default function ContactUsPage() {
           <MapOfficeHours />
 
           <ServicesOverview />
+
+          <AreaServedNote />
 
           <Script
             src="https://link.msgsndr.com/js/form_embed.js"

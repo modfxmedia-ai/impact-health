@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageLayout } from "@/components/page/PageLayout";
 import { BenefitGrid } from "@/components/page/BenefitGrid";
 import { RelatedServices } from "@/components/page/RelatedServices";
+import { AreaServedNote } from "@/components/page/AreaServedNote";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { CalorieMacroCalculator } from "@/components/page/CalorieMacroCalculator";
 import { getRelatedServices } from "@/lib/nav-data";
@@ -137,6 +138,7 @@ export default function AntiAgingWellnessPage() {
         <>
           <RelatedServices items={getRelatedServices("/anti-aging-wellness/")} />
           <ServicesOverview />
+          <AreaServedNote />
         </>
       }
     >

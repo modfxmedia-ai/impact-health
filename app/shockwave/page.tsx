@@ -3,6 +3,7 @@ import { PageLayout } from "@/components/page/PageLayout";
 import { ProcessSteps } from "@/components/page/ProcessSteps";
 import { Faq, faqSchema } from "@/components/page/Faq";
 import { RelatedServices } from "@/components/page/RelatedServices";
+import { AreaServedNote } from "@/components/page/AreaServedNote";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
 import Link from "next/link";
@@ -158,6 +159,7 @@ export default function ShockwavePage() {
         <>
           <RelatedServices items={getRelatedServices("/shockwave/")} />
           <ServicesOverview />
+          <AreaServedNote />
         </>
       }
     >

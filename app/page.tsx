@@ -7,6 +7,7 @@ import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { Conditions } from "@/components/home/Conditions";
 import { Testimonials } from "@/components/home/Testimonials";
 import { MapOfficeHours } from "@/components/home/MapOfficeHours";
+import { ServiceArea } from "@/components/home/ServiceArea";
 
 export const metadata: Metadata = {
   title: "Care Clinic | Health & Wellness Services in Westerville, OH",
@@ -105,6 +106,7 @@ export default function Home() {
         <ServicesGrid />
         <ServicesOverview />
         <Conditions />
+        <ServiceArea />
         <Testimonials />
         <BlogPreview />
         <MapOfficeHours />

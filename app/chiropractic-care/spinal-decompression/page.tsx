@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageLayout } from "@/components/page/PageLayout";
 import { RelatedServices } from "@/components/page/RelatedServices";
+import { AreaServedNote } from "@/components/page/AreaServedNote";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
 import Link from "next/link";
@@ -132,6 +133,7 @@ export default function SpinalDecompressionPage() {
             )}
           />
           <ServicesOverview />
+          <AreaServedNote />
         </>
       }
     >

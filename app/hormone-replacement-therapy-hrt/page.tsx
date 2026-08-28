@@ -5,6 +5,7 @@ import { BenefitGrid } from "@/components/page/BenefitGrid";
 import { ProcessSteps } from "@/components/page/ProcessSteps";
 import { Faq, faqSchema } from "@/components/page/Faq";
 import { RelatedServices } from "@/components/page/RelatedServices";
+import { AreaServedNote } from "@/components/page/AreaServedNote";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { getRelatedServices } from "@/lib/nav-data";
 
@@ -206,6 +207,7 @@ export default function HormoneReplacementTherapyPage() {
             items={getRelatedServices("/hormone-replacement-therapy-hrt/")}
           />
           <ServicesOverview />
+          <AreaServedNote />
         </>
       }
     >

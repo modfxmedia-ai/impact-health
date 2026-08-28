@@ -9,6 +9,7 @@ import {
   PhoneIcon,
 } from "@/components/site-header/icons";
 import { contactInfo, socialLinks } from "@/lib/nav-data";
+import { AREAS_WE_SERVE_ENABLED } from "@/lib/areas-we-serve/config";
 
 const socialIcons = {
   Facebook: FacebookIcon,
@@ -22,9 +23,14 @@ const exploreLinks = [
   { label: "Conditions We Treat", href: "/conditions-we-treat/" },
   { label: "Blog", href: "/blog/" },
   { label: "FAQ", href: "/faq/" },
+  // Exactly one link to the Areas We Serve hub — never link individual
+  // location pages from the footer, that creates a spam-pattern link farm.
+  ...(AREAS_WE_SERVE_ENABLED
+    ? [{ label: "Areas We Serve", href: "/areas-we-serve/" }]
+    : []),
   { label: "Privacy Policy", href: "/privacy-policy/" },
   { label: "Terms of Use", href: "/terms-of-use/" },
-  { label: "Sitemap", href: "/sitemap.xml" },
+  { label: "Sitemap", href: "/sitemap/" },
   { label: "Contact Us", href: "/contact-us/" },
 ];
 
