@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { blogPosts } from "@/lib/blog-posts";
+import { getPublishedBlogPosts } from "@/lib/ranked/posts";
 import { staffMembers } from "@/lib/staff-data";
 import { SITE_URL } from "@/lib/site";
 import {
@@ -68,15 +68,16 @@ const staticPaths = [
   "/medical-infusion-therapy-guide/",
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticEntries: MetadataRoute.Sitemap = staticPaths.map((path) => ({
     url: `${BASE_URL}${path}`,
     lastModified: new Date(),
   }));
 
-  const blogEntries: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+  const publishedPosts = await getPublishedBlogPosts().catch(() => []);
+  const blogEntries: MetadataRoute.Sitemap = publishedPosts.map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}/`,
-    lastModified: new Date(),
+    lastModified: new Date(post.publishDate),
   }));
 
   const staffEntries: MetadataRoute.Sitemap = staffMembers.map((member) => ({

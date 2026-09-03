@@ -1,11 +1,16 @@
-import Image from "next/image";
 import Link from "next/link";
-import { blogPosts } from "@/lib/blog-posts";
+import { getPublishedBlogPosts } from "@/lib/ranked/posts";
+import { BlogCoverImage } from "@/components/blog/BlogCoverImage";
 import { Reveal } from "@/components/motion/Reveal";
 import { SectionHeading } from "@/components/home/SectionHeading";
 
-export function BlogPreview() {
-  const [lead, ...rest] = blogPosts.slice(0, 3);
+export async function BlogPreview() {
+  const posts = await getPublishedBlogPosts();
+  const sorted = [...posts].sort(
+    (a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime(),
+  );
+  const [lead, ...rest] = sorted.slice(0, 3);
+  if (!lead) return null;
 
   return (
     <section className="bg-gradient-to-b from-white to-zinc-50">
@@ -25,13 +30,11 @@ export function BlogPreview() {
               href={`/blog/${lead.slug}/`}
               className="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-zinc-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              {lead.image ? (
+              {lead.coverImage ? (
                 <div className="relative aspect-[3/2] w-full overflow-hidden">
-                  <Image
-                    src={lead.image}
-                    alt={lead.title}
-                    fill
-                    quality={90}
+                  <BlogCoverImage
+                    src={lead.coverImage}
+                    alt={lead.coverAlt}
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 560px"
                   />
@@ -42,7 +45,7 @@ export function BlogPreview() {
                   {lead.title}
                 </h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-zinc-600">
-                  {lead.description}
+                  {lead.metaDescription}
                 </p>
                 <span className="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold tracking-wide text-brand-teal uppercase">
                   Read Article
@@ -61,13 +64,11 @@ export function BlogPreview() {
                   href={`/blog/${post.slug}/`}
                   className="group flex h-full gap-5 overflow-hidden rounded-2xl bg-white p-4 shadow-sm ring-1 ring-zinc-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                 >
-                  {post.image ? (
+                  {post.coverImage ? (
                     <div className="relative aspect-square w-28 shrink-0 overflow-hidden rounded-xl sm:w-40">
-                      <Image
-                        src={post.image}
-                        alt={post.title}
-                        fill
-                        quality={90}
+                      <BlogCoverImage
+                        src={post.coverImage}
+                        alt={post.coverAlt}
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                         sizes="(max-width: 640px) 112px, 160px"
                       />
@@ -78,7 +79,7 @@ export function BlogPreview() {
                       {post.title}
                     </h3>
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-600 line-clamp-3">
-                      {post.description}
+                      {post.metaDescription}
                     </p>
                     <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold tracking-wide text-brand-teal uppercase">
                       Read Article

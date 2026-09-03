@@ -8,6 +8,21 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     qualities: [75, 90],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "*.public.blob.vercel-storage.com",
+      },
+      {
+        protocol: "https",
+        hostname: "*.googleusercontent.com",
+      },
+    ],
+  },
+  // Keep cron under the 250MB serverless limit — never trace public/ into
+  // api/cron/publish-posts. Covers live in Vercel Blob, not fs.readFile.
+  outputFileTracingExcludes: {
+    "*": ["./public/images/**", "./public/**/*.mp4", "./public/**/*.webm"],
   },
 };
 

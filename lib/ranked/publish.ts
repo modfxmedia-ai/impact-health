@@ -1,0 +1,29 @@
+import { listRankedContent } from "./client";
+import { getRankedCoverImage } from "./cover";
+import { isBlogContentType, isRankedPostLive, slugFromTitle } from "./html-to-post";
+
+export async function generateLiveRankedCovers(projectId: string): Promise<string[]> {
+  const items = await listRankedContent(projectId);
+  const slugs: string[] = [];
+
+  for (const item of items) {
+    if (
+      !isBlogContentType(item.content_type) ||
+      !isRankedPostLive(item.status, item.scheduled_date)
+    ) {
+      continue;
+    }
+
+    const slug = slugFromTitle(item.title);
+    await getRankedCoverImage({
+      contentId: item.id,
+      title: item.title,
+      slug,
+      generate: true,
+      featuredImage: item.featured_image_url,
+    });
+    slugs.push(slug);
+  }
+
+  return slugs;
+}

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Reveal } from "@/components/motion/Reveal";
+import { BlogCoverImage } from "@/components/blog/BlogCoverImage";
 import { Breadcrumbs, type Crumb } from "@/components/page/Breadcrumbs";
 
 export interface PageHeroImage {
@@ -72,10 +72,9 @@ export function PageHero({
           {image ? (
             <Reveal delay={0.2}>
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl shadow-xl shadow-brand-navy/10 ring-1 ring-white/60">
-                <Image
+                <BlogCoverImage
                   src={image.src}
                   alt={image.alt}
-                  fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 560px"
                   priority

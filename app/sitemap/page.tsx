@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageLayout } from "@/components/page/PageLayout";
-import { blogPosts } from "@/lib/blog-posts";
+import { getPublishedBlogPosts } from "@/lib/ranked/posts";
 import { staffMembers } from "@/lib/staff-data";
 import {
   AREAS_WE_SERVE_ENABLED,
@@ -102,7 +102,8 @@ function LinkGrid({ items }: { items: { label: string; href: string }[] }) {
   );
 }
 
-export default function SitemapPage() {
+export default async function SitemapPage() {
+  const publishedPosts = await getPublishedBlogPosts().catch(() => []);
   const visibleAreaLocations = AREAS_WE_SERVE_ENABLED
     ? areaLocations.filter(
         (location) => !AREAS_WE_SERVE_PILOT_MODE || isPilotLocation(location.slug),
@@ -141,7 +142,7 @@ export default function SitemapPage() {
 
       <h2>Blog</h2>
       <LinkGrid
-        items={blogPosts.map((post) => ({
+        items={publishedPosts.map((post) => ({
           label: post.title,
           href: `/blog/${post.slug}/`,
         }))}

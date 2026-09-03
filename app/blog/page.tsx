@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { blogPosts, formatBlogDate } from "@/lib/blog-posts";
+import { formatBlogDate } from "@/lib/blog-posts";
+import { getPublishedBlogPosts } from "@/lib/ranked/posts";
+import { BlogCoverImage } from "@/components/blog/BlogCoverImage";
 import { PageLayout } from "@/components/page/PageLayout";
 import { Reveal } from "@/components/motion/Reveal";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Blog | Health & Wellness Tips from Impact Health & Wellness",
@@ -12,8 +15,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/blog/" },
 };
 
-// No live /blog/ archive exists on the source site (it 404s), so this index — and
-// its schema below — is an original addition rather than a ported/preserved page.
 const schema = [
   {
     "@type": "CollectionPage",
@@ -89,7 +90,12 @@ const schema = [
   },
 ];
 
-export default function BlogIndexPage() {
+export default async function BlogIndexPage() {
+  const posts = await getPublishedBlogPosts();
+  const sorted = [...posts].sort(
+    (a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime(),
+  );
+
   return (
     <PageLayout
       title="Blog"
@@ -101,7 +107,7 @@ export default function BlogIndexPage() {
         <section className="bg-white">
           <div className="mx-auto max-w-6xl px-6 pb-20">
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {blogPosts.map((post, i) => (
+              {sorted.map((post, i) => (
                 <Reveal
                   key={post.slug}
                   delay={(i % 3) * 0.08}
@@ -112,27 +118,25 @@ export default function BlogIndexPage() {
                     className="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-zinc-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                   >
                     <div className="relative aspect-[3/2] w-full overflow-hidden">
-                      <Image
-                        src={post.image}
-                        alt={post.imageAlt}
-                        fill
-                        quality={90}
+                      <BlogCoverImage
+                        src={post.coverImage}
+                        alt={post.coverAlt}
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
                       />
                     </div>
                     <div className="flex flex-1 flex-col p-6">
                       <time
-                        dateTime={post.date}
+                        dateTime={post.publishDate}
                         className="text-xs font-semibold tracking-wide text-brand-teal uppercase"
                       >
-                        {formatBlogDate(post.date)}
+                        {formatBlogDate(post.publishDate)}
                       </time>
                       <h2 className="mt-2 text-lg font-bold text-brand-navy">
                         {post.title}
                       </h2>
                       <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-600 line-clamp-3">
-                        {post.description}
+                        {post.metaDescription}
                       </p>
                       <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold tracking-wide text-brand-teal uppercase">
                         Read Article
