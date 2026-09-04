@@ -7,9 +7,13 @@ function decodeEntities(text: string): string {
     .replace(/&amp;/gi, "&")
     .replace(/&lt;/gi, "<")
     .replace(/&gt;/gi, ">")
-    .replace(/&quot;/gi, '"')
+    .replace(/&quot;|&ldquo;|&rdquo;/gi, '"')
+    .replace(/&lsquo;|&rsquo;/gi, "'")
+    .replace(/&mdash;|&ndash;/gi, "—")
+    .replace(/&hellip;/gi, "…")
     .replace(/&#39;/g, "'")
     .replace(/&#x27;/gi, "'")
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCharCode(parseInt(h, 16)))
     .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)))
     .replace(/\s+/g, " ")
     .trim();
@@ -137,15 +141,18 @@ export function htmlToBlogPost(input: {
       input.title;
   }
 
+  const cleanIntro = decodeEntities(intro);
+  const cleanDescription = decodeEntities(input.description || "");
+
   return {
     slug: input.slug,
     title: input.title,
-    metaDescription: metaFromPlain(input.description || intro, input.title),
+    metaDescription: metaFromPlain(cleanDescription || cleanIntro, input.title),
     h1: input.title,
     publishDate: input.publishDate,
     coverImage: input.coverImage || DEFAULT_COVER,
     coverAlt: input.coverImage ? input.title : DEFAULT_COVER_ALT,
-    intro,
+    intro: cleanIntro,
     sections: usable,
     cta: DEFAULT_CTA,
   };
@@ -179,4 +186,56 @@ export function publishDateFromRanked(
 ): string {
   if (scheduledDate) return scheduledDate.slice(0, 10);
   return fallback.slice(0, 10);
+}
+
+export function todayInNewYork(now = new Date()): string {
+  return now.toLocaleDateString("en-CA", { timeZone: "America/New_York" });
+}
+
+export function addIsoDays(isoDate: string, days: number): string {
+  const [year, month, day] = isoDate.slice(0, 10).split("-").map(Number);
+  const next = new Date(Date.UTC(year, month - 1, day + days));
+  return next.toISOString().slice(0, 10);
+}
+
+export function nextUniquePublishDate(
+  preferred: string,
+  occupied: Set<string>,
+  today = todayInNewYork(),
+): string {
+  let date = preferred.slice(0, 10);
+  if (!occupied.has(date)) return date;
+
+  let forward = date;
+  while (forward < today) {
+    forward = addIsoDays(forward, 1);
+    if (!occupied.has(forward) && forward <= today) return forward;
+  }
+
+  let back = preferred.slice(0, 10);
+  while (occupied.has(back)) back = addIsoDays(back, -1);
+  return back;
+}
+
+/** No two posts share a publishDate. Keep original dates when they are free. */
+export function ensureUniquePublishDates<
+  T extends { slug: string; publishDate: string },
+>(posts: T[], today = todayInNewYork()): T[] {
+  const occupied = new Set<string>();
+  const sorted = [...posts].sort(
+    (a, b) =>
+      a.publishDate.localeCompare(b.publishDate) || a.slug.localeCompare(b.slug),
+  );
+  const remapped = new Map<string, string>();
+  for (const post of sorted) {
+    const unique = nextUniquePublishDate(post.publishDate, occupied, today);
+    occupied.add(unique);
+    remapped.set(post.slug, unique);
+  }
+  return posts.map((post) => {
+    const date = remapped.get(post.slug);
+    return date && date !== post.publishDate
+      ? { ...post, publishDate: date }
+      : post;
+  });
 }

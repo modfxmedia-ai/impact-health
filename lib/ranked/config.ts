@@ -18,9 +18,12 @@ export function coverPrompt(title: string): string {
   return [
     "Editorial photograph, 16:9 landscape, premium wellness clinic photography.",
     `Theme inspired by: ${title.slice(0, 120)}.`,
+    "Match the article subject: chiropractic, physical therapy, joint care, neuropathy, migraine, or regenerative wellness as implied by the title.",
+    "Real clinic scene — treatment table, clinician hands, spine or joint model, stretching, or a calm exam room.",
     "Calm modern medical wellness setting, soft natural light, clean and reassuring.",
     "Cinematic lighting, sharp, no grain, no watermark.",
     "No text, no letters, no logos, no captions, no readable signage.",
+    "No robots, no laptops as the subject, no futuristic AI imagery, no office meetings.",
     "No patient faces, no medical procedures, no gore.",
   ].join(" ");
 }
@@ -33,42 +36,4 @@ export const COMMITTED_COVER_SLUGS: readonly string[] = [];
 
 export function isRemoteImageSrc(src: string): boolean {
   return /^https?:\/\//i.test(src);
-}
-
-/**
- * Topic → existing committed blog photos. URL map only — do not fs.stat public/.
- * Used when Ranked has no featured image, Blob, or OpenAI cover.
- */
-const TOPIC_COVERS: { test: RegExp; src: string }[] = [
-  {
-    test: /neuropath/i,
-    src: "/images/blog/innovations-in-neuropathy-treatments.jpg",
-  },
-  {
-    test: /shockwave|sports injur|laser/i,
-    src: "/images/blog/unveiling-the-wonders-of-laser-therapy-at-impact-health-wellness.webp",
-  },
-  {
-    test: /hip|knee|joint|arthritis|regenerative|stem cell/i,
-    src: "/images/blog/umbilical-cord-stem-cell-injections.jpg",
-  },
-  {
-    test: /neck|back|sciatica|spinal|chiropract/i,
-    src: "/images/blog/innovations-in-neuropathy-treatments.jpg",
-  },
-  {
-    test: /migraine|headache/i,
-    src: "/images/blog/hormone-therapy-for-menopause.jpg",
-  },
-  {
-    test: /physical therapy|\bpt\b/i,
-    src: "/images/blog/strength-training-by-age.webp",
-  },
-];
-
-export function topicCover(title: string): string {
-  for (const row of TOPIC_COVERS) {
-    if (row.test.test(title)) return row.src;
-  }
-  return DEFAULT_COVER;
 }

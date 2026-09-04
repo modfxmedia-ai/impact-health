@@ -73,7 +73,7 @@ export async function listRankedContent(
   const items: RankedContentListItem[] = [];
   const pageSize = Math.min(limit, 50);
 
-  for (let offset = 0; offset < 200; offset += pageSize) {
+  for (let offset = 0; offset < 1000; offset += pageSize) {
     const json = await rankedGet<RankedListResponse>(
       `/projects/${id}/content?limit=${pageSize}&offset=${offset}`,
     );

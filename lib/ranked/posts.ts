@@ -3,9 +3,10 @@ import {
   isRankedConfigured,
   listRankedContent,
 } from "./client";
-import { getRankedCoverImage } from "./cover";
+import { ensureUniqueCoverImages, getRankedCoverImage } from "./cover";
 import { fetchGoogleDocHtml } from "./google-doc";
 import {
+  ensureUniquePublishDates,
   htmlToBlogPost,
   isBlogContentType,
   isRankedPostLive,
@@ -71,14 +72,21 @@ export async function getLiveRankedBlogPosts(
 
   try {
     const items = await listRankedContent(id);
-    const candidates = items.filter(
-      (item) =>
-        isBlogContentType(item.content_type) &&
-        isRankedPostLive(item.status, item.scheduled_date),
-    );
+    const candidates = items
+      .filter(
+        (item) =>
+          isBlogContentType(item.content_type) &&
+          isRankedPostLive(item.status, item.scheduled_date),
+      )
+      .sort((a, b) => {
+        const da = publishDateFromRanked(a.scheduled_date, a.created_at);
+        const db = publishDateFromRanked(b.scheduled_date, b.created_at);
+        return db.localeCompare(da) || a.title.localeCompare(b.title);
+      });
 
     const local = getLocalBlogPosts();
     const taken = new Set(local.map((p) => p.slug));
+    const reservedCovers = new Set(local.map((p) => p.coverImage));
 
     const resolved = await Promise.all(
       candidates.map(async (item) => {
@@ -125,6 +133,7 @@ export async function getLiveRankedBlogPosts(
         slug,
         generate:
           Boolean(opts.generateCovers) || opts.generateForSlug === slug,
+        reservedUrls: reservedCovers,
       });
       post.coverAlt = `${source.title} cover`;
       post.relatedPosts = relatedFromLocal(slug);
@@ -132,7 +141,7 @@ export async function getLiveRankedBlogPosts(
       taken.add(slug);
     }
 
-    return posts;
+    return ensureUniquePublishDates(ensureUniqueCoverImages(posts));
   } catch (err) {
     console.error("[ranked] failed to load content calendar", err);
     return [];
@@ -151,16 +160,16 @@ export async function getLiveRankedBlogPost(
 export async function getPublishedBlogPost(
   slug: string,
 ): Promise<BlogPostData | undefined> {
-  const local = getLocalBlogPosts().find((p) => p.slug === slug);
-  if (local) return local;
-  return getLiveRankedBlogPost(slug);
+  const posts = await getPublishedBlogPosts();
+  return posts.find((p) => p.slug === slug);
 }
 
 export async function getPublishedBlogPosts(): Promise<BlogPostData[]> {
   const local = getLocalBlogPosts();
   const ranked = await getLiveRankedBlogPosts();
   const taken = new Set(local.map((p) => p.slug));
-  return [...local, ...ranked.filter((p) => !taken.has(p.slug))];
+  const merged = [...local, ...ranked.filter((p) => !taken.has(p.slug))];
+  return ensureUniquePublishDates(ensureUniqueCoverImages(merged));
 }
 
 export async function getPublishedBlogSlugs(): Promise<string[]> {

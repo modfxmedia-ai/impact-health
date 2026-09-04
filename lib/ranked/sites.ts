@@ -15,8 +15,25 @@ export const RANKED_SITES: RankedSiteTarget[] = [
   },
 ].filter((s) => s.projectId);
 
+function sitesFromEnv(): RankedSiteTarget[] {
+  const raw = process.env.RANKED_SITE_MAP;
+  if (!raw) return [];
+  try {
+    const parsed = JSON.parse(raw) as RankedSiteTarget[];
+    if (!Array.isArray(parsed)) return [];
+    return parsed.filter((row) => row?.projectId && row?.origin);
+  } catch {
+    console.error("[ranked] RANKED_SITE_MAP is not valid JSON");
+    return [];
+  }
+}
+
 export function getRankedSiteTargets(): RankedSiteTarget[] {
-  return RANKED_SITES;
+  const merged = new Map<string, RankedSiteTarget>();
+  for (const site of [...RANKED_SITES, ...sitesFromEnv()]) {
+    merged.set(site.projectId, site);
+  }
+  return [...merged.values()];
 }
 
 export function isLocalOrigin(origin: string): boolean {

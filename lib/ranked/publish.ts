@@ -12,6 +12,7 @@ export async function generateLiveRankedCovers(
 ): Promise<string[]> {
   const items = await listRankedContent(projectId);
   const slugs: string[] = [];
+  const reservedUrls = new Set<string>();
 
   for (const item of items) {
     if (
@@ -27,6 +28,7 @@ export async function generateLiveRankedCovers(
       title: item.title,
       slug,
       generate: true,
+      reservedUrls,
     });
     slugs.push(slug);
   }

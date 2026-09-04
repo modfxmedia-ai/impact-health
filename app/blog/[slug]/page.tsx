@@ -59,6 +59,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const local = blogPosts.find((p) => p.slug === slug);
+  const post = await getPublishedBlogPost(slug);
   if (local) {
     return {
       title: local.title,
@@ -68,14 +69,13 @@ export async function generateMetadata({
         title: local.title,
         description: local.description,
         type: "article",
-        publishedTime: local.date,
+        publishedTime: post?.publishDate ?? local.date,
         modifiedTime: local.dateModified,
-        images: [{ url: local.image }],
+        images: [{ url: post?.coverImage ?? local.image }],
       },
     };
   }
 
-  const post = await getPublishedBlogPost(slug);
   if (!post) return {};
   return {
     title: post.title,
@@ -99,28 +99,32 @@ export default async function BlogPostPage({
   const { slug } = await params;
   const local = blogPosts.find((p) => p.slug === slug);
   const compiled = contentBySlug[slug];
+  const published = await getPublishedBlogPost(slug);
 
   if (local && compiled) {
     const schema = blogPostSchemas[slug];
+    const date = published?.publishDate ?? local.date;
+    const cover = published?.coverImage ?? local.image;
+    const coverAlt = published?.coverAlt ?? local.imageAlt;
     return (
       <PageLayout
         title={local.title}
         eyebrow="Blog"
         intro={local.description}
-        image={{ src: local.image, alt: local.imageAlt }}
+        image={{ src: cover, alt: coverAlt }}
         breadcrumbs={[{ label: "Blog", href: "/blog/" }, { label: local.title }]}
         schema={schema}
         afterContent={<ServicesOverview />}
       >
         <p className="!mt-0 text-sm font-semibold tracking-wide text-brand-teal uppercase">
-          {formatBlogDate(local.date)} &middot; Impact Health &amp; Wellness Team
+          {formatBlogDate(date)} &middot; Impact Health &amp; Wellness Team
         </p>
         {compiled}
       </PageLayout>
     );
   }
 
-  const post = await getPublishedBlogPost(slug);
+  const post = published;
   if (!post || post.sections.length === 0) notFound();
 
   return (
