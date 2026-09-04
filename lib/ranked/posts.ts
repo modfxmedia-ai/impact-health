@@ -12,6 +12,7 @@ import {
   isRankedPostLive,
   publishDateFromRanked,
   slugFromTitle,
+  spreadRankedPublishDates,
 } from "./html-to-post";
 import { getLocalBlogPosts } from "./local-posts";
 import type {
@@ -141,7 +142,9 @@ export async function getLiveRankedBlogPosts(
       taken.add(slug);
     }
 
-    return ensureUniquePublishDates(ensureUniqueCoverImages(posts));
+    return ensureUniquePublishDates(
+      spreadRankedPublishDates(ensureUniqueCoverImages(posts)),
+    );
   } catch (err) {
     console.error("[ranked] failed to load content calendar", err);
     return [];
