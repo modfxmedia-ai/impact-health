@@ -45,7 +45,7 @@ export const areaTopics: AreaTopic[] = [
     category: "service",
     href: "/ha-gel-injections/",
     tagline:
-      "Experience lasting relief with HA Gel Injections — a targeted treatment for joint pain that lubricates and cushions the joint to restore movement and comfort.",
+      "Experience lasting relief with HA Gel Injections, a targeted treatment for joint pain that lubricates and cushions the joint to restore movement and comfort.",
     faq: {
       question: "How many HA gel injections will I need?",
       answer:
@@ -64,7 +64,7 @@ export const areaTopics: AreaTopic[] = [
     faq: {
       question: "Is PRP therapy safe?",
       answer:
-        "Yes — PRP uses a concentration of platelets drawn from your own blood, so there is no risk of an allergic reaction to a foreign substance.",
+        "Yes, PRP uses a concentration of platelets drawn from your own blood, so there is no risk of an allergic reaction to a foreign substance.",
     },
     relatedSlug: "sports-injuries",
   },
@@ -74,7 +74,7 @@ export const areaTopics: AreaTopic[] = [
     category: "service",
     href: "/shockwave/",
     tagline:
-      "Embrace the future of healing with Shockwave Therapy — a non-surgical treatment that accelerates recovery, reduces pain, and improves mobility.",
+      "Embrace the future of healing with Shockwave Therapy, a non-surgical treatment that accelerates recovery, reduces pain, and improves mobility.",
     faq: {
       question: "Does shockwave therapy hurt?",
       answer:
@@ -106,7 +106,7 @@ export const areaTopics: AreaTopic[] = [
     faq: {
       question: "Can neuropathy treatments help with diabetic neuropathy?",
       answer:
-        "Yes — our neuropathy treatments are designed to improve blood flow and nerve function, which can help ease symptoms tied to diabetic neuropathy and other nerve conditions.",
+        "Yes, our neuropathy treatments are designed to improve blood flow and nerve function, which can help ease symptoms tied to diabetic neuropathy and other nerve conditions.",
     },
     relatedSlug: "foot-ankle-pain",
   },
@@ -116,7 +116,7 @@ export const areaTopics: AreaTopic[] = [
     category: "service",
     href: "/anti-aging-wellness/",
     tagline:
-      "Transform your life with our Anti-Aging & Weight Loss programs — tailored strategies to rejuvenate your body and achieve lasting wellness.",
+      "Transform your life with our Anti-Aging & Weight Loss programs, tailored strategies to rejuvenate your body and achieve lasting wellness.",
     faq: {
       question: "What does an anti-aging and weight loss program include?",
       answer:
@@ -134,23 +134,9 @@ export const areaTopics: AreaTopic[] = [
     faq: {
       question: "Who is a good candidate for HRT?",
       answer:
-        "Men and women experiencing symptoms of hormonal imbalance — like low energy, mood changes, or weight gain — may benefit from a hormone evaluation to see if HRT is appropriate.",
+        "Men and women experiencing symptoms of hormonal imbalance, like low energy, mood changes, or weight gain, may benefit from a hormone evaluation to see if HRT is appropriate.",
     },
     relatedSlug: "anti-aging-wellness",
-  },
-  {
-    slug: "wound-care",
-    name: "Wound Care",
-    category: "service",
-    href: "/wound-care/",
-    tagline:
-      "Discover expert wound care solutions tailored to your needs for effective healing, innovative treatments, and dedicated patient support.",
-    faq: {
-      question: "Do you offer mobile or at-home wound care?",
-      answer:
-        "Yes — for patients who have difficulty traveling, our wound care team can provide at-home visits in addition to in-office treatment.",
-    },
-    relatedSlug: "regenerative-medicine",
   },
   {
     slug: "iv-therapy",
@@ -201,11 +187,11 @@ export const areaTopics: AreaTopic[] = [
     category: "service",
     href: "/chiropractic-care/spinal-decompression/",
     tagline:
-      "Rediscover comfort and mobility through our state-of-the-art Spinal Decompression therapy — a gentle, non-surgical path back to wellness.",
+      "Rediscover comfort and mobility through our state-of-the-art Spinal Decompression therapy, a gentle, non-surgical path back to wellness.",
     faq: {
       question: "Is spinal decompression therapy painful?",
       answer:
-        "No — spinal decompression is a gentle, non-surgical stretching therapy designed to relieve pressure on the spine, and most patients find it comfortable and relaxing.",
+        "No, spinal decompression is a gentle, non-surgical stretching therapy designed to relieve pressure on the spine, and most patients find it comfortable and relaxing.",
     },
     relatedSlug: "back-pain",
   },
@@ -229,7 +215,7 @@ export const areaTopics: AreaTopic[] = [
     category: "condition",
     href: "/conditions-we-treat/carpal-tunnel/",
     tagline:
-      "Understand Carpal Tunnel Syndrome — the causes, symptoms, and discomfort associated with this common condition affecting the hands.",
+      "Understand Carpal Tunnel Syndrome, the causes, symptoms, and discomfort associated with this common condition affecting the hands.",
     faq: {
       question: "Can carpal tunnel be treated without surgery?",
       answer:
@@ -243,11 +229,11 @@ export const areaTopics: AreaTopic[] = [
     category: "condition",
     href: "/conditions-we-treat/chronic-pain/",
     tagline:
-      "Discover personalized care for chronic pain conditions like fibromyalgia and sciatica — relief is possible.",
+      "Discover personalized care for chronic pain conditions like fibromyalgia and sciatica, relief is possible.",
     faq: {
       question: "What causes chronic pain?",
       answer:
-        "Chronic pain can stem from conditions like fibromyalgia, past injuries, or nerve dysfunction — our team looks for the underlying cause rather than just masking symptoms.",
+        "Chronic pain can stem from conditions like fibromyalgia, past injuries, or nerve dysfunction; our team looks for the underlying cause rather than just masking symptoms.",
     },
     relatedSlug: "regenerative-medicine",
   },
@@ -261,7 +247,7 @@ export const areaTopics: AreaTopic[] = [
     faq: {
       question: "What are common causes of foot and ankle pain?",
       answer:
-        "Foot and ankle pain is often linked to overuse, prior injury, or nerve issues like neuropathy — treatment starts with identifying the specific cause.",
+        "Foot and ankle pain is often linked to overuse, prior injury, or nerve issues like neuropathy; treatment starts with identifying the specific cause.",
     },
     relatedSlug: "shockwave",
   },
@@ -275,7 +261,7 @@ export const areaTopics: AreaTopic[] = [
     faq: {
       question: "Is hip pain always related to arthritis?",
       answer:
-        "Not always — hip pain can also stem from muscle imbalances, prior injury, or joint irritation, so an evaluation helps determine the right treatment path.",
+        "Not always: hip pain can also stem from muscle imbalances, prior injury, or joint irritation, so an evaluation helps determine the right treatment path.",
     },
     relatedSlug: "ha-gel-injections",
   },
@@ -311,7 +297,7 @@ export const areaTopics: AreaTopic[] = [
     category: "condition",
     href: "/conditions-we-treat/neck-pain/",
     tagline:
-      "Uncover the complexity of neck pain — its origins, treatments, and long-term management strategies for improved quality of life.",
+      "Uncover the complexity of neck pain, its origins, treatments, and long-term management strategies for improved quality of life.",
     faq: {
       question: "What typically causes neck pain?",
       answer:
@@ -325,7 +311,7 @@ export const areaTopics: AreaTopic[] = [
     category: "condition",
     href: "/conditions-we-treat/osteoarthritis/",
     tagline:
-      "Explore comprehensive insights into osteoarthritis — from its origins and symptoms to innovative treatments aimed at addressing its root causes.",
+      "Explore comprehensive insights into osteoarthritis, from its origins and symptoms to innovative treatments aimed at addressing its root causes.",
     faq: {
       question: "What treatment options are available for osteoarthritis?",
       answer:
@@ -345,6 +331,20 @@ export const areaTopics: AreaTopic[] = [
         "Recovery timelines vary by injury and treatment plan, but many patients return to activity faster with a targeted rehab and recovery program.",
     },
     relatedSlug: "prp-therapy",
+  },
+  {
+    slug: "shoulder-pain",
+    name: "Shoulder Pain",
+    category: "condition",
+    href: "/conditions-we-treat/shoulder-pain/",
+    tagline:
+      "Understand the common causes of shoulder pain and explore non-surgical treatment options designed to restore movement and relieve discomfort.",
+    faq: {
+      question: "Do I need surgery for shoulder pain?",
+      answer:
+        "Many patients improve with non-surgical options such as chiropractic care, physical therapy, and regenerative medicine before surgery is considered.",
+    },
+    relatedSlug: "shockwave",
   },
   {
     slug: "whiplash",
@@ -370,7 +370,7 @@ export const areaTopics: AreaTopic[] = [
     faq: {
       question: "Do you work directly with personal injury attorneys?",
       answer:
-        "Yes — our team is experienced in coordinating care and documentation for patients working with a personal injury attorney.",
+        "Yes, our team is experienced in coordinating care and documentation for patients working with a personal injury attorney.",
     },
     relatedSlug: "chiropractic-care",
   },
@@ -384,7 +384,7 @@ export const areaTopics: AreaTopic[] = [
     faq: {
       question: "What should I do after a car accident even if I feel fine?",
       answer:
-        "Some injuries, like whiplash or soft tissue damage, don't show symptoms right away — an evaluation soon after the accident helps catch issues early.",
+        "Some injuries, like whiplash or soft tissue damage, don't show symptoms right away; an evaluation soon after the accident helps catch issues early.",
     },
     relatedSlug: "whiplash",
   },
@@ -398,7 +398,7 @@ export const areaTopics: AreaTopic[] = [
     faq: {
       question: "Do you accept workers' compensation claims?",
       answer:
-        "Yes — our team works with workers' compensation cases to help you get the treatment and documentation you need for your claim.",
+        "Yes, our team works with workers' compensation cases to help you get the treatment and documentation you need for your claim.",
     },
     relatedSlug: "back-pain",
   },

@@ -29,7 +29,7 @@ export async function generateMetadata({
   const title = `Care for ${location.name}, OH Patients | Impact Health & Wellness`;
   const description = location.isHomeBase
     ? `Impact Health & Wellness is located in ${location.name}, OH, offering chiropractic care, regenerative medicine, and more.`
-    : `Impact Health & Wellness in Westerville, OH welcomes patients from ${location.name} — about a ${location.driveTimeMinutes}-minute drive. Explore our services and conditions we treat.`;
+    : `Impact Health & Wellness in Westerville, OH welcomes patients from ${location.name}, about a ${location.driveTimeMinutes}-minute drive. Explore our services and conditions we treat.`;
 
   return {
     title,
@@ -98,7 +98,7 @@ export default async function AreaLocationPage({
       intro={
         location.isHomeBase
           ? `${location.blurb} Our office is located right here in ${location.name}.`
-          : `${location.blurb} Patients from ${location.name} travel to our Westerville office — about a ${location.driveTimeMinutes}-minute drive — for the services and conditions below.`
+          : `${location.blurb} Patients from ${location.name} travel to our Westerville office, about a ${location.driveTimeMinutes}-minute drive, for the services and conditions below.`
       }
       breadcrumbs={[
         { label: "Areas We Serve", href: "/areas-we-serve/" },

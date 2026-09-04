@@ -85,7 +85,7 @@ export function SiteFooter() {
       <div className="relative mx-auto max-w-6xl px-6 py-12 sm:py-16">
         <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-x-10 lg:gap-y-0">
           <div className="lg:col-span-4">
-            <Link href="/" aria-label="Impact Health & Wellness — home">
+            <Link href="/" aria-label="Impact Health & Wellness home">
               <Image
                 src="/images/impact-logo-white.png"
                 alt="Impact Health & Wellness"

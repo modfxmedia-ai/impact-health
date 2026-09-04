@@ -19,7 +19,6 @@ const popularPages = [
     label: "Hormone Replacement Therapy",
     href: "/hormone-replacement-therapy-hrt/",
   },
-  { label: "Wound Care", href: "/wound-care/" },
   { label: "Conditions We Treat", href: "/conditions-we-treat/" },
   { label: "Contact Us", href: "/contact-us/" },
 ];

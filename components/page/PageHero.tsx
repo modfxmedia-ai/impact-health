@@ -1,10 +1,16 @@
 import { Reveal } from "@/components/motion/Reveal";
 import { BlogCoverImage } from "@/components/blog/BlogCoverImage";
 import { Breadcrumbs, type Crumb } from "@/components/page/Breadcrumbs";
+import { CtaButton } from "@/components/ui/CtaButton";
 
 export interface PageHeroImage {
   src: string;
   alt: string;
+}
+
+export interface PageHeroCta {
+  label: string;
+  href: string;
 }
 
 export interface PageHeroProps {
@@ -13,6 +19,7 @@ export interface PageHeroProps {
   intro?: string;
   breadcrumbs: Crumb[];
   image?: PageHeroImage;
+  cta?: PageHeroCta;
 }
 
 export function PageHero({
@@ -21,6 +28,7 @@ export function PageHero({
   intro,
   breadcrumbs,
   image,
+  cta,
 }: PageHeroProps) {
   const hasImage = Boolean(image);
 
@@ -65,6 +73,13 @@ export function PageHero({
                 <p className="mt-5 max-w-2xl text-base leading-relaxed text-zinc-600 sm:text-lg">
                   {intro}
                 </p>
+              </Reveal>
+            ) : null}
+            {cta ? (
+              <Reveal delay={0.2}>
+                <CtaButton href={cta.href} variant="navy" className="mt-8">
+                  {cta.label}
+                </CtaButton>
               </Reveal>
             ) : null}
           </div>

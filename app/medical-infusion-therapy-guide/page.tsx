@@ -115,7 +115,7 @@ export default function MedicalInfusionTherapyGuidePage() {
       eyebrow="Infusions"
       intro="A specialty-by-specialty reference for the infusion and biologic therapies available at Impact Health & Wellness."
       breadcrumbs={[
-        { label: "Medical Infusion Therapies", href: "/medical-infusion-therapy/" },
+        { label: "Infusions" },
         { label: "Medical Infusion Therapy Guide" },
       ]}
       schema={schema}
@@ -238,10 +238,6 @@ export default function MedicalInfusionTherapyGuidePage() {
           <RelatedServices
             heading="Explore More"
             items={[
-              {
-                label: "Medical Infusion Therapy",
-                href: "/medical-infusion-therapy/",
-              },
               {
                 label: "Therapies & Order Forms",
                 href: "/therapies-order-forms/",

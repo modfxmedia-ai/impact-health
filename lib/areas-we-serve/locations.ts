@@ -131,7 +131,7 @@ export const areaLocations: AreaLocation[] = [
     driveTimeMinutes: 27,
     driveDistanceMiles: 11.2,
     blurb:
-      "Seat of the Big Walnut Local School District, near Hoover Reservoir and Alum Creek State Park — also serving nearby Galena.",
+      "Seat of the Big Walnut Local School District, near Hoover Reservoir and Alum Creek State Park, also serving nearby Galena.",
     nearby: ["lewis-center", "powell", "johnstown"],
   },
   {

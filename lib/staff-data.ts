@@ -73,21 +73,6 @@ export const staffMembers: StaffMember[] = [
     ],
   },
   {
-    slug: "melinda-everman-moore",
-    name: "Melinda Everman-Moore",
-    role: "Nurse Practitioner",
-    blurb: "Certified Nurse Practitioner",
-    image: "/images/staff/melinda-everman-moore.jpg",
-    pageTitle: "Melinda Everman-Moore - Impact Health & Wellness - Westerville, OH",
-    metaDescription: "Certified Nurse Practitioner",
-    bio: [
-      "Melinda is an Adult-Gerontology Nurse Practitioner and Functional Medicine & Medical Weight Management Specialist at Impact Health & Wellness.",
-      "She holds a PhD in Exercise Science and Health Promotion and is a certified nutrition counselor. With a background in group exercise instruction, Melinda is certified in Strong Nation, Zumba, and Zumba Toning, allowing her to integrate movement and wellness into her patient care approach. Her passion for medical weight management and functional medicine drives her commitment to optimizing health and well-being through a holistic approach.",
-      "Melinda has over eight years of experience in home health and is a Certified Palliative and Hospice Provider. She has also completed an advanced wound certification course and is preparing to become a Board-Certified Wound Care Provider. In addition to her expertise in functional medicine, she specializes in regenerative and aesthetic treatments, including platelet-rich plasma (PRP) therapy, joint injections, Botox, laser hair removal, microneedling, and laser facial resurfacing.",
-      "Outside of work, Melinda enjoys spending time with her 18-year-old twin boys, staying active with weight training, tackling home improvement projects, and gardening. She is dedicated to empowering patients through innovative, personalized treatments that enhance both longevity and quality of life.",
-    ],
-  },
-  {
     slug: "eve-ciacciarelli-pt",
     name: "Dr. Eve Ciacciarelli, DPT",
     role: "Physical Therapist",
@@ -100,20 +85,6 @@ export const staffMembers: StaffMember[] = [
       "Dr. Eve Ciacciarelli, our physical therapist, is highly skilled, compassionate, and committed to delivering exceptional care to patients of all ages and conditions.",
       "She specializes in designing personalized treatment plans that address the unique needs of each patient, focusing on techniques that promote healing, improve mobility, and enhance overall quality of life. Utilizing her background in outpatient and inpatient settings, Eve works to not only treat your musculoskeletal (i.e., injuries, pain, post surgical etc.) and neurological (i.e., stroke, TBI, etc.) conditions, but also to help you understand how those conditions developed in the first place.",
       "Eve graduated summa cum laude from The Richard Stockton University in Atlantic City, NJ. After becoming interested in the field of Physical Therapy while volunteering at a hippotherapy (physical therapy involving humans and horses) program. She believes in treating the entire individual and loves being a part of a multidisciplinary team. At Impact Health & Wellness, we are dedicated to helping you regain your strength, improve your mobility, and relieve your pain through personalized and evidence-based physical therapy services. Rehab therapy treatment interventions include various manual soft tissue techniques and joint mobilizations, corrective exercises and home programs, functional movement training, and patient education are all part of our integrated approach to help you feel and function at your best.",
-    ],
-  },
-  {
-    slug: "tara-allen",
-    name: "Tara Allen",
-    role: "Business Development Director",
-    blurb: "Business Development Director",
-    image: "/images/staff/tara-allen.jpg",
-    pageTitle: "Tara Allen at Impact Health & Wellness",
-    metaDescription:
-      "Tara Allen at Impact Health & Wellness: Experienced Speech Language Pathologist and Business Development Director. Learn more about her healthcare expertise.",
-    bio: [
-      "Meet Tara Allen. Tara is the Business Development Director for Impact Health & Wellness.",
-      "She is a licensed Speech Language Pathologist and has over 18 years of experience in the healthcare field. Tara received her Bachelors of Education from The University of Toledo and her Masters of Fine Arts from The University of Akron. She specialized with the geriatric population and dementia training along with being a Director of Rehabilitation for 14 years in a subacute care facility. Tara lives in Lewis Center with her husband Nick and their three children Zach, Alexis, and Jacob. She enjoys spending time watching her children play sports, being outdoors, and spending time with family and friends. Tara has a passion for helping others improve their health and wellness through rehabilitation.",
     ],
   },
   {
@@ -130,6 +101,24 @@ export const staffMembers: StaffMember[] = [
       "Kim has worked as a billing specialist and office manager for some of the most sought chiropractic and neurological offices in the Columbus area. In her experience, she has gained insight into a whole new world of holistic medical care to coincide with her surgical knowledge.",
       "Kim helps facilitate positive experiences and builds relationships that help create overall patient satisfaction and experiences.",
       "Kim has been married to her wonderful husband for 23 years, she has 3 adult children and a dog named Layla. In her spare time, she enjoys shopping, traveling, and just have a good old time hanging out with family and friends looking forward to the future.",
+    ],
+  },
+  {
+    slug: "morgan-steiskal-fnp-c",
+    name: "Morgan Steiskal, FNP-C",
+    role: "Nurse Practitioner",
+    blurb: "Internal Medicine & Weight Loss Specialist",
+    // Placeholder headshot — real photo coming soon.
+    image: "/images/staff/placeholder-headshot.jpg",
+    pageTitle: "Morgan Steiskal, FNP-C: Internal Medicine in Westerville, OH",
+    metaDescription:
+      "Meet Morgan Steiskal, FNP-C at Impact Health & Wellness in Westerville, OH. Experience expert care in internal medicine, weight loss, and hormone therapy. Book your visit!",
+    bio: [
+      "Meet Morgan Steiskal. Morgan is a board-certified family nurse practitioner for Impact Health & Wellness.",
+      "Morgan graduated from Chamberlain College of Nursing in 2019 with a master's degree in nursing and focus on family medicine.",
+      "Morgan has been an RN since 2008 and spent Dr. Steiskal's life studying medicine in various aspects. Morgan has extensive experience in hospital medicine, emergency medicine and family medicine.",
+      "Morgan focuses on holistic approaches to disease management and implementing a plan of care the patients can work with. Morgan has spent 26 years in healthcare focusing on patients with different medical needs and backgrounds expanding from weight loss, diabetes control, reduction in cholesterol, neurological conditions, mental health and more.",
+      "At Impact Morgan is an integral provider of internal medicine, weight loss, hormone replacement therapy, IV infusions and more.",
     ],
   },
   {

@@ -15,7 +15,7 @@ import { areaTopics } from "@/lib/areas-we-serve/topics";
 export const metadata: Metadata = {
   title: "Sitemap | Impact Health & Wellness in Westerville, OH",
   description:
-    "Browse every page on the Impact Health & Wellness website, organized by category — services, conditions we treat, our team, blog, and more.",
+    "Browse every page on the Impact Health & Wellness website, organized by category: services, conditions we treat, our team, blog, and more.",
   alternates: { canonical: "/sitemap/" },
 };
 
@@ -45,10 +45,8 @@ const servicePages = [
   { label: "IV Therapy & Infusion Boosters", href: "/iv-therapy-infusion-boosters/" },
   { label: "Peptide Therapy", href: "/peptide-therapy/" },
   { label: "Hormone Replacement Therapy (HRT)", href: "/hormone-replacement-therapy-hrt/" },
-  { label: "Medical Infusion Therapy", href: "/medical-infusion-therapy/" },
   { label: "Medical Infusion Therapy Guide", href: "/medical-infusion-therapy-guide/" },
   { label: "Therapies Order Forms", href: "/therapies-order-forms/" },
-  { label: "Wound Care", href: "/wound-care/" },
   { label: "School Sports Physicals", href: "/school-sports-physicals/" },
 ];
 
@@ -75,6 +73,7 @@ const conditionPages = [
   { label: "Migraines & Headaches", href: "/conditions-we-treat/migraines-and-headaches/" },
   { label: "Neck Pain", href: "/conditions-we-treat/neck-pain/" },
   { label: "Osteoarthritis", href: "/conditions-we-treat/osteoarthritis/" },
+  { label: "Shoulder Pain", href: "/conditions-we-treat/shoulder-pain/" },
   { label: "Sports Injuries", href: "/conditions-we-treat/sports-injuries/" },
   { label: "Whiplash", href: "/conditions-we-treat/whiplash/" },
 ];

@@ -47,8 +47,8 @@ export default function AreasWeServePage() {
       eyebrow="Areas We Serve"
       intro={
         AREAS_WE_SERVE_PILOT_MODE
-          ? "Impact Health & Wellness is located at 193 W. Schrock Road in Westerville, OH — patients travel from across Central Ohio to see us. We're rolling out area pages gradually; find your area below, and check back soon if you don't see it yet."
-          : "Impact Health & Wellness is located at 193 W. Schrock Road in Westerville, OH — patients travel from across Central Ohio to see us. Find your area below for drive times and the care we offer."
+          ? "Impact Health & Wellness is located at 193 W. Schrock Road in Westerville, OH, patients travel from across Central Ohio to see us. We're rolling out area pages gradually; find your area below, and check back soon if you don't see it yet."
+          : "Impact Health & Wellness is located at 193 W. Schrock Road in Westerville, OH, patients travel from across Central Ohio to see us. Find your area below for drive times and the care we offer."
       }
       breadcrumbs={[{ label: "Areas We Serve" }]}
       schema={schema}

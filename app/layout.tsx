@@ -71,6 +71,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <CtaBanner />
         <SiteFooter />
         <QuickAccessBar />
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6a997d56ba70a028e78623fb"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

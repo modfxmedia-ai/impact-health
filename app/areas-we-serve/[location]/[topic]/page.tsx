@@ -88,7 +88,7 @@ export default async function AreaTopicPage({
           <RelatedServices items={relatedLinks} heading="Explore More" />
           <BookAppointmentCta
             title={`Ready to get started with ${topicMention(topic)}?`}
-            description={`Book an appointment at our Westerville office — a convenient drive from ${location.name} — and take the next step toward relief and recovery.`}
+            description={`Book an appointment at our Westerville office, a convenient drive from ${location.name}, and take the next step toward relief and recovery.`}
           />
         </>
       }

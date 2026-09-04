@@ -92,7 +92,6 @@ export const primaryNav: NavItem[] = [
             label: "Physical Therapy",
             href: "/chiropractic-care/physical-therapy/",
           },
-          { label: "Wound Care", href: "/wound-care/" },
           { label: "Work Related Injuries", href: "/workers-compensation/" },
           { label: "Auto Related Injuries", href: "/car-accident-injuries/" },
           { label: "Personal Injuries", href: "/personal-injuries/" },
@@ -100,17 +99,6 @@ export const primaryNav: NavItem[] = [
             label: "School & Sports Physicals",
             href: "/school-sports-physicals/",
           },
-        ],
-      },
-    ],
-  },
-  {
-    label: "Infusions",
-    href: "/medical-infusion-therapy/",
-    columns: [
-      {
-        links: [
-          { label: "Therapies & Order Forms", href: "/therapies-order-forms/" },
         ],
       },
     ],
@@ -148,11 +136,14 @@ export const primaryNav: NavItem[] = [
             href: "/conditions-we-treat/osteoarthritis/",
           },
           {
+            label: "Shoulder Pain",
+            href: "/conditions-we-treat/shoulder-pain/",
+          },
+          {
             label: "Sports Injuries",
             href: "/conditions-we-treat/sports-injuries/",
           },
           { label: "Whiplash", href: "/conditions-we-treat/whiplash/" },
-          { label: "Wounds", href: "/wound-care/" },
         ],
       },
     ],

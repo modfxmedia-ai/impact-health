@@ -6,7 +6,7 @@ import { ServicesOverview } from "@/components/home/ServicesOverview";
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | Impact Health & Wellness",
   description:
-    "Find answers to frequently asked questions about Impact Health & Wellness in Westerville, OH — our services, insurance, and appointments.",
+    "Find answers to frequently asked questions about Impact Health & Wellness in Westerville, OH, our services, insurance, and appointments.",
   alternates: { canonical: "/faq/" },
 };
 
@@ -62,7 +62,7 @@ const schema = [
     name: "Frequently Asked Questions | Impact Health & Wellness",
     isPartOf: { "@id": "https://impacthealthoh.com/#website" },
     description:
-      "Find answers to frequently asked questions about Impact Health & Wellness in Westerville, OH — our services, insurance, and appointments.",
+      "Find answers to frequently asked questions about Impact Health & Wellness in Westerville, OH, our services, insurance, and appointments.",
     breadcrumb: { "@id": "https://impacthealthoh.com/faq/#breadcrumb" },
     inLanguage: "en-US",
     potentialAction: [

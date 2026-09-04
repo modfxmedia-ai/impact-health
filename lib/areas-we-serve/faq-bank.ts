@@ -14,31 +14,31 @@ const LOGISTIC_FAQ_TEMPLATES: Array<(location: AreaLocation, topic: AreaTopic) =
     question: `Do you have an office in ${location.name}?`,
     answer:
       location.isHomeBase
-        ? `Yes — our only office is right here in Westerville at 193 W. Schrock Road.`
-        : `No — our only location is at 193 W. Schrock Road in Westerville, OH. Patients from ${location.name} regularly make the roughly ${location.driveTimeMinutes}-minute drive to our Westerville office.`,
+        ? `Yes, our only office is right here in Westerville at 193 W. Schrock Road.`
+        : `No, our only location is at 193 W. Schrock Road in Westerville, OH. Patients from ${location.name} regularly make the roughly ${location.driveTimeMinutes}-minute drive to our Westerville office.`,
   }),
   (location) => ({
     question: `Do you accept insurance for patients coming from ${location.name}?`,
     answer:
-      "Yes — we accept a range of insurance plans regardless of where you live. Visit our Accepted Insurance page or contact us to confirm your specific plan before your visit.",
+      "Yes, we accept a range of insurance plans regardless of where you live. Visit our Accepted Insurance page or contact us to confirm your specific plan before your visit.",
   }),
   (location, topic) => ({
     question: `What should I expect at my first visit for ${topicMention(topic)}?`,
-    answer: `Your first visit includes a review of your health history and goals related to ${topicMention(topic)}, followed by a personalized treatment plan — there's no need to make a separate trip from ${location.name} just for a consultation.`,
+    answer: `Your first visit includes a review of your health history and goals related to ${topicMention(topic)}, followed by a personalized treatment plan, so there's no need to make a separate trip from ${location.name} just for a consultation.`,
   }),
   (location) => ({
     question: `Is there parking available for patients traveling from ${location.name}?`,
-    answer: `Yes — our Westerville office has on-site patient parking, so there's no added hassle after your drive in from ${location.name}.`,
+    answer: `Yes, our Westerville office has on-site patient parking, so there's no added hassle after your drive in from ${location.name}.`,
   }),
   (location, topic) => ({
     question: `Can I schedule ${topicMention(topic)} appointments around a commute from ${location.name}?`,
-    answer: `Yes — we offer flexible scheduling and can help you find appointment times that work with your commute from ${location.name}.`,
+    answer: `Yes, we offer flexible scheduling and can help you find appointment times that work with your commute from ${location.name}.`,
   }),
   (location) => ({
     question: `How do I get to your office from ${location.name}?`,
     answer: location.isHomeBase
-      ? `Our office is right in Westerville at 193 W. Schrock Road — our team can share exact directions when you book.`
-      : `Most patients from ${location.name} reach our Westerville office in about ${location.driveTimeMinutes} minutes via the local major roads — our team can share exact directions when you book.`,
+      ? `Our office is right in Westerville at 193 W. Schrock Road, and our team can share exact directions when you book.`
+      : `Most patients from ${location.name} reach our Westerville office in about ${location.driveTimeMinutes} minutes via the local major roads, and our team can share exact directions when you book.`,
   }),
 ];
 

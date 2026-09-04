@@ -24,6 +24,16 @@ const nextConfig: NextConfig = {
   outputFileTracingExcludes: {
     "*": ["./public/images/**", "./public/**/*.mp4", "./public/**/*.webm"],
   },
+  // These pages/profiles were removed from the site at the client's
+  // request; permanently redirect their old URLs to the homepage.
+  async redirects() {
+    return [
+      { source: "/wound-care/", destination: "/", permanent: true },
+      { source: "/medical-infusion-therapy/", destination: "/", permanent: true },
+      { source: "/staff/melinda-everman-moore/", destination: "/", permanent: true },
+      { source: "/staff/tara-allen/", destination: "/", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

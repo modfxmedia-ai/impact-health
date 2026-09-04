@@ -26,7 +26,7 @@ export function ServiceArea() {
           />
           <p className="max-w-2xl text-base leading-relaxed text-zinc-600">
             Patients travel to our Westerville office from across Central
-            Ohio — including {sample}, and more — for the same experienced
+            Ohio, including {sample}, and more, for the same experienced
             team every visit.
           </p>
           <Link

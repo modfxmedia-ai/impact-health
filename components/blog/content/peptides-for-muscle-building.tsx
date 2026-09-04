@@ -26,7 +26,7 @@ export const PeptidesForMuscleBuildingContent: ReactNode[] = [
   <h3 key={15}>Fat Reduction</h3>,
   <p key={16}>Peptides are also highly effective in promoting fat loss, which indirectly supports muscle building by improving overall body composition. Many peptides increase the body’s metabolic rate, encouraging the use of stored fat as an energy source while preserving lean muscle mass.</p>,
   <ul key={17}>
-  <li><strong>Boosting Metabolism:</strong> Peptides such as CJC-1295 and Ipamorelin stimulate the release of growth hormone, which enhances lipolysis—the breakdown of fat cells into fatty acids that the body can use for energy. This leads to a reduction in overall body fat, especially in areas like the abdomen.</li>
+  <li><strong>Boosting Metabolism:</strong> Peptides such as CJC-1295 and Ipamorelin stimulate the release of growth hormone, which enhances lipolysis, the breakdown of fat cells into fatty acids that the body can use for energy. This leads to a reduction in overall body fat, especially in areas like the abdomen.</li>
   <li><strong>Preservation of Lean Muscle:</strong> Unlike traditional fat-burning supplements, peptides prioritize muscle preservation during fat loss. This ensures that any weight lost is primarily fat, leaving muscle mass intact.</li>
   <li><strong>Enhanced Energy Levels:</strong> The fat-burning process triggered by peptides also increases energy levels, supporting more intense workouts and prolonged physical activity.</li>
   </ul>,

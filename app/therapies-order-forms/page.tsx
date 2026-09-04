@@ -132,7 +132,7 @@ export default function TherapiesOrderFormsPage() {
       eyebrow="Infusions"
       intro="Download the order form for your prescribed therapy and submit it securely to get your infusion scheduled."
       breadcrumbs={[
-        { label: "Medical Infusion Therapies", href: "/medical-infusion-therapy/" },
+        { label: "Infusions" },
         { label: "Therapies & Order Forms" },
       ]}
       schema={schema}
@@ -208,10 +208,6 @@ export default function TherapiesOrderFormsPage() {
           <RelatedServices
             heading="Explore More"
             items={[
-              {
-                label: "Medical Infusion Therapy",
-                href: "/medical-infusion-therapy/",
-              },
               {
                 label: "Infusion Therapy Guide by Specialty",
                 href: "/medical-infusion-therapy-guide/",

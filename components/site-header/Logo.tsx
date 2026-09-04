@@ -6,7 +6,7 @@ export function Logo() {
     <Link
       href="/"
       className="flex shrink-0 items-center"
-      aria-label="Impact Health & Wellness — home"
+      aria-label="Impact Health & Wellness home"
     >
       <Image
         src="/images/impact-logo.png"

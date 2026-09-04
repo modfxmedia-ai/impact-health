@@ -27,7 +27,7 @@ export function getAreaIntro(location: AreaLocation, topic: AreaTopic): string {
   if (location.isHomeBase) {
     return `${topic.tagline} Our Westerville office is right here in ${location.name}, so ${topicMention(topic)} care is as convenient as it gets.`;
   }
-  return `Patients travel to our Westerville office from ${location.name} for ${topicMention(topic)} — about a ${location.driveTimeMinutes}-minute drive. ${topic.tagline}`;
+  return `Patients travel to our Westerville office from ${location.name} for ${topicMention(topic)}, about a ${location.driveTimeMinutes}-minute drive. ${topic.tagline}`;
 }
 
 /**
@@ -40,13 +40,13 @@ export function getTravelParagraph(location: AreaLocation, topic: AreaTopic): st
   const mention = topicMention(topic);
 
   if (location.isHomeBase) {
-    return `${location.blurb} Being right in town means no long commute for your ${mention} appointments — just the same experienced team, every visit.`;
+    return `${location.blurb} Being right in town means no long commute for your ${mention} appointments, just the same experienced team, every visit.`;
   }
 
   const templates = [
-    `Patients travel to our Westerville office from ${location.name} for ${mention} care — about a ${location.driveTimeMinutes}-minute drive. ${location.blurb} We don't have a satellite office in ${location.name}; everyone is seen at our single Westerville location so you get the same experienced team every visit.`,
+    `Patients travel to our Westerville office from ${location.name} for ${mention} care, about a ${location.driveTimeMinutes}-minute drive. ${location.blurb} We don't have a satellite office in ${location.name}; everyone is seen at our single Westerville location so you get the same experienced team every visit.`,
     `If you live in ${location.name}, you're not alone in making the trip to Westerville for ${mention}. ${location.blurb} The drive is typically around ${location.driveTimeMinutes} minutes, and it's worth it for continuity of care with the same clinical team each time.`,
-    `${location.blurb} Many of our ${mention} patients commute from ${location.name}, a drive of roughly ${location.driveTimeMinutes} minutes to our Westerville office. We intentionally keep all care under one roof — no rotating locations — so your treatment plan stays consistent.`,
+    `${location.blurb} Many of our ${mention} patients commute from ${location.name}, a drive of roughly ${location.driveTimeMinutes} minutes to our Westerville office. We intentionally keep all care under one roof, no rotating locations, so your treatment plan stays consistent.`,
     `From ${location.name}, our Westerville office is about a ${location.driveTimeMinutes}-minute drive, and it's a trip many patients make specifically for ${mention}. ${location.blurb} Because we operate from a single location, you always see the same providers who know your history.`,
   ];
 
@@ -60,7 +60,7 @@ export function getTopicDetailParagraph(topic: AreaTopic): string {
   const relatedMention = related ? topicMention(related) : "our other services";
 
   if (topic.category === "condition") {
-    return `Treatment for ${topicMention(topic)} often draws on our ${relatedName}, tailored to your specific symptoms, activity level, and goals — not a one-size-fits-all protocol.`;
+    return `Treatment for ${topicMention(topic)} often draws on our ${relatedName}, tailored to your specific symptoms, activity level, and goals, not a one-size-fits-all protocol.`;
   }
   if (topic.category === "service") {
     return `Our ${topic.name} program is one of the ways we help patients manage ${relatedMention} and related pain without unnecessary surgery.`;
@@ -76,7 +76,7 @@ export function getAreaMeta(location: AreaLocation, topic: AreaTopic) {
 
   const description = location.isHomeBase
     ? `${topic.name} at Impact Health & Wellness in Westerville, OH. ${topic.tagline}`
-    : `Impact Health & Wellness in Westerville, OH welcomes ${topicMention(topic)} patients from ${location.name} — about a ${location.driveTimeMinutes}-minute drive. ${topic.tagline}`;
+    : `Impact Health & Wellness in Westerville, OH welcomes ${topicMention(topic)} patients from ${location.name}, about a ${location.driveTimeMinutes}-minute drive. ${topic.tagline}`;
 
   return { title, description };
 }

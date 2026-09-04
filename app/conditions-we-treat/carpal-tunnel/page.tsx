@@ -143,8 +143,8 @@ export default function CarpalTunnelPage() {
       <p>
         Carpal Tunnel Syndrome is often linked to repetitive hand and wrist
         motions, awkward wrist positioning, and prolonged pressure on the
-        median nerve. Certain health factors—including pregnancy, diabetes,
-        thyroid conditions, and rheumatoid arthritis—can also increase your
+        median nerve. Certain health factors, including pregnancy, diabetes,
+        thyroid conditions, and rheumatoid arthritis, can also increase your
         risk by contributing to swelling within the carpal canal.
       </p>
 
@@ -152,7 +152,7 @@ export default function CarpalTunnelPage() {
       <p>
         Our team takes a non-invasive approach to Carpal Tunnel relief,
         combining chiropractic adjustments, laser therapy, and trigger point
-        injections to reduce inflammation and restore nerve function—helping
+        injections to reduce inflammation and restore nerve function, helping
         you avoid surgery whenever possible.
       </p>
     </PageLayout>

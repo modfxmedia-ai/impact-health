@@ -30,9 +30,9 @@ const conditions = [
     href: "/neuropathy-treatments/#Understanding_Neuropathy",
   },
   { label: "Osteoarthritis", href: "/conditions-we-treat/osteoarthritis/" },
+  { label: "Shoulder Pain", href: "/conditions-we-treat/shoulder-pain/" },
   { label: "Sports Injuries", href: "/conditions-we-treat/sports-injuries/" },
   { label: "Whiplash", href: "/conditions-we-treat/whiplash/" },
-  { label: "Wounds", href: "/wound-care/" },
 ];
 
 const relatedTreatments = [

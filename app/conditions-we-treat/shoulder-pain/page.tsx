@@ -4,44 +4,44 @@ import { RelatedServices } from "@/components/page/RelatedServices";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 
 export const metadata: Metadata = {
-  title: "Specialist Foot & Ankle Pain Relief & Care in Westerville",
+  title: "Shoulder Pain Treatment in Westerville, OH",
   description:
-    "Find foot and ankle pain relief at Impact Health & Wellness in Westerville. Our targeted therapies restore mobility so you can move without discomfort. Call us!",
-  alternates: { canonical: "/conditions-we-treat/foot-ankle-pain/" },
+    "Find non-surgical shoulder pain relief at Impact Health & Wellness in Westerville, OH. Restore mobility and ease discomfort. Schedule your exam today!",
+  alternates: { canonical: "/conditions-we-treat/shoulder-pain/" },
 };
 
 const relatedTreatments = [
   { label: "Chiropractic Care", href: "/chiropractic-care/" },
   { label: "Physical Therapy and Rehabilitation", href: "/chiropractic-care/physical-therapy/" },
-  { label: "Laser Therapy", href: "/laser-therapy/" },
+  { label: "Regenerative Medicine", href: "/regenerative-medicine/" },
   { label: "Shockwave Therapy", href: "/shockwave/" },
 ];
 
 const schema = [
   {
     "@type": "WebPage",
-    "@id": "https://impacthealthoh.com/conditions-we-treat/foot-ankle-pain/",
-    url: "https://impacthealthoh.com/conditions-we-treat/foot-ankle-pain/",
-    name: "Specialist Foot & Ankle Pain Relief & Care in Westerville",
+    "@id": "https://impacthealthoh.com/conditions-we-treat/shoulder-pain/",
+    url: "https://impacthealthoh.com/conditions-we-treat/shoulder-pain/",
+    name: "Shoulder Pain Treatment in Westerville, OH",
     isPartOf: { "@id": "https://impacthealthoh.com/#website" },
-    datePublished: "2024-02-13T19:29:59+00:00",
-    dateModified: "2026-04-10T11:08:31+00:00",
+    datePublished: "2026-09-04T00:00:00+00:00",
+    dateModified: "2026-09-04T00:00:00+00:00",
     description:
-      "Find foot and ankle pain relief at Impact Health & Wellness in Westerville. Our targeted therapies restore mobility so you can move without discomfort. Call us!",
+      "Find non-surgical shoulder pain relief at Impact Health & Wellness in Westerville, OH. Restore mobility and ease discomfort. Schedule your exam today!",
     breadcrumb: {
-      "@id": "https://impacthealthoh.com/conditions-we-treat/foot-ankle-pain/#breadcrumb",
+      "@id": "https://impacthealthoh.com/conditions-we-treat/shoulder-pain/#breadcrumb",
     },
     inLanguage: "en-US",
     potentialAction: [
       {
         "@type": "ReadAction",
-        target: ["https://impacthealthoh.com/conditions-we-treat/foot-ankle-pain/"],
+        target: ["https://impacthealthoh.com/conditions-we-treat/shoulder-pain/"],
       },
     ],
   },
   {
     "@type": "BreadcrumbList",
-    "@id": "https://impacthealthoh.com/conditions-we-treat/foot-ankle-pain/#breadcrumb",
+    "@id": "https://impacthealthoh.com/conditions-we-treat/shoulder-pain/#breadcrumb",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://impacthealthoh.com/" },
       {
@@ -50,7 +50,7 @@ const schema = [
         name: "Conditions We Treat",
         item: "https://impacthealthoh.com/conditions-we-treat/",
       },
-      { "@type": "ListItem", position: 3, name: "Foot & Ankle Pain" },
+      { "@type": "ListItem", position: 3, name: "Shoulder Pain" },
     ],
   },
   {
@@ -103,16 +103,16 @@ const schema = [
   },
 ];
 
-export default function FootAnklePainPage() {
+export default function ShoulderPainPage() {
   return (
     <PageLayout
-      title="Foot & Ankle Pain"
-      intro="Understanding foot anatomy, pain types, and treatment options. Discover how to alleviate discomfort and when to seek professional help."
-      image={{ src: "/images/conditions/foot-ankle-pain.jpg", alt: "Patient with foot and ankle pain" }}
+      title="Shoulder Pain"
+      intro="Understand the common causes of shoulder pain and explore non-surgical treatment options designed to restore movement and relieve discomfort."
       breadcrumbs={[
         { label: "Conditions We Treat", href: "/conditions-we-treat/" },
-        { label: "Foot & Ankle Pain" },
+        { label: "Shoulder Pain" },
       ]}
+      image={{ src: "/images/conditions/shoulder-pain.jpg", alt: "Provider examining a patient's shoulder for signs of pain or injury" }}
       schema={schema}
       showTestimonials
       afterContent={
@@ -123,38 +123,37 @@ export default function FootAnklePainPage() {
       }
     >
       <p>
-        The human foot is a complex structure packed tightly with twenty-six
-        bones and numerous joints, muscles, nerves, and ligaments. Feet are
-        easily injured due to the cramped nature of everything within, as
-        well as the relatively fragile bones. Foot pain, just like all pain,
-        can be chronic or acute. Sometimes cases of acute foot pain can be
-        treated with home care treatments. The chronic and extreme cases of
-        foot pain almost always require medical attention. When left
-        untreated, chronic, and sometimes acute, foot pain can lead to
-        long-term issues such as numbness in the foot or a walking impairment.
+        Shoulder Pain can affect the joint itself, the surrounding muscles,
+        or the tendons and ligaments that keep the shoulder stable. Because
+        the shoulder has such a wide range of motion, it&apos;s especially
+        vulnerable to overuse injuries, joint degeneration, and soft-tissue
+        strain that can make everyday movements like reaching or lifting
+        difficult and painful.
       </p>
 
-      <h2>Common Causes of Foot & Ankle Pain</h2>
+      <h2>Common Causes of Shoulder Pain</h2>
       <ul>
-        <li>Plantar fasciitis and heel pain</li>
-        <li>Ankle sprains and ligament injuries</li>
-        <li>Tendinitis from overuse or repetitive stress</li>
-        <li>Arthritis affecting the foot or ankle joints</li>
-        <li>Stress fractures from high-impact activity</li>
+        <li>Rotator cuff strain, tendinitis, or tears</li>
+        <li>Frozen shoulder (adhesive capsulitis)</li>
+        <li>Bursitis or impingement in the shoulder joint</li>
+        <li>Osteoarthritis affecting the shoulder joint</li>
+        <li>Overuse injuries from repetitive lifting, throwing, or reaching</li>
       </ul>
 
-      <h2>When to Seek Treatment</h2>
+      <h2>When to Seek Treatment for Shoulder Pain</h2>
       <p>
-        If foot or ankle pain persists beyond a few days, limits your ability
-        to bear weight, or is accompanied by swelling or bruising, it&apos;s time
-        to have it evaluated before the issue becomes chronic.
+        Shoulder pain that limits your range of motion, disrupts sleep, or
+        persists for more than a few weeks is a sign your shoulder needs a
+        proper evaluation. Catching the underlying cause early can help you
+        avoid further joint damage and a longer recovery down the road.
       </p>
 
-      <h2>Why Choose Impact for Foot & Ankle Pain</h2>
+      <h2>Why Choose Impact for Shoulder Pain Relief</h2>
       <p>
-        We combine chiropractic care, laser therapy, and shockwave therapy to
-        reduce inflammation and support healing, helping you get back on your
-        feet without surgery.
+        Our providers combine chiropractic care, physical therapy, and
+        regenerative medicine to relieve pressure on the shoulder joint and
+        rebuild strength and stability&mdash;helping you regain full
+        movement without surgery.
       </p>
     </PageLayout>
   );

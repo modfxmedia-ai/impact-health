@@ -163,7 +163,7 @@ export default function BackPainPage() {
 
       <h2>Understanding Back Pain</h2>
       <p>
-        Back pain is one of the world’s leading causes of disability—and one
+        Back pain is one of the world’s leading causes of disability, and one
         of the most common reasons for doctor’s office visits. In fact, as
         many as 75% – 85% of Americans will experience back pain at some point
         in their lives. Your pain may be concentrated in a region of your neck
@@ -172,7 +172,7 @@ export default function BackPainPage() {
       <p>
         You also may find that your pain worsens with movement like walking,
         lifting, bending, and twisting. For some people, back pain can be
-        debilitating—impacting sleep, activity level, and emotional
+        debilitating, impacting sleep, activity level, and emotional
         well-being.
       </p>
       <p>Your back and neck pain can have many different causes:</p>

@@ -1,88 +1,39 @@
 import type { Metadata } from "next";
 import { PageLayout } from "@/components/page/PageLayout";
-import { BenefitGrid } from "@/components/page/BenefitGrid";
 import { ProcessSteps } from "@/components/page/ProcessSteps";
-import { Faq, faqSchema } from "@/components/page/Faq";
 import { RelatedServices } from "@/components/page/RelatedServices";
 import { AreaServedNote } from "@/components/page/AreaServedNote";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
+import { CtaButton } from "@/components/ui/CtaButton";
 import { getRelatedServices } from "@/lib/nav-data";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Regenerative Medicine in Westerville | Non-Surgical Healing",
   description:
-    "Impact Health & Wellness in Westerville, OH offers regenerative medicine for pain relief and improved mobility. Learn about our non-surgical treatment options.",
+    "Chronic joint pain and soft tissue injuries don't have to end in surgery. Impact Health & Wellness in Westerville, OH offers non-surgical regenerative therapies to relieve pain and restore mobility.",
   alternates: { canonical: "/regenerative-medicine/" },
 };
-
-const faqItems = [
-  {
-    question: "Can regenerative medicine help with osteoarthritis?",
-    answer:
-      "Yes, regenerative medicine treatments can provide relief for osteoarthritis by regenerating damaged cartilage, reducing inflammation and alleviating pain, potentially delaying or eliminating the need for joint replacement surgery.",
-  },
-  {
-    question: "Is regenerative medicine covered by insurance?",
-    answer:
-      "Coverage for regenerative medicine treatments varies by the type of treatment, insurance provider and plan. We recommend contacting your insurance company to inquire about coverage specifics. Our clinic also offers various payment options to accommodate different budgets and needs.",
-  },
-  {
-    question:
-      "Are there any lifestyle changes I should consider alongside regenerative medicine treatments?",
-    answer:
-      "Healthy lifestyle choices such as a balanced diet, regular exercise and adequate rest can enhance the effectiveness of regenerative medicine treatments. We may also recommend complementary treatments based on your specific condition.",
-  },
-];
-
-const benefitItems = [
-  {
-    title: "Pain Reduction",
-    description:
-      "Significantly reduce pain from chronic conditions and acute injuries.",
-  },
-  {
-    title: "Improved Functionality",
-    description:
-      "Restore function to damaged tissues and joints, improving mobility and quality of life.",
-  },
-  {
-    title: "Non-Surgical",
-    description:
-      "A non-invasive alternative to surgery, reducing risks and recovery time.",
-  },
-  {
-    title: "Natural Healing",
-    description:
-      "Uses the body's own healing mechanisms to support and accelerate natural tissue repair.",
-  },
-  {
-    title: "Long-Term Relief",
-    description:
-      "Addresses the underlying causes of pain and dysfunction, offering more durable outcomes.",
-  },
-];
 
 const processItems = [
   {
     title: "Consultation",
     description:
-      "As a new patient at Impact Health & Wellness, you begin your journey with a personalized consultation with one of our regenerative medicine specialists. During this session, we'll discuss your medical history, current health concerns and treatment goals to create a tailored plan that addresses your specific needs.",
+      "We review your history, current symptoms, and goals, and may recommend lab work to help identify any underlying issues contributing to your pain, to build a plan specific to your case.",
   },
   {
-    title: "Procedure",
+    title: "Treatment",
     description:
-      "Our regenerative medicine treatments, including tissue allografts, structural tissue products and platelet-rich plasma (PRP) injections, are performed in our comfortable and accessible Westerville clinic. These procedures are minimally invasive and typically take just a few hours, allowing you to return to your daily activities with minimal downtime.",
+      "A typical protocol includes 1–3 biologic injections (allograft and/or PRP) alongside a course of 4–6 shockwave sessions and 6–8 laser sessions, combined with physical therapy and stretching. Your exact plan depends on your injury and how you respond along the way.",
   },
   {
     title: "Recovery",
     description:
-      "Recovery times vary depending on the specific treatment and individual patient factors. Our team will provide detailed aftercare instructions and support to ensure a smooth recovery process. Most patients experience noticeable improvements in their symptoms within weeks to months following the procedure.",
+      "Most patients notice improvement within weeks; full benefit typically builds over the course of the full protocol.",
   },
   {
-    title: "Follow-ups",
-    description:
-      "We believe in a collaborative approach to healthcare, which is why follow-up appointments are a crucial part of our treatment protocol. These sessions allow us to monitor your progress, make any necessary adjustments to your treatment plan and ensure optimal results.",
+    title: "Follow-Up",
+    description: "We track your progress and adjust your plan as needed.",
   },
 ];
 
@@ -94,9 +45,9 @@ const schema = [
     name: "Regenerative Medicine in Westerville | Non-Surgical Healing",
     isPartOf: { "@id": "https://impacthealthoh.com/#website" },
     datePublished: "2024-02-14T18:10:57+00:00",
-    dateModified: "2026-04-10T11:26:28+00:00",
+    dateModified: "2026-09-04T00:00:00+00:00",
     description:
-      "Impact Health & Wellness in Westerville, OH offers regenerative medicine for pain relief and improved mobility. Learn about our non-surgical treatment options.",
+      "Chronic joint pain and soft tissue injuries don't have to end in surgery. Impact Health & Wellness in Westerville, OH offers non-surgical regenerative therapies to relieve pain and restore mobility.",
     breadcrumb: {
       "@id": "https://impacthealthoh.com/regenerative-medicine/#breadcrumb",
     },
@@ -169,15 +120,15 @@ const schema = [
       "https://www.linkedin.com/company/impacthealthandwellness",
     ],
   },
-  faqSchema(faqItems),
 ];
 
 export default function RegenerativeMedicinePage() {
   return (
     <PageLayout
-      title="Regenerative Medicine"
-      intro="Unlock your body's natural healing potential with innovative regenerative medicine approaches. Discover treatments that promote tissue repair and support long-term well-being."
+      title="Non-Surgical Relief for Joint & Soft Tissue Injuries"
+      intro="Chronic joint pain, tendon injuries, and soft tissue damage don't have to end in surgery. At Impact Health & Wellness, we use advanced, non-surgical therapies that work with your body's own repair process, helping you manage pain, move better, and get back to the life you had before the pain started."
       breadcrumbs={[{ label: "Regenerative Medicine" }]}
+      cta={{ label: "Schedule a Consultation", href: "/contact-us/" }}
       schema={schema}
       showTestimonials
       image={{
@@ -194,164 +145,149 @@ export default function RegenerativeMedicinePage() {
         </>
       }
     >
+      <h2>A Smarter Path Before Surgery</h2>
       <p>
-        The fast-growing field of regenerative medicine offers new
-        possibilities for patients with a range of issues related to healing
-        and overall wellness. By transplanting healthy donated cells into the
-        affected area, these treatments can significantly enhance the body’s
-        natural healing process, leading to improved function and reduced
-        pain.
+        Most patients come to us after trying everything else, medication,
+        injections, physical therapy, and still not feeling like themselves.
+        They&apos;re not looking for another short-term fix. They want their
+        joint or injury to actually get better.
       </p>
       <p>
-        <a href="https://impacthealthoh.com/">Impact Health & Wellness</a> is
-        at the forefront of providing these advanced treatment options to our
-        clients in Westerville, Columbus, Dublin, Gahanna and all of Central
-        Ohio. <Link href="/contact-us/">Contact us</Link> to schedule a consultation
-        and discover how regenerative medicine treatments can benefit you.
-      </p>
-
-      <h2>What is Regenerative Medicine?</h2>
-      <p>
-        Regenerative medicine is a groundbreaking field of medical science
-        that focuses on repairing, replacing, regenerating or enhancing the
-        function of tissues. This innovative approach aims to restore the
-        structure and function of damaged tissues, offering new hope for
-        patients with conditions that are currently difficult or impossible
-        to cure.
-      </p>
-      <p>
-        At its core, regenerative medicine involves using a combination of
-        several key techniques, including tissue engineering and the use of
-        biologically active molecules such as growth factors.
-      </p>
-      <p>
-        Regenerative medicine holds great promise for treating a wide range
-        of medical conditions, from injuries and chronic diseases to
-        age-related issues. It aims not just to treat the symptoms of these
-        conditions but to address the underlying causes, potentially offering
-        more durable and comprehensive solutions than traditional treatments.
+        That&apos;s what regenerative treatment is built for. Instead of
+        masking pain with medication, we deliver targeted, biologic-based
+        therapies directly to the affected area to support your body&apos;s
+        own healing response, helping reduce inflammation, ease pain,
+        numbness, and stiffness, and support tissue repair without surgery or
+        long recovery times.
       </p>
 
-      <h3>Benefits</h3>
-      <BenefitGrid items={benefitItems} />
+      <h3>We see the strongest results treating symptoms of:</h3>
+      <ul>
+        <li>Osteoarthritis, including pain, stiffness, and reduced mobility</li>
+        <li>
+          Soft tissue injuries and partial tears (tendon, ligament, muscle)
+        </li>
+        <li>Muscle strains and sprains</li>
+      </ul>
 
-      <h2>Why Choose Impact Health & Wellness?</h2>
-      <p>
-        At Impact Health & Wellness in Westerville, our dedicated team of
-        medical professionals specializes in the latest regenerative medicine
-        techniques. We pride ourselves on our holistic approach to
-        healthcare, ensuring each patient receives a personalized treatment
-        plan tailored to their specific needs.
-      </p>
-      <p>
-        By choosing our clinic, you benefit from our expertise,
-        state-of-the-art facilities, and our commitment to your health and
-        recovery.
-      </p>
+      <h3>Also used to help manage:</h3>
+      <ul>
+        <li>Tendonitis and overuse injuries</li>
+        <li>
+          Chronic joint pain, numbness, or tingling that hasn&apos;t responded
+          to other treatment
+        </li>
+      </ul>
 
-      <h2>Ideal Candidates for Regenerative Medicine Treatments</h2>
+      <h2>Advanced Therapies That Support Real Healing</h2>
       <p>
-        Regenerative medicine can be suitable for individuals of all ages,
-        particularly those seeking non-surgical treatment options for various
-        conditions. Ideal candidates typically are looking to address
-        concerns such as:
+        We use two core biologic-based therapies, often paired together
+        depending on your injury:
       </p>
       <ul>
-        <li>Acute injuries</li>
-        <li>Burns</li>
-        <li>Chronic pain</li>
-        <li>Diabetic ulcers and non-healing wounds</li>
-        <li>Osteoarthritis</li>
-        <li>Sports-related injuries</li>
-        <li>Tendonitis</li>
+        <li>
+          <span>
+            <strong>Umbilical Cord Tissue Allografts:</strong> A donated
+            tissue product rich in the growth factors and structural proteins
+            your body naturally uses to repair connective tissue. It&apos;s
+            placed directly at the site of injury to support the healing
+            process.
+          </span>
+        </li>
+        <li>
+          <span>
+            <strong>Platelet-Rich Plasma (PRP) Therapy:</strong> We draw a
+            small sample of your own blood, concentrate the platelets (which
+            carry your body&apos;s natural healing factors), and inject it
+            directly into the injured joint or tissue to jump-start repair.
+          </span>
+        </li>
+      </ul>
+
+      <h2>Why We Pair These with Shockwave & Laser Therapy</h2>
+      <p>
+        Biologic therapies work best when the surrounding tissue is primed to
+        respond. That&apos;s why we often combine allograft or PRP treatment
+        with:
+      </p>
+      <ul>
+        <li>
+          <span>
+            <Link href="/shockwave/">Shockwave Therapy</Link>: acoustic wave
+            pulses that increase blood flow and break up scar tissue, making
+            the area more receptive to healing
+          </span>
+        </li>
+        <li>
+          <span>
+            <Link href="/laser-therapy/">Class IV Medical Laser Therapy</Link>:
+            reduces inflammation and stimulates cellular repair at a deeper
+            level
+          </span>
+        </li>
       </ul>
       <p>
-        Contraindications may include certain medical conditions, pregnancy
-        and active infections. It’s essential to consult with your healthcare
-        provider to determine if this treatment is right for you.
+        Used together, this combination can meaningfully improve outcomes
+        compared to any one treatment alone, it&apos;s often the difference
+        between a good result and a great one.
+      </p>
+      <p>
+        <strong>This isn&apos;t a one-and-done treatment.</strong> Lasting
+        symptom relief comes from a customized, multi-faceted protocol, not a
+        single injection. A typical plan combines biologic therapy with a full
+        course of shockwave and laser sessions, plus physical therapy and
+        stretching, in the sequence your body actually needs. We may also
+        recommend lab work to help identify any underlying issues
+        contributing to your symptoms.
       </p>
 
-      <h2>What to Expect from Your Treatment</h2>
+      <h2>Is This the Right Option for You?</h2>
+      <p>This approach may be a good fit if you:</p>
+      <ul>
+        <li>
+          Have osteoarthritis pain, a soft tissue injury, a partial tear, or a
+          muscle strain/sprain that hasn&apos;t improved with rest, PT, or
+          medication
+        </li>
+        <li>
+          Have been told surgery is your &quot;only option&quot; and want to
+          explore alternatives first
+        </li>
+        <li>
+          Are an active person or athlete looking to manage pain and recover
+          from an injury
+        </li>
+        <li>
+          Want a treatment approach aimed at the source of your symptoms, not
+          just covering them up
+        </li>
+      </ul>
+      <p>
+        <em>
+          Not everyone is a candidate: certain medical conditions, pregnancy,
+          and active infections may rule out some treatments. We&apos;ll walk
+          through your health history at your consultation to determine
+          what&apos;s appropriate for you.
+        </em>
+      </p>
+
+      <h2>What to Expect</h2>
       <ProcessSteps items={processItems} />
+      <CtaButton href="/contact-us/" variant="teal" className="not-prose">
+        Book Your Consultation
+      </CtaButton>
 
-      <h2>Cost of Regenerative Medicine Treatments in Ohio</h2>
+      <h2>An Investment in Fixing the Problem, Not Just Covering It Up</h2>
       <p>
-        The cost of our regenerative medicine treatments is based on the type
-        of therapy, the complexity of the procedure, individual patient needs
-        and in some cases, your insurance plan. At Impact Health & Wellness,
-        we strive to provide transparent pricing and will discuss all options
-        and costs during your consultation. <Link href="/contact-us/">
-          Contact us
-        </Link>{" "}
-        for more detailed information.
+        These treatments are self-pay. Insurance typically covers medications
+        and injections designed to mask pain, not therapies designed to
+        support your body&apos;s own repair process. We believe that&apos;s an
+        important distinction: you&apos;re not paying to manage a symptom
+        indefinitely, you&apos;re investing in a protocol built to address
+        what&apos;s actually causing it. We&apos;ll walk through the full cost
+        of your customized plan at your consultation, with no surprises.
       </p>
-
-      <h2>Related Treatments</h2>
-      <p>
-        At Impact Health & Wellness in Westerville, Ohio, we offer a
-        comprehensive suite of treatments that complement our regenerative
-        medicine services. Each of these treatments is designed to promote
-        overall health and wellness, addressing a wide range of concerns from
-        chronic pain to weight management. Here’s a closer look at some of
-        the related services we provide:
-      </p>
-      <ul>
-        <li>
-          <Link href="/prp-therapy/">PRP Therapy</Link>: Utilizing the healing
-          properties of your own blood, PRP (Platelet-Rich Plasma) Therapy
-          stimulates tissue repair and regeneration. It’s a
-          minimally-invasive, gentle solution for pain management and
-          improved tissue function.
-        </li>
-        <li>
-          <Link href="/chiropractic-care/">Chiropractic Care</Link>: Chiropractic
-          care involves adjusting the spine and other parts of the body to
-          alleviate pain and support the body’s natural ability to heal
-          itself. This form of functional medicine can help you achieve
-          relief from back pain, neck pain, headaches and other
-          musculoskeletal issues without surgery or medication.
-        </li>
-        <li>
-          <Link href="/wound-care/">Advanced Wound Care</Link>: Our advanced wound
-          care services utilize the latest techniques and technologies to
-          promote healing in chronic and complex wounds such as diabetic
-          ulcers, venous stasis ulcers or wounds that have not responded to
-          traditional treatments. We offer both in-clinic and at-home
-          services for your convenience.
-        </li>
-        <li>
-          <Link href="/anti-aging-wellness/">Medical Weight Loss Programs</Link>: We
-          combine nutrition counseling, fitness recommendations and, when
-          appropriate, medication management to help you achieve and
-          maintain a healthy weight. This holistic approach is perfect for
-          those who have struggled with weight loss in the past and are
-          looking for a sustainable, health-focused solution.
-        </li>
-        <li>
-          <Link href="/shockwave/">Shockwave Therapy</Link>: This non-invasive
-          treatment uses acoustic waves to stimulate healing in injured
-          tissues. It’s particularly effective for treating conditions like
-          plantar fasciitis, tendonitis, ligament injuries and other soft
-          tissue disorders.
-        </li>
-      </ul>
-
-      <h2>Book Your Regenerative Medicine Consultation in Westerville, Ohio</h2>
-      <p>
-        Located in the heart of Westerville and easily accessible to
-        residents of Columbus, Dublin, Gahanna and the wider Central Ohio
-        area, our facility offers leading-edge treatments in a comfortable
-        and welcoming environment.
-      </p>
-      <p>
-        Take the first step towards a healthier, pain-free life.{" "}
-        <Link href="/contact-us/">Schedule</Link> your regenerative medicine
-        consultation today and let us show you how our advanced treatments
-        can improve your quality of life and help you heal faster.
-      </p>
-
-      <h2>FAQs</h2>
-      <Faq items={faqItems} />
     </PageLayout>
   );
 }
+

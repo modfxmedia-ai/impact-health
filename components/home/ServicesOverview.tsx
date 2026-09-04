@@ -32,13 +32,6 @@ const services = [
       "Our Chiropractic Care provides diagnostics, spinal decompression, and therapy for all ages, focusing on pain relief, preventive care, and long-term spinal health for improved life quality.",
   },
   {
-    title: "Wound Care",
-    href: "/wound-care/",
-    icon: "/images/icons/help.svg",
-    description:
-      "Our wound care services focus on advanced management and healing of complex wounds, utilizing cutting-edge techniques to enhance tissue regeneration, prevent infection, and achieve the best patient outcomes.",
-  },
-  {
     title: "Personal Injuries",
     href: "/personal-injuries/",
     icon: "/images/icons/accident.svg",

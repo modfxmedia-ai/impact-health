@@ -279,14 +279,6 @@ export default function PrpTherapyPage() {
           ideal for individuals seeking immediate benefits in their energy
           levels and overall vitality.
         </li>
-        <li>
-          <Link href="/wound-care/">Advanced Wound Care</Link>: Utilizing the
-          latest in wound healing technologies and methodologies, our
-          advanced wound care services are designed to promote faster
-          healing of chronic wounds, reducing the risk of infection and
-          complications. This service is essential for individuals with
-          wounds that have not responded to traditional treatment methods.
-        </li>
       </ul>
 
       <h2>Book Your PRP Therapy Consultation in Westerville, Ohio</h2>

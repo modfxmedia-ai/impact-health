@@ -2,7 +2,13 @@ import { RANKED_CACHE_TAG } from "./types";
 
 const DOC_ID_RE = /\/document\/(?:u\/\d+\/)?d\/([a-zA-Z0-9_-]+)/;
 
+<<<<<<< HEAD
 export function googleDocIdFromUrl(url: string | null | undefined): string | null {
+=======
+export function googleDocIdFromUrl(
+  url: string | null | undefined,
+): string | null {
+>>>>>>> fca3edc (feedback edits)
   if (!url) return null;
   const match = url.match(DOC_ID_RE);
   return match?.[1] ?? null;

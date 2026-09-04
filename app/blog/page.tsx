@@ -11,7 +11,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Blog | Health & Wellness Tips from Impact Health & Wellness",
   description:
-    "Explore health, wellness, and pain-relief tips from Impact Health & Wellness in Westerville, OH — from hormone therapy to nutrition, recovery, and more.",
+    "Explore health, wellness, and pain-relief tips from Impact Health & Wellness in Westerville, OH, from hormone therapy to nutrition, recovery, and more.",
   alternates: { canonical: "/blog/" },
 };
 
@@ -23,7 +23,7 @@ const schema = [
     name: "Blog | Health & Wellness Tips from Impact Health & Wellness",
     isPartOf: { "@id": "https://impacthealthoh.com/#website" },
     description:
-      "Explore health, wellness, and pain-relief tips from Impact Health & Wellness in Westerville, OH — from hormone therapy to nutrition, recovery, and more.",
+      "Explore health, wellness, and pain-relief tips from Impact Health & Wellness in Westerville, OH, from hormone therapy to nutrition, recovery, and more.",
     breadcrumb: { "@id": "https://impacthealthoh.com/blog/#breadcrumb" },
     inLanguage: "en-US",
   },

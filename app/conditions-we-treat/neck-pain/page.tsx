@@ -152,7 +152,7 @@ export default function NeckPainPage() {
       <p>
         Impact&apos;s providers combine chiropractic adjustments, spinal
         decompression, and physical therapy to relieve pressure on the neck
-        and restore mobility—addressing the root cause rather than just
+        and restore mobility, addressing the root cause rather than just
         masking the symptoms.
       </p>
     </PageLayout>

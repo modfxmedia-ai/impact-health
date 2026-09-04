@@ -122,7 +122,7 @@ export const blogPosts: BlogPost[] = [
     title:
       "Healthy Eating: Save Time, Stress & Money with Meal Planning",
     description:
-      "Meal planning isn't just about deciding what's for dinner — it's a tool that saves money, reduces stress, avoids wasting food, and helps you eat more healthfully.",
+      "Meal planning isn't just about deciding what's for dinner, it's a tool that saves money, reduces stress, avoids wasting food, and helps you eat more healthfully.",
     image: "/images/blog/meal-planning-made-easy.webp",
     imageAlt:
       "meal-planning-made-easy",

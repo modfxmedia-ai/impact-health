@@ -147,7 +147,7 @@ export default function OsteoarthritisPage() {
       <h2>Joints Most Affected by Osteoarthritis</h2>
       <p>
         Osteoarthritis most commonly develops in the knees, hips, hands, and
-        spine—joints that absorb repeated stress over time. Left unmanaged,
+        spine, joints that absorb repeated stress over time. Left unmanaged,
         it can progressively limit mobility and independence.
       </p>
 

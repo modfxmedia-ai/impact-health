@@ -144,7 +144,7 @@ export default function MigrainesAndHeadachesPage() {
         There are a wide variety of headaches, but most fall into one of two
         broad categories: primary headaches and secondary headaches. Primary
         headaches are caused by dysfunction or overactivity of pain-sensitive
-        structures in your head—not by an underlying, or secondary,
+        structures in your head, not by an underlying, or secondary,
         disease. Stress and disrupted sleep patterns are often triggers for
         primary headaches. A migraine is an extremely painful type of primary
         headache.

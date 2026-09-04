@@ -148,7 +148,7 @@ export default function HipPainPage() {
       <p>
         Our providers combine chiropractic care, physical therapy, and
         regenerative medicine to relieve pressure on the hip joint and
-        rebuild strength—so you can move without pain, without surgery.
+        rebuild strength, so you can move without pain, without surgery.
       </p>
     </PageLayout>
   );

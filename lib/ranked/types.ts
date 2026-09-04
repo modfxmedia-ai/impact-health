@@ -12,6 +12,11 @@ export interface BlogPostData {
   sections: { heading: string; body: string[] }[];
   cta: { label: string; href: string };
   relatedPosts?: { title: string; slug: string }[];
+<<<<<<< HEAD
+=======
+  /** True for hand-written local posts rendered via React content components. */
+  isLocal?: boolean;
+>>>>>>> fca3edc (feedback edits)
 }
 
 export interface RankedContentListItem {

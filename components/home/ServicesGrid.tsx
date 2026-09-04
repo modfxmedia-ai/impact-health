@@ -24,15 +24,6 @@ const services = [
     className: "",
   },
   {
-    label: "Wound Care",
-    href: "/wound-care/",
-    image: "/images/home/service-wound-care.jpg",
-    alt: "Wound care",
-    description:
-      "Accelerate healing with advanced Wound Care. Embrace targeted treatments for swift recovery and optimal skin health restoration.",
-    className: "",
-  },
-  {
     label: "Chiropractic & Rehab",
     href: "/chiropractic-care/",
     image: "/images/home/service-chiropractic.jpg",
