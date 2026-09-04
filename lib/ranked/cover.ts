@@ -1,9 +1,5 @@
 import { BlobNotFoundError, head, put } from "@vercel/blob";
-<<<<<<< HEAD
-import { COMMITTED_COVER_SLUGS, coverPrompt, topicCover } from "./config";
-=======
 import { COMMITTED_COVER_SLUGS, DEFAULT_COVER, coverPrompt } from "./config";
->>>>>>> fca3edc (feedback edits)
 
 function coverPathname(contentId: string): string {
   return `blog-covers/${contentId}.png`;
@@ -26,10 +22,7 @@ function imageModels(): string[] {
 
 async function existingBlobUrl(contentId: string): Promise<string | null> {
   if (!process.env.BLOB_READ_WRITE_TOKEN && !process.env.VERCEL) return null;
-<<<<<<< HEAD
-=======
 
->>>>>>> fca3edc (feedback edits)
   try {
     const meta = await head(coverPathname(contentId));
     return meta.url;
@@ -76,13 +69,9 @@ async function generatePng(title: string): Promise<Buffer | null> {
       data?: Array<{ url?: string; b64_json?: string }>;
     };
     const row = json.data?.[0];
-<<<<<<< HEAD
-    if (row?.b64_json) return Buffer.from(row.b64_json, "base64");
-=======
 
     if (row?.b64_json) return Buffer.from(row.b64_json, "base64");
 
->>>>>>> fca3edc (feedback edits)
     if (row?.url) {
       const img = await fetch(row.url);
       if (!img.ok) {
@@ -99,36 +88,20 @@ async function generatePng(title: string): Promise<Buffer | null> {
   return null;
 }
 
-<<<<<<< HEAD
-async function persistPng(contentId: string, png: Buffer): Promise<string | null> {
-  if (!process.env.BLOB_READ_WRITE_TOKEN && !process.env.VERCEL) return null;
-=======
 async function persistPng(
   contentId: string,
   png: Buffer,
 ): Promise<string | null> {
   if (!process.env.BLOB_READ_WRITE_TOKEN && !process.env.VERCEL) return null;
 
->>>>>>> fca3edc (feedback edits)
   const blob = await put(coverPathname(contentId), png, {
     access: "public",
     addRandomSuffix: false,
     allowOverwrite: true,
     contentType: "image/png",
   });
-<<<<<<< HEAD
-  return blob.url;
-}
-
-function usableUrl(value?: string | null): string | null {
-  const src = value?.trim();
-  if (!src) return null;
-  if (src.startsWith("data:")) return null;
-  return src;
-=======
 
   return blob.url;
->>>>>>> fca3edc (feedback edits)
 }
 
 export async function getRankedCoverImage(input: {
@@ -136,11 +109,6 @@ export async function getRankedCoverImage(input: {
   title: string;
   generate: boolean;
   slug?: string;
-<<<<<<< HEAD
-  featuredImage?: string | null;
-  htmlImage?: string | null;
-=======
->>>>>>> fca3edc (feedback edits)
 }): Promise<string> {
   const committed = committedCoverUrl(input.slug);
   if (committed) return committed;
@@ -148,25 +116,6 @@ export async function getRankedCoverImage(input: {
   const cached = await existingBlobUrl(input.contentId);
   if (cached) return cached;
 
-<<<<<<< HEAD
-  if (input.generate) {
-    try {
-      const png = await generatePng(input.title);
-      if (png) {
-        const stored = await persistPng(input.contentId, png);
-        if (stored) return stored;
-      }
-    } catch (err) {
-      console.error(`[ranked] cover failed for ${input.contentId}`, err);
-    }
-  }
-
-  return (
-    usableUrl(input.featuredImage) ||
-    usableUrl(input.htmlImage) ||
-    topicCover(input.title)
-  );
-=======
   if (!input.generate) return DEFAULT_COVER;
 
   try {
@@ -177,5 +126,4 @@ export async function getRankedCoverImage(input: {
     console.error(`[ranked] cover failed for ${input.contentId}`, err);
     return DEFAULT_COVER;
   }
->>>>>>> fca3edc (feedback edits)
 }

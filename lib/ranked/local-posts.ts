@@ -3,13 +3,8 @@ import { DEFAULT_CTA } from "./config";
 import type { BlogPostData } from "./types";
 
 /**
-<<<<<<< HEAD
- * Existing compiled/MDX posts win on slug collision so a Ranked import
- * cannot overwrite a hand-written Impact Health article.
-=======
  * Existing compiled posts win on slug collision so a Ranked import cannot
  * overwrite a hand-written article. Bodies render via React content components.
->>>>>>> fca3edc (feedback edits)
  */
 export function getLocalBlogPosts(): BlogPostData[] {
   return blogPosts.map((post) => ({
@@ -23,9 +18,6 @@ export function getLocalBlogPosts(): BlogPostData[] {
     coverAlt: post.imageAlt,
     sections: [],
     cta: DEFAULT_CTA,
-<<<<<<< HEAD
-=======
     isLocal: true,
->>>>>>> fca3edc (feedback edits)
   }));
 }

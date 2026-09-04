@@ -26,22 +26,8 @@ export function hasRankedApiKey(): boolean {
   return Boolean(rankedConfig().apiKey);
 }
 
-<<<<<<< HEAD
-/** This domain publishes only RANKED_PROJECT_ID. Foreign project IDs are refused. */
-function thisProjectId(projectId?: string): string | undefined {
-  const configured = rankedConfig().projectId;
-  if (!configured) return undefined;
-  if (projectId && projectId !== configured) {
-    console.error(
-      `[ranked] blocked foreign project ${projectId}; this site only publishes ${configured}`,
-    );
-    return undefined;
-  }
-  return configured;
-=======
 function thisProjectId(projectId?: string): string | undefined {
   return projectId || rankedConfig().projectId;
->>>>>>> fca3edc (feedback edits)
 }
 
 async function rankedGet<T>(path: string): Promise<T> {
@@ -86,10 +72,7 @@ export async function listRankedContent(
 
   const items: RankedContentListItem[] = [];
   const pageSize = Math.min(limit, 50);
-<<<<<<< HEAD
-=======
 
->>>>>>> fca3edc (feedback edits)
   for (let offset = 0; offset < 200; offset += pageSize) {
     const json = await rankedGet<RankedListResponse>(
       `/projects/${id}/content?limit=${pageSize}&offset=${offset}`,

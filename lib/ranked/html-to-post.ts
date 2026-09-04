@@ -45,21 +45,9 @@ function htmlChunkToPlain(html: string): string {
 }
 
 function usableParas(parts: string[]): string[] {
-<<<<<<< HEAD
-  return parts.map(htmlChunkToPlain).filter((p) => p.length > 1 && !isSeoMetaLine(p));
-}
-
-export function firstHtmlImage(html: string | null | undefined): string | null {
-  if (!html) return null;
-  const match = html.match(/<img\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/i);
-  const src = match?.[1]?.trim();
-  if (!src || src.startsWith("data:")) return null;
-  return decodeEntities(src);
-=======
   return parts
     .map(htmlChunkToPlain)
     .filter((p) => p.length > 1 && !isSeoMetaLine(p));
->>>>>>> fca3edc (feedback edits)
 }
 
 export function slugFromTitle(title: string): string {
@@ -118,12 +106,8 @@ export function htmlToBlogPost(input: {
       const bodyHtml = close >= 0 ? rest.slice(rest.indexOf(">", close) + 1) : "";
       const paras = usableParas(bodyHtml.split(/<\/p>|<li>/i));
       const headingIsTitle =
-<<<<<<< HEAD
-        tag === "h1" && heading.replace(/\s+/g, " ").trim().toLowerCase() === titleNorm;
-=======
         tag === "h1" &&
         heading.replace(/\s+/g, " ").trim().toLowerCase() === titleNorm;
->>>>>>> fca3edc (feedback edits)
 
       if (headingIsTitle) {
         if (!intro && paras[0]) intro = paras[0];
@@ -134,10 +118,6 @@ export function htmlToBlogPost(input: {
       }
 
       if (!heading && paras.length === 0) continue;
-<<<<<<< HEAD
-
-=======
->>>>>>> fca3edc (feedback edits)
       sections.push({
         heading: heading || input.title,
         body: paras.length ? paras : [htmlChunkToPlain(bodyHtml) || heading],
@@ -151,14 +131,10 @@ export function htmlToBlogPost(input: {
   if (usable.length === 0) return null;
 
   if (!intro || isSeoMetaLine(intro)) {
-<<<<<<< HEAD
-    intro = usable[0].body.find((p) => !isSeoMetaLine(p)) ?? input.description ?? input.title;
-=======
     intro =
       usable[0].body.find((p) => !isSeoMetaLine(p)) ??
       input.description ??
       input.title;
->>>>>>> fca3edc (feedback edits)
   }
 
   return {
@@ -189,14 +165,6 @@ export function isRankedPostLive(
   const s = status.trim().toLowerCase();
   if (s === "revising" || s === "cancelled" || s === "canceled") return false;
   if (!scheduledDate) return true;
-<<<<<<< HEAD
-  const day = scheduledDate.slice(0, 10);
-  const today = now.toLocaleDateString("en-CA", { timeZone: "America/New_York" });
-  return day <= today;
-}
-
-export function publishDateFromRanked(scheduledDate: string | null, fallback: string): string {
-=======
 
   const day = scheduledDate.slice(0, 10);
   const today = now.toLocaleDateString("en-CA", {
@@ -209,7 +177,6 @@ export function publishDateFromRanked(
   scheduledDate: string | null,
   fallback: string,
 ): string {
->>>>>>> fca3edc (feedback edits)
   if (scheduledDate) return scheduledDate.slice(0, 10);
   return fallback.slice(0, 10);
 }

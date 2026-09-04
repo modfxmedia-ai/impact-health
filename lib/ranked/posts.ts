@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-import { getRankedContentDetail, isRankedConfigured, listRankedContent } from "./client";
-=======
 import {
   getRankedContentDetail,
   isRankedConfigured,
   listRankedContent,
 } from "./client";
->>>>>>> fca3edc (feedback edits)
 import { getRankedCoverImage } from "./cover";
 import { fetchGoogleDocHtml } from "./google-doc";
 import {
@@ -15,12 +11,6 @@ import {
   isRankedPostLive,
   publishDateFromRanked,
   slugFromTitle,
-<<<<<<< HEAD
-  firstHtmlImage,
-} from "./html-to-post";
-import { getLocalBlogPosts } from "./local-posts";
-import type { BlogPostData, RankedContentDetail, RankedContentListItem } from "./types";
-=======
 } from "./html-to-post";
 import { getLocalBlogPosts } from "./local-posts";
 import type {
@@ -28,7 +18,6 @@ import type {
   RankedContentDetail,
   RankedContentListItem,
 } from "./types";
->>>>>>> fca3edc (feedback edits)
 
 async function resolveArticleHtml(
   item: RankedContentListItem,
@@ -36,13 +25,6 @@ async function resolveArticleHtml(
 ): Promise<string | null> {
   const fromRanked = detail?.content_body?.trim();
   if (fromRanked) return fromRanked;
-<<<<<<< HEAD
-  const docUrl = detail?.document_url || detail?.source_url || item.document_url || item.source_url;
-  return fetchGoogleDocHtml(docUrl);
-}
-
-function relatedFromLocal(excludeSlug: string): { title: string; slug: string }[] {
-=======
 
   const docUrl =
     detail?.document_url ||
@@ -55,7 +37,6 @@ function relatedFromLocal(excludeSlug: string): { title: string; slug: string }[
 function relatedFromLocal(
   excludeSlug: string,
 ): { title: string; slug: string }[] {
->>>>>>> fca3edc (feedback edits)
   return [...getLocalBlogPosts()]
     .sort((a, b) => b.publishDate.localeCompare(a.publishDate))
     .filter((p) => p.slug !== excludeSlug)
@@ -63,13 +44,6 @@ function relatedFromLocal(
     .map((p) => ({ title: p.h1, slug: p.slug }));
 }
 
-<<<<<<< HEAD
-function uniqueSlug(title: string, contentId: string, taken: Set<string>): string {
-  const base = slugFromTitle(title);
-  if (!taken.has(base)) return base;
-  const withId = `${base}-${contentId.slice(0, 8)}`;
-  if (!taken.has(withId)) return withId;
-=======
 function uniqueSlug(
   title: string,
   contentId: string,
@@ -81,7 +55,6 @@ function uniqueSlug(
   const withId = `${base}-${contentId.slice(0, 8)}`;
   if (!taken.has(withId)) return withId;
 
->>>>>>> fca3edc (feedback edits)
   let i = 2;
   while (taken.has(`${base}-${i}`)) i += 1;
   return `${base}-${i}`;
@@ -92,24 +65,10 @@ export async function getLiveRankedBlogPosts(
   opts: { generateCovers?: boolean; generateForSlug?: string } = {},
 ): Promise<BlogPostData[]> {
   if (!isRankedConfigured() && !projectId) return [];
-<<<<<<< HEAD
-  const id = projectId || process.env.RANKED_PROJECT_ID;
-  if (!process.env.RANKED_API_KEY || !id) return [];
-
-  const configuredId = process.env.RANKED_PROJECT_ID;
-  if (configuredId && id !== configuredId) {
-    console.error(
-      `[ranked] refused to load project ${id}; this site only publishes ${configuredId}`,
-    );
-    return [];
-  }
-
-=======
 
   const id = projectId || process.env.RANKED_PROJECT_ID;
   if (!process.env.RANKED_API_KEY || !id) return [];
 
->>>>>>> fca3edc (feedback edits)
   try {
     const items = await listRankedContent(id);
     const candidates = items.filter(
@@ -119,21 +78,10 @@ export async function getLiveRankedBlogPosts(
     );
 
     const local = getLocalBlogPosts();
-<<<<<<< HEAD
-    const localSlugs = new Set(local.map((p) => p.slug));
-    const taken = new Set(localSlugs);
-
-    const resolved = await Promise.all(
-      candidates.map(async (item) => {
-        const baseSlug = slugFromTitle(item.title);
-        if (localSlugs.has(baseSlug)) return null;
-
-=======
     const taken = new Set(local.map((p) => p.slug));
 
     const resolved = await Promise.all(
       candidates.map(async (item) => {
->>>>>>> fca3edc (feedback edits)
         let detail: RankedContentDetail | null = null;
         try {
           detail = await getRankedContentDetail(item.id, id);
@@ -153,10 +101,7 @@ export async function getLiveRankedBlogPosts(
     );
 
     const posts: BlogPostData[] = [];
-<<<<<<< HEAD
-=======
 
->>>>>>> fca3edc (feedback edits)
     for (const row of resolved) {
       if (!row) continue;
       const { source, html } = row;
@@ -165,14 +110,10 @@ export async function getLiveRankedBlogPosts(
         title: source.title,
         html,
         description: source.description,
-<<<<<<< HEAD
-        publishDate: publishDateFromRanked(source.scheduled_date, source.created_at),
-=======
         publishDate: publishDateFromRanked(
           source.scheduled_date,
           source.created_at,
         ),
->>>>>>> fca3edc (feedback edits)
         slug,
         coverImage: source.featured_image_url,
       });
@@ -182,14 +123,8 @@ export async function getLiveRankedBlogPosts(
         contentId: source.id,
         title: source.title,
         slug,
-<<<<<<< HEAD
-        generate: Boolean(opts.generateCovers) || opts.generateForSlug === slug,
-        featuredImage: source.featured_image_url,
-        htmlImage: firstHtmlImage(html),
-=======
         generate:
           Boolean(opts.generateCovers) || opts.generateForSlug === slug,
->>>>>>> fca3edc (feedback edits)
       });
       post.coverAlt = `${source.title} cover`;
       post.relatedPosts = relatedFromLocal(slug);
@@ -204,14 +139,6 @@ export async function getLiveRankedBlogPosts(
   }
 }
 
-<<<<<<< HEAD
-export async function getLiveRankedBlogPost(slug: string): Promise<BlogPostData | undefined> {
-  const posts = await getLiveRankedBlogPosts(undefined, { generateForSlug: slug });
-  return posts.find((p) => p.slug === slug);
-}
-
-export async function getPublishedBlogPost(slug: string): Promise<BlogPostData | undefined> {
-=======
 export async function getLiveRankedBlogPost(
   slug: string,
 ): Promise<BlogPostData | undefined> {
@@ -224,7 +151,6 @@ export async function getLiveRankedBlogPost(
 export async function getPublishedBlogPost(
   slug: string,
 ): Promise<BlogPostData | undefined> {
->>>>>>> fca3edc (feedback edits)
   const local = getLocalBlogPosts().find((p) => p.slug === slug);
   if (local) return local;
   return getLiveRankedBlogPost(slug);
