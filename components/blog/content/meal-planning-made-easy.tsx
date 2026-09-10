@@ -8,9 +8,9 @@ export const MealPlanningMadeEasyContent: ReactNode[] = [
   <p key={5}>For those aiming to manage specific health conditions, seeking guidance from a registered dietitian or healthcare provider is invaluable. Their expertise ensures that your meal plans align with your health goals while meeting nutritional needs.</p>,
   <p key={6}>Engaging in meal planning might seem overwhelming initially, but it truly boils down to three straightforward steps:</p>,
   <ul key={7}>
-  <li><strong>Select Your Meals for the Week<br /></strong>We’ve all experienced those hectic weeks where mealtime becomes a rushed decision or scavenger hunt in the fridge. By planning your meals for the entire week, you eliminate the nightly guesswork and ensure you have wholesome, cost-effective meals ready to go.</li>
-  <li><strong>Shop for Ingredients<br /></strong>Once you’ve picked your recipes and crafted a plan, take stock of your pantry and compile a grocery list with the necessary ingredients. Head to the grocery store or schedule a convenient pickup or delivery to gather all the essentials.</li>
-  <li><strong>Food Preparation<br /></strong>Simplify your cooking routine by prepping ingredients in advance. Cutting and preparing food beforehand can significantly streamline meal preparation during busy weekdays, making meal time a breeze.</li>
+  <li><strong>Select Your Meals for the Week: </strong>We’ve all experienced those hectic weeks where mealtime becomes a rushed decision or scavenger hunt in the fridge. By planning your meals for the entire week, you eliminate the nightly guesswork and ensure you have wholesome, cost-effective meals ready to go.</li>
+  <li><strong>Shop for Ingredients: </strong>Once you’ve picked your recipes and crafted a plan, take stock of your pantry and compile a grocery list with the necessary ingredients. Head to the grocery store or schedule a convenient pickup or delivery to gather all the essentials.</li>
+  <li><strong>Food Preparation: </strong>Simplify your cooking routine by prepping ingredients in advance. Cutting and preparing food beforehand can significantly streamline meal preparation during busy weekdays, making meal time a breeze.</li>
   </ul>,
   <h3 key={8} id="h-tools-for-meal-planning">Tools for Meal Planning</h3>,
   <p key={9}>Organizing recipes, devising a meal plan, and putting together a detailed grocery list stand out as the cornerstones of effective meal planning. With the right tools, these tasks can become effortless and greatly enhance planning efficiency. Here are several handy options for:</p>,

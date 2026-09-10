@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { formatBlogDate } from "@/lib/blog-posts";
+import {
+  BLOG_CATEGORIES,
+  blogPosts,
+  categoryForTitle,
+} from "@/lib/blog-posts";
 import { getPublishedBlogPosts } from "@/lib/ranked/posts";
-import { BlogCoverImage } from "@/components/blog/BlogCoverImage";
+import { BlogCategoryFilter, type BlogListItem } from "@/components/blog/BlogCategoryFilter";
 import { PageLayout } from "@/components/page/PageLayout";
-import { Reveal } from "@/components/motion/Reveal";
 
 export const revalidate = 3600;
 
@@ -92,8 +94,21 @@ const schema = [
 
 export default async function BlogIndexPage() {
   const posts = await getPublishedBlogPosts();
-  const sorted = [...posts].sort(
-    (a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime(),
+  const categoryBySlug = new Map(blogPosts.map((p) => [p.slug, p.category]));
+
+  const localAndRanked: BlogListItem[] = posts.map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    description: post.metaDescription,
+    image: post.coverImage,
+    imageAlt: post.coverAlt,
+    date: post.publishDate,
+    category: categoryBySlug.get(post.slug) ?? categoryForTitle(post.title),
+    href: `/blog/${post.slug}/`,
+  }));
+
+  const sorted = [...localAndRanked].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
 
   return (
@@ -106,55 +121,11 @@ export default async function BlogIndexPage() {
       afterContent={
         <section className="bg-white">
           <div className="mx-auto max-w-6xl px-6 pb-20">
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {sorted.map((post, i) => (
-                <Reveal
-                  key={post.slug}
-                  delay={(i % 3) * 0.08}
-                  className="h-full"
-                >
-                  <Link
-                    href={`/blog/${post.slug}/`}
-                    className="group flex h-full flex-col overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-zinc-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                  >
-                    <div className="relative aspect-[3/2] w-full overflow-hidden">
-                      <BlogCoverImage
-                        src={post.coverImage}
-                        alt={post.coverAlt}
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
-                      />
-                    </div>
-                    <div className="flex flex-1 flex-col p-6">
-                      <time
-                        dateTime={post.publishDate}
-                        className="text-xs font-semibold tracking-wide text-brand-teal uppercase"
-                      >
-                        {formatBlogDate(post.publishDate)}
-                      </time>
-                      <h2 className="mt-2 text-lg font-bold text-brand-navy">
-                        {post.title}
-                      </h2>
-                      <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-600 line-clamp-3">
-                        {post.metaDescription}
-                      </p>
-                      <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold tracking-wide text-brand-teal uppercase">
-                        Read Article
-                        <span
-                          aria-hidden="true"
-                          className="transition-transform duration-300 group-hover:translate-x-1"
-                        >
-                          &rarr;
-                        </span>
-                      </span>
-                    </div>
-                  </Link>
-                </Reveal>
-              ))}
-            </div>
+            <BlogCategoryFilter posts={sorted} categories={[...BLOG_CATEGORIES]} />
           </div>
         </section>
       }
     />
   );
 }
+

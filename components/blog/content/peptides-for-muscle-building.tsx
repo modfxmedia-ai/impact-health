@@ -51,7 +51,7 @@ export const PeptidesForMuscleBuildingContent: ReactNode[] = [
   <ul key={32}>
   <li><strong>Examples:</strong> Ostarine (MK-2866), Ligandrol (LGD-4033), RAD-140</li>
   </ul>,
-  <p key={33}><br />Though not technically peptides, SARMs are often grouped with peptides due to their similar role in enhancing muscle gain and reducing body fat. SARMs mimic the effects of anabolic steroids but with fewer side effects.</p>,
+  <p key={33}>Though not technically peptides, SARMs are often grouped with peptides due to their similar role in enhancing muscle gain and reducing body fat. SARMs mimic the effects of anabolic steroids but with fewer side effects.</p>,
   <h2 key={34} id="Benefits_of_Peptides_for_Muscle_Building">Benefits of Peptides for Muscle Building</h2>,
   <h3 key={35}>Increased Muscle Mass</h3>,
   <p key={36}>Peptides enhance the production of growth hormone, which directly stimulates the growth of new muscle cells. This leads to significant increases in muscle mass, especially when combined with resistance training.</p>,

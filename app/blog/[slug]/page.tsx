@@ -24,6 +24,29 @@ import { UnderstandingTheRoleOfSocialConnectionsContent } from "@/components/blo
 import { TheBasicsOfMindfulEatingContent } from "@/components/blog/content/the-basics-of-mindful-eating";
 import { StrengthTrainingByAgeContent } from "@/components/blog/content/strength-training-by-age";
 import { DiscoverTheTransformativePowerOfIvVitaminTherapyContent } from "@/components/blog/content/discover-the-transformative-power-of-iv-vitamin-therapy";
+import { NeuropathyTreatmentInWestervilleLifestyleHabitsThatAffectResultsContent } from "@/components/blog/content/neuropathy-treatment-in-westerville-lifestyle-habits-that-affect-results";
+import { BackPainInWestervilleRedFlagsThatWarrantSeeingASpineSpecialistContent } from "@/components/blog/content/back-pain-in-westerville-red-flags-that-warrant-seeing-a-spine-specialist";
+import { NeuropathyTreatmentTimelineInWestervilleMilestonesAndProgressTrackingContent } from "@/components/blog/content/neuropathy-treatment-timeline-in-westerville-milestones-and-progress-tracking";
+import { RecognizingWhenMigraineTreatmentInWestervilleNeedsAnUpgradeContent } from "@/components/blog/content/recognizing-when-migraine-treatment-in-westerville-needs-an-upgrade";
+import { UnderstandingSpinalDecompressionForChronicBackPainReliefContent } from "@/components/blog/content/understanding-spinal-decompression-for-chronic-back-pain-relief";
+import { ChronicPainInWestervilleNeuropathyVsArthritisVsSciaticaTreatmentsContent } from "@/components/blog/content/chronic-pain-in-westerville-neuropathy-vs-arthritis-vs-sciatica-treatments";
+import { EarlyArthritisCluesYourSummerActivityIsMaskingContent } from "@/components/blog/content/early-arthritis-clues-your-summer-activity-is-masking";
+import { SummerArthritisFlareUpsAndWhenRegenerativeMedicineHelpsContent } from "@/components/blog/content/summer-arthritis-flare-ups-and-when-regenerative-medicine-helps";
+import { SummerMigraineFlareUpsAndWhenToSeekTreatmentInWestervilleContent } from "@/components/blog/content/summer-migraine-flare-ups-and-when-to-seek-treatment-in-westerville";
+import { SummerActivityMistakesThatWorsenSciaticaPainContent } from "@/components/blog/content/summer-activity-mistakes-that-worsen-sciatica-pain";
+import { ChronicBackPainWhenAWestervilleChiropractorIsTheNextStepContent } from "@/components/blog/content/chronic-back-pain-when-a-westerville-chiropractor-is-the-next-step";
+import { HipPainInWestervilleCausesByLocationGroinVsOuterHipVsButtockContent } from "@/components/blog/content/hip-pain-in-westerville-causes-by-location-groin-vs-outer-hip-vs-buttock";
+import { HiddenSignsYourKneePainNeedsTargetedTreatmentContent } from "@/components/blog/content/hidden-signs-your-knee-pain-needs-targeted-treatment";
+import { SummerSportsComebackRegenerativeMedicineForFasterHealingContent } from "@/components/blog/content/summer-sports-comeback-regenerative-medicine-for-faster-healing";
+import { PreventNeckPainWhileTravelingPackingPillowSupportPostureAndCareContent } from "@/components/blog/content/prevent-neck-pain-while-traveling-packing-pillow-support-posture-and-care";
+import { ShouldYouSeeAChiropractorFirstForChronicNeckPainContent } from "@/components/blog/content/should-you-see-a-chiropractor-first-for-chronic-neck-pain";
+import { ComparingRegenerativeMedicineAndSurgeryForJointPainReliefContent } from "@/components/blog/content/comparing-regenerative-medicine-and-surgery-for-joint-pain-relief";
+import { ManagingSummerSportsInjuriesWithPhysicalTherapyInWestervilleContent } from "@/components/blog/content/managing-summer-sports-injuries-with-physical-therapy-in-westerville";
+import { JointPainReliefOptionsInWestervilleBeyondMedicationContent } from "@/components/blog/content/joint-pain-relief-options-in-westerville-beyond-medication";
+import { WhyYourSpringJointPainNeedsArthritisTreatmentSupportContent } from "@/components/blog/content/why-your-spring-joint-pain-needs-arthritis-treatment-support";
+import { UnderstandingNeuropathyTreatmentOptionsInWestervilleContent } from "@/components/blog/content/understanding-neuropathy-treatment-options-in-westerville";
+import { IsShockwaveTherapyTheMissingStepInYourSportsInjuryRecoveryContent } from "@/components/blog/content/is-shockwave-therapy-the-missing-step-in-your-sports-injury-recovery";
+import { WhenPersistentHipPainDemandsSpecialistTreatmentContent } from "@/components/blog/content/when-persistent-hip-pain-demands-specialist-treatment";
 
 export const revalidate = 3600;
 export const dynamicParams = true;
@@ -45,6 +68,29 @@ const contentBySlug: Record<string, ReactNode[]> = {
   "the-basics-of-mindful-eating": TheBasicsOfMindfulEatingContent,
   "strength-training-by-age": StrengthTrainingByAgeContent,
   "discover-the-transformative-power-of-iv-vitamin-therapy": DiscoverTheTransformativePowerOfIvVitaminTherapyContent,
+  "neuropathy-treatment-in-westerville-lifestyle-habits-that-affect-results": NeuropathyTreatmentInWestervilleLifestyleHabitsThatAffectResultsContent,
+  "back-pain-in-westerville-red-flags-that-warrant-seeing-a-spine-specialist": BackPainInWestervilleRedFlagsThatWarrantSeeingASpineSpecialistContent,
+  "neuropathy-treatment-timeline-in-westerville-milestones-and-progress-tracking": NeuropathyTreatmentTimelineInWestervilleMilestonesAndProgressTrackingContent,
+  "recognizing-when-migraine-treatment-in-westerville-needs-an-upgrade": RecognizingWhenMigraineTreatmentInWestervilleNeedsAnUpgradeContent,
+  "understanding-spinal-decompression-for-chronic-back-pain-relief": UnderstandingSpinalDecompressionForChronicBackPainReliefContent,
+  "chronic-pain-in-westerville-neuropathy-vs-arthritis-vs-sciatica-treatments": ChronicPainInWestervilleNeuropathyVsArthritisVsSciaticaTreatmentsContent,
+  "early-arthritis-clues-your-summer-activity-is-masking": EarlyArthritisCluesYourSummerActivityIsMaskingContent,
+  "summer-arthritis-flare-ups-and-when-regenerative-medicine-helps": SummerArthritisFlareUpsAndWhenRegenerativeMedicineHelpsContent,
+  "summer-migraine-flare-ups-and-when-to-seek-treatment-in-westerville": SummerMigraineFlareUpsAndWhenToSeekTreatmentInWestervilleContent,
+  "summer-activity-mistakes-that-worsen-sciatica-pain": SummerActivityMistakesThatWorsenSciaticaPainContent,
+  "chronic-back-pain-when-a-westerville-chiropractor-is-the-next-step": ChronicBackPainWhenAWestervilleChiropractorIsTheNextStepContent,
+  "hip-pain-in-westerville-causes-by-location-groin-vs-outer-hip-vs-buttock": HipPainInWestervilleCausesByLocationGroinVsOuterHipVsButtockContent,
+  "hidden-signs-your-knee-pain-needs-targeted-treatment": HiddenSignsYourKneePainNeedsTargetedTreatmentContent,
+  "summer-sports-comeback-regenerative-medicine-for-faster-healing": SummerSportsComebackRegenerativeMedicineForFasterHealingContent,
+  "prevent-neck-pain-while-traveling-packing-pillow-support-posture-and-care": PreventNeckPainWhileTravelingPackingPillowSupportPostureAndCareContent,
+  "should-you-see-a-chiropractor-first-for-chronic-neck-pain": ShouldYouSeeAChiropractorFirstForChronicNeckPainContent,
+  "comparing-regenerative-medicine-and-surgery-for-joint-pain-relief": ComparingRegenerativeMedicineAndSurgeryForJointPainReliefContent,
+  "managing-summer-sports-injuries-with-physical-therapy-in-westerville": ManagingSummerSportsInjuriesWithPhysicalTherapyInWestervilleContent,
+  "joint-pain-relief-options-in-westerville-beyond-medication": JointPainReliefOptionsInWestervilleBeyondMedicationContent,
+  "why-your-spring-joint-pain-needs-arthritis-treatment-support": WhyYourSpringJointPainNeedsArthritisTreatmentSupportContent,
+  "understanding-neuropathy-treatment-options-in-westerville": UnderstandingNeuropathyTreatmentOptionsInWestervilleContent,
+  "is-shockwave-therapy-the-missing-step-in-your-sports-injury-recovery": IsShockwaveTherapyTheMissingStepInYourSportsInjuryRecoveryContent,
+  "when-persistent-hip-pain-demands-specialist-treatment": WhenPersistentHipPainDemandsSpecialistTreatmentContent,
 };
 
 export async function generateStaticParams() {
