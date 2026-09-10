@@ -299,7 +299,7 @@ export const blogPosts: BlogPost[] = [
     slug: "recognizing-when-migraine-treatment-in-westerville-needs-an-upgrade",
     title: "Recognizing When Migraine Treatment in Westerville Needs an Upgrade",
     description: "When your migraine plan stops working: signs it's time to reassess your treatment approach.",
-    image: "/images/blog/hormone-therapy-for-menopause.jpg",
+    image: "/images/blog/recognizing-when-migraine-treatment-in-westerville-needs-an-upgrade.webp",
     imageAlt: "Patient discussing migraine treatment options with a provider",
     date: "2026-08-10",
     dateModified: "2026-08-10",
