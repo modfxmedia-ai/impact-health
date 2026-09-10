@@ -86,7 +86,8 @@ export async function getLiveRankedBlogPosts(
       });
 
     const local = getLocalBlogPosts();
-    const taken = new Set(local.map((p) => p.slug));
+    const localSlugs = new Set(local.map((p) => p.slug));
+    const taken = new Set(localSlugs);
     const reservedCovers = new Set(local.map((p) => p.coverImage));
 
     const resolved = await Promise.all(
@@ -114,6 +115,12 @@ export async function getLiveRankedBlogPosts(
     for (const row of resolved) {
       if (!row) continue;
       const { source, html } = row;
+      // Skip Ranked content that duplicates an already-published local post
+      // (same title -> same base slug). Without this, the Ranked pipeline's
+      // independently-published version would get a disambiguated slug (e.g.
+      // "-502960e0" suffix) and show up as a second, duplicate card instead
+      // of being treated as the same article.
+      if (localSlugs.has(slugFromTitle(source.title))) continue;
       const slug = uniqueSlug(source.title, source.id, taken);
       const post = htmlToBlogPost({
         title: source.title,
